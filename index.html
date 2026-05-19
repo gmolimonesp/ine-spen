@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Intensivo LGIPE - SPEN 2026</title>
+    <style>
+        :root {
+            --primary-color: #0d2b45;
+            --secondary-color: #203c56;
+            --accent-color: #d14949;
+            --bg-color: #f4f7f6;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-top: 0;
+        }
+
+        /* Buscador Interactivo */
+        .search-container {
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        /* Contenedor de Tablas */
+        .table-container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .table-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px 12px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        tr:hover {
+            background-color: #f9fbfd;
+        }
+
+        /* Etiquetas visuales para estudio */
+        .badge-art {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .highlight-text {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .alert-box {
+            background-color: #fff5f5;
+            border-left: 4px solid var(--accent-color);
+            padding: 10px;
+            border-radius: 0 4px 4px 0;
+            font-size: 13px;
+            color: #a02020;
+        }
+
+        .period-box {
+            background-color: #eef7f2;
+            border-left: 4px solid #2d8a4e;
+            padding: 8px;
+            border-radius: 0 4px 4px 0;
+            font-size: 13px;
+            color: #1e5c34;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Plataforma de Estudio LGIPE</h1>
+        <p class="subtitle">Guía de preparación interactiva para el Examen del SPEN 2026</p>
+    </header>
+
+    <!-- Caja de Búsqueda -->
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="🔍 Busca por número de artículo, palabra clave (ej. 'paridad', 'voto', 'VPMRG')...">
+    </div>
+
+    <!-- TABLA PRINCIPAL DE ARTÍCULOS -->
+    <div class="table-container">
+        <div class="table-header">Libro Primero: Disposiciones Generales</div>
+        <table id="lgipeTable">
+            <thead>
+                <tr>
+                    <th style="width: 8%;">Art.</th>
+                    <th style="width: 15%;">Nombre</th>
+                    <th style="width: 25%;">Texto Explícito</th>
+                    <th style="width: 25%;">Puntos Importantes</th>
+                    <th style="width: 17%;">Observaciones (Trampas)</th>
+                    <th style="width: 10%;">Fechas / Periodos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ARTÍCULO 1 -->
+                <tr>
+                    <td><span class="badge-art">Art. 1</span></td>
+                    <td class="highlight-text">Objeto y aplicación</td>
+                    <td>Las disposiciones de esta Ley son de orden público y de observancia general en todo el territorio nacional... regula organización de elecciones federales y locales.</td>
+                    <td><strong>Sentido de la ley:</strong> Define el alcance general de la norma como el marco jurídico supremo nacional.<br>• Aplica en todo el país.<br>• Distribuye competencias entre INE y OPLES.</td>
+                    <td><div class="alert-box">Ceneval suele decir que solo rige lo federal. Falso, pone las bases obligatorias para lo local.</div></td>
+                    <td>-</td>
+                </tr>
+                <!-- ARTÍCULO 2 -->
+                <tr>
+                    <td><span class="badge-art">Art. 2</span></td>
+                    <td class="highlight-text">Criterios de interpretación</td>
+                    <td>Para la interpretación de esta Ley se aplicarán los criterios gramatical, sistemático y funcional... A falta de disposición expresa, los principios generales del derecho.</td>
+                    <td><strong>Sentido de la ley:</strong> Delimita las herramientas válidas para resolver dudas o vacíos legales.<br>• Métodos: gramatical, sistemático y funcional.</td>
+                    <td><div class="alert-box">Cambian los métodos por "literal" o "analógico". Grábate la triada exacta.</div></td>
+                    <td>-</td>
+                </tr>
+                <!-- ARTÍCULO 3 -->
+                <tr>
+                    <td><span class="badge-art">Art. 3</span></td>
+                    <td class="highlight-text">Glosario legal</td>
+                    <td>Para los efectos de esta Ley se entenderá por: a) Instituto: El INE; b) OPLES: Organismos Públicos Locales; c) Tribunal: El TEPJF...</td>
+                    <td><strong>Sentido de la ley:</strong> Asegura que todas las autoridades usen el mismo lenguaje técnico.<br>• Fija siglas oficiales de las autoridades.</td>
+                    <td><div class="alert-box">Intercambian definiciones federales con locales en preguntas de columnas.</div></td>
+                    <td>-</td>
+                </tr>
+                <!-- ARTÍCULO 4 -->
+                <tr>
+                    <td><span class="badge-art">Art. 4</span></td>
+                    <td class="highlight-text">Características del voto</td>
+                    <td>El voto es un derecho y una obligación... El voto es universal, libre, secreto, directo, personal e intransferible. Queda prohibida la coacción.</td>
+                    <td><strong>Sentido de la ley:</strong> Blinda el sufragio protegiendo la voluntad individual de interferencias externas.<br>• Doble dimensión: derecho y obligación.</td>
+                    <td><div class="alert-box">Agregan palabras falsas como "delegable" o "público". Memoriza los 6 adjetivos exactos.</div></td>
+                    <td>-</td>
+                </tr>
+                <!-- ARTÍCULO 5 -->
+                <tr>
+                    <td><span class="badge-art">Art. 5</span></td>
+                    <td class="highlight-text">Equidad y género</td>
+                    <td>Autoridades garantizarán la paridad de género en candidaturas... garantizarán el ejercicio de derechos políticos de mujeres libres de violencia (VPMRG).</td>
+                    <td><strong>Sentido de la ley:</strong> Obliga a garantizar la paridad y entornos seguros para las mujeres.<br>• Mandato imperativo de paridad de género.</td>
+                    <td><div class="alert-box">Plantean la paridad como "sugerencia" o "meta gradual". Es una obligación estricta.</div></td>
+                    <td>-</td>
+                </tr>
+                <!-- ARTÍCULO 6 -->
+                <tr>
+                    <td><span class="badge-art">Art. 6</span></td>
+                    <td class="highlight-text">Requisitos para votar</td>
+                    <td>Cumplir Art. 34 Const. y: a) Estar inscrito en Padrón Electoral; b) Credencial para Votar vigente; c) Incluido en Lista Nominal.</td>
+                    <td><strong>Sentido de la ley:</strong> Candados técnicos para asegurar la certeza e impedir dobles votos.<br>• Distingue instrumentos registrales.</td>
+                    <td><div class="alert-box">Confunden Padrón (base de datos) con Lista Nominal (quienes ya tienen credencial física).</div></td>
+                    <td><div class="period-box">Vigencia de credencial: 10 años.</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- SCRIPT PARA EL MOTOR DE BÚSQUEDA INTERACTIVO -->
+    <script>
+        function searchFunction() {
+            var input, filter, table, tr, td, i, j, txtValue, found;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("lgipeTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Empieza en 1 para saltarse los encabezados (th)
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td");
+                found = false;
+                
+                // Busca en todas las celdas de la fila
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            found = true;
+                            break; // Si lo encuentra en una celda, no necesita seguir buscando en esa fila
+                        }
+                    }
+                }
+                
+                if (found) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
