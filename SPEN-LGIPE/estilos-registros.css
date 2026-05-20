@@ -1,6 +1,6 @@
 :root {
-    --ine-pink: #D5007F;     /* Rosa Institucional del INE */
-    --ine-purple: #5A2A61;   /* Púrpura */
+    --ine-pink: #D5007F;     
+    --ine-purple: #5A2A61;   
     --ine-dark: #333333;     
     --ine-bg-light: #F9F9F9; 
     --ine-white: #FFFFFF;
@@ -9,12 +9,14 @@
 body {
     font-family: 'Arial', sans-serif;
     color: var(--ine-dark);
-    margin: 20px;
+    margin: 10px; /* Reducido para pantallas pequeñas */
     background-color: #FAFAFA;
 }
 
 .contenedor-tabla {
+    width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Scroll táctil fluido en iOS */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
 }
@@ -25,13 +27,22 @@ table {
     background-color: var(--ine-white);
     font-size: 13px;
     text-align: left;
+    white-space: nowrap; /* Evita saltos de línea caóticos en columnas cortas */
+}
+
+/* Permitir saltos de línea controlados en columnas de texto denso */
+table td:nth-child(1),
+table td:nth-child(6),
+table td:nth-child(7) {
+    white-space: normal;
+    min-width: 160px; /* Asegura un ancho base legible */
 }
 
 th {
     background-color: var(--ine-purple);
     color: var(--ine-white);
     font-weight: bold;
-    padding: 10px 12px;
+    padding: 12px 10px;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 0.3px;
@@ -39,11 +50,10 @@ th {
     vertical-align: middle;
 }
 
-/* Estilos de los Selects del Filtro */
 .filtro-select {
     width: 100%;
     margin-top: 6px;
-    padding: 4px 6px;
+    padding: 6px; /* Más grande para facilitar clics con el dedo */
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.15);
@@ -51,6 +61,7 @@ th {
     font-size: 11px;
     outline: none;
     cursor: pointer;
+    -webkit-appearance: none; /* Limpia estilos por defecto en Safari iOS */
 }
 
 .filtro-select option {
@@ -59,13 +70,12 @@ th {
 }
 
 td {
-    padding: 12px;
+    padding: 10px;
     border-bottom: 1px solid #E0E0E0;
     line-height: 1.4;
     vertical-align: middle;
 }
 
-/* Efecto Cebrado */
 tbody tr:nth-child(even) {
     background-color: var(--ine-bg-light);
 }
@@ -74,13 +84,13 @@ tbody tr:hover {
     background-color: #F3ECF5;
 }
 
-/* Badges Estilizados */
 .badge {
     display: inline-block;
     padding: 3px 8px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 11px;
+    text-align: center;
 }
 
 .badge.si {
@@ -95,5 +105,32 @@ tbody tr:hover {
 
 .fundamento {
     font-family: 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 11px;
+}
+
+/* ==========================================
+   MEDIA QUERIES (ADAPTACIÓN TABLET Y MÓVIL)
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 5px;
+    }
+    
+    table {
+        font-size: 12px; /* Reduce ligeramente la fuente */
+    }
+    
+    th {
+        padding: 10px 6px;
+    }
+    
+    td {
+        padding: 8px 6px;
+    }
+    
+    .filtro-select {
+        font-size: 12px; /* Mejora lectura de inputs en móviles */
+        padding: 8px 4px; /* Mayor área táctil conforme a guías UX */
+    }
 }
