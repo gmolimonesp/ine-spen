@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Actores Políticos y Autoridades Electorales - INE</title>
+    <style>
+        :root {
+            --ine-pink: #D5007F;     /* Rosa Institucional del INE */
+            --ine-purple: #5A2A61;   /* Púrpura Complementario del INE */
+            --ine-dark: #333333;     /* Gris Oscuro para Texto */
+            --ine-bg-light: #F9F9F9; /* Fondo Claro para Cebrado */
+            --ine-white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            color: var(--ine-dark);
+            margin: 20px;
+            background-color: #FAFAFA;
+        }
+
+        .contenedor-tabla {
+            overflow-x: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--ine-white);
+            font-size: 14px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--ine-purple);
+            color: var(--ine-white);
+            font-weight: bold;
+            padding: 12px 15px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid var(--ine-pink);
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #E0E0E0;
+            line-height: 1.5;
+            vertical-align: top;
+        }
+
+        /* Efecto Cebrado */
+        tbody tr:nth-child(even) {
+            background-color: var(--ine-bg-light);
+        }
+
+        /* Hover en Filas */
+        tbody tr:hover {
+            background-color: #F1EAF2;
+        }
+
+        /* Resaltados Especiales */
+        .si-aplica {
+            color: #2E7D32;
+            font-weight: bold;
+        }
+
+        .no-aplica {
+            color: #C62828;
+            font-style: italic;
+        }
+
+        .fundamento {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Actor Político / Autoridad</th>
+                    <th>Tipo de Actor</th>
+                    <th>¿Aplica Candidatura?</th>
+                    <th>Ámbito</th>
+                    <th>Registro o Nombramiento ante</th>
+                    <th>Fundamento Legal</th>
+                    <th>¿Permite Reelección? / Duración</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Presidencia de la República</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Nacional</td>
+                    <td>Consejo General del INE</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 82-84.</td>
+                    <td><strong>No.</strong> Absolutamente prohibida.<br>(6 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Senadurías</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Nacional</td>
+                    <td>Consejos Locales INE (MR) y Consejo General (RP)</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 56.</td>
+                    <td><strong>Sí.</strong> Hasta por dos periodos consecutivos.<br>(6 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Diputaciones Federales</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Nacional</td>
+                    <td>Consejos Distritales (MR) y Consejo General (RP)</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 55.</td>
+                    <td><strong>Sí.</strong> Hasta por cuatro periodos consecutivos.<br>(3 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Gubernaturas</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Local</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. I.</td>
+                    <td><strong>No.</strong> Absolutamente prohibida.<br>(6 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Diputaciones Locales</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Local</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. II.</td>
+                    <td><strong>Sí.</strong> Hasta por cuatro periodos consecutivos.<br>(3 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Ayuntamientos / Alcaldías</strong></td>
+                    <td>Partido Político / Coalición</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Local</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115, Fracc. I.</td>
+                    <td><strong>Sí.</strong> Por un periodo adicional inmediato.<br>(3 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Candidaturas Independientes (Fed.)</strong></td>
+                    <td>Candidatura Independiente</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Nacional</td>
+                    <td>Estructura del INE (según el cargo)</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro VII, Título III, Cap. I, Art. 381-385.</td>
+                    <td><strong>Sí.</strong> Mismas reglas que los partidos.<br>(Varía por cargo)</td>
+                </tr>
+                <tr>
+                    <td><strong>Candidaturas Independientes (Loc.)</strong></td>
+                    <td>Candidatura Independiente</td>
+                    <td><span class="si-aplica">Sí</span></td>
+                    <td>Local</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115 y 116.</td>
+                    <td><strong>Sí.</strong> Mismas reglas que los partidos locales.<br>(Varía por cargo)</td>
+                </tr>
+                <tr>
+                    <td><strong>Consejeros/as del INE</strong></td>
+                    <td>Autoridad Electoral Administrativa</td>
+                    <td><span class="no-aplica">No (Nombramiento)</span></td>
+                    <td>Nacional</td>
+                    <td>Cámara de Diputados</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Cap. III, Art. 36 y 38.<br><strong>CPEUM</strong>: Art. 41, Base V, Apdo. A.</td>
+                    <td><strong>No.</strong> Único e improrrogable.<br>(9 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Consejeros/as de OPLEs</strong></td>
+                    <td>Autoridad Electoral Administrativa</td>
+                    <td><span class="no-aplica">No (Nombramiento)</span></td>
+                    <td>Local</td>
+                    <td>Consejo General del INE</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título I, Cap. III, Art. 100-101.</td>
+                    <td><strong>No.</strong> Único e improrrogable.<br>(7 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Magistrados/as TEPJF (Sala Superior)</strong></td>
+                    <td>Autoridad Jurisdiccional</td>
+                    <td><span class="no-aplica">No (Nombramiento)</span></td>
+                    <td>Nacional</td>
+                    <td>Cámara de Senadores (propuesta SCJN)</td>
+                    <td class="fundamento"><strong>Ley Orgánica PJF</strong>: Cap. IV, Art. 165 y 167.<br><strong>CPEUM</strong>: Art. 99.</td>
+                    <td><strong>No.</strong> Mandato único.<br>(9 años)</td>
+                </tr>
+                <tr>
+                    <td><strong>Magistrados/as Tribunales Locales</strong></td>
+                    <td>Autoridad Jurisdiccional</td>
+                    <td><span class="no-aplica">No (Nombramiento)</span></td>
+                    <td>Local</td>
+                    <td>Cámara de Senadores</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título II, Cap. I, Art. 106 y 108.</td>
+                    <td><strong>No.</strong> Único e improrrogable.<br>(7 años)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
