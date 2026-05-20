@@ -1,0 +1,99 @@
+:root {
+    --ine-pink: #D5007F;     /* Rosa Institucional del INE */
+    --ine-purple: #5A2A61;   /* Púrpura */
+    --ine-dark: #333333;     
+    --ine-bg-light: #F9F9F9; 
+    --ine-white: #FFFFFF;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--ine-dark);
+    margin: 20px;
+    background-color: #FAFAFA;
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--ine-white);
+    font-size: 13px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--ine-purple);
+    color: var(--ine-white);
+    font-weight: bold;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    border-bottom: 3px solid var(--ine-pink);
+    vertical-align: middle;
+}
+
+/* Estilos de los Selects del Filtro */
+.filtro-select {
+    width: 100%;
+    margin-top: 6px;
+    padding: 4px 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--ine-white);
+    font-size: 11px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filtro-select option {
+    background-color: var(--ine-white);
+    color: var(--ine-dark);
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #E0E0E0;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+/* Efecto Cebrado */
+tbody tr:nth-child(even) {
+    background-color: var(--ine-bg-light);
+}
+
+tbody tr:hover {
+    background-color: #F3ECF5;
+}
+
+/* Badges Estilizados */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.badge.si {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.badge.no {
+    background-color: #FFEBEE;
+    color: #C62828;
+}
+
+.fundamento {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+}
