@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Dinámica de Requisitos de Elegibilidad - INE</title>
+    <link rel="stylesheet" href="estilos-registros.css">
+</head>
+<body>
+
+    <div class="contenedor-tabla">
+        <table id="tabla-requisitos">
+            <thead>
+                <tr>
+                    <th>
+                        Cargo de Elección<br>
+                        <select id="filtro-cargo" class="filtro-select">
+                            <option value="">-- Todos --</option>
+                            <option value="Presidencia">Presidencia</option>
+                            <option value="Senaduría">Senaduría</option>
+                            <option value="Diputación Federal">Diputación Federal</option>
+                            <option value="Gubernatura">Gubernatura</option>
+                            <option value="Diputación Local">Diputación Local</option>
+                            <option value="Ayuntamiento">Ayuntamiento / Alcaldía</option>
+                        </select>
+                    </th>
+                    <th>
+                        Ámbito<br>
+                        <select id="filtro-ambito" class="filtro-select">
+                            <option value="">-- Todos --</option>
+                            <option value="Nacional">Nacional</option>
+                            <option value="Local">Local</option>
+                        </select>
+                    </th>
+                    <th>
+                        Edad Mínima<br>
+                        <select id="filtro-edad" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="18">18 años</option>
+                            <option value="21">21 años</option>
+                            <option value="25">25 años</option>
+                            <option value="30">30 años</option>
+                            <option value="35">35 años</option>
+                        </select>
+                    </th>
+                    <th>Requisito de Nacionalidad</th>
+                    <th>
+                        Residencia Mínima<br>
+                        <select id="filtro-residencia" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="No exige">No exige residencia específica</option>
+                            <option value="6 meses">6 meses efectivos</option>
+                            <option value="1 año">1 año efectivo</option>
+                            <option value="5 años">5 años inmediatos</option>
+                            <option value="20 años">20 años de residencia</option>
+                        </select>
+                    </th>
+                    <th>Restricción de Separación del Cargo (Servidores Públicos / Militares)</th>
+                    <th>Fundamento Legal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-cargo="Presidencia" data-ambito="Nacional" data-edad="35" data-residencia="20 años">
+                    <td><strong>Presidencia de la República</strong></td>
+                    <td>Nacional</td>
+                    <td><span class="badge edad">35 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, hijo de padre o madre mexicanos.</td>
+                    <td>Haber residido en el país durante 20 años y todo el año anterior a la elección.</td>
+                    <td>6 meses antes del día de la elección (Secretarios, Gobernadores, etc.). No ser ministro de culto.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 82.<br><strong>LGIPE</strong>: Libro V.</td>
+                </tr>
+                <tr data-cargo="Senaduría" data-ambito="Nacional" data-edad="25" data-residencia="No exige">
+                    <td><strong>Senadurías</strong></td>
+                    <td>Nacional</td>
+                    <td><span class="badge edad">25 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si se es titular de algún órgano de gobierno o fuerza pública.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 58 y 55.<br><strong>LGIPE</strong>: Libro V.</td>
+                </tr>
+                <tr data-cargo="Diputación Federal" data-ambito="Nacional" data-edad="21" data-residencia="No exige">
+                    <td><strong>Diputaciones Federales</strong></td>
+                    <td>Nacional</td>
+                    <td><span class="badge edad">21 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si ostenta mandos policiales, militares o secretarías estatales.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 55.<br><strong>LGIPE</strong>: Libro V, Art. 7.</td>
+                </tr>
+                <tr data-cargo="Gubernatura" data-ambito="Local" data-edad="30" data-residencia="5 años">
+                    <td><strong>Gubernaturas</strong></td>
+                    <td>Local</td>
+                    <td><span class="badge edad">30 años</span> (Varía según constitución local, máximo constitucional 30).</td>
+                    <td>Mexicano por nacimiento y nativo de la entidad o con residencia.</td>
+                    <td>Residencia efectiva no menor de 5 años inmediatos anteriores al día de la elección.</td>
+                    <td>Variable por estado (comúnmente de 90 a 180 días antes de los comicios).</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. I.<br><strong>Const. Locales</strong>.</td>
+                </tr>
+                <tr data-cargo="Diputación Local" data-ambito="Local" data-edad="18" data-residencia="6 meses">
+                    <td><strong>Diputaciones Locales</strong></td>
+                    <td>Local</td>
+                    <td><span class="badge edad">18 años</span> o 21 según el estado (la Constitución permite desde los 18).</td>
+                    <td>Ciudadano mexicano en pleno ejercicio de sus derechos civiles y políticos.</td>
+                    <td>Vecindad o residencia efectiva en el distrito o estado (usualmente 6 meses o 1 año).</td>
+                    <td>Separación definitiva o licencia temporal entre 90 y 120 días según la legislación de cada entidad.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. II.<br><strong>Leyes Estatales</strong>.</td>
+                </tr>
+                <tr data-cargo="Ayuntamiento" data-ambito="Local" data-edad="18" data-residencia="1 año">
+                    <td><strong>Ayuntamientos / Alcaldías</strong></td>
+                    <td>Local</td>
+                    <td><span class="badge edad">18 años</span> (En la mayoría de los estados para regidurías; 21/25 para alcaldes).</td>
+                    <td>Ciudadano mexicano por nacimiento o naturalización (según normativa local).</td>
+                    <td>Residencia efectiva en el municipio (varía comúnmente entre 6 meses, 1 año o 3 años).</td>
+                    <td>Separación del cargo de manera formal generalmente entre 60 y 90 días previos a la jornada electoral.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 115, Fracc. I.<br><strong>Leyes Estatales</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="registros.js"></script>
+</body>
+</html>
