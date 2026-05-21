@@ -3,41 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Dinámica Responsiva - INE</title>
-    <link rel="stylesheet" href="estilos-registros.css">
+    <title>Tabla Dinámica de Requisitos de Elegibilidad - INE</title>
+    <link rel="stylesheet" href="estilos-requisitos.css">
 </head>
 <body>
 
-    <!-- Contenedor optimizado para scrolling móvil táctil -->
     <div class="contenedor-tabla">
-        <table id="tabla-actores">
+        <table id="tabla-requisitos">
             <thead>
                 <tr>
-                    <th>Actor Político / Autoridad</th>
                     <th>
-                        Tipo de Actor<br>
-                        <select id="filtro-tipo" class="filtro-select">
+                        Cargo de Elección<br>
+                        <select id="filtro-cargo" class="filtro-select">
                             <option value="">-- Todos --</option>
-                            <option value="Partido Político">Partido Político</option>
-                            <option value="Candidatura Independiente">Candidatura Independiente</option>
-                            <option value="Autoridad Electoral Administrativa">Autoridad Electoral Administrativa</option>
-                            <option value="Autoridad Jurisdiccional">Autoridad Jurisdiccional</option>
-                        </select>
-                    </th>
-                    <th>
-                        ¿Aplica Candidatura?<br>
-                        <select id="filtro-candidatura" class="filtro-select">
-                            <option value="">-- Todos --</option>
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
-                        </select>
-                    </th>
-                    <th>
-                        Coalición<br>
-                        <select id="filtro-coalicion" class="filtro-select">
-                            <option value="">-- Todos --</option>
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
+                            <option value="Presidencia">Presidencia</option>
+                            <option value="Senaduría">Senaduría</option>
+                            <option value="Diputación Federal">Diputación Federal</option>
+                            <option value="Gubernatura">Gubernatura</option>
+                            <option value="Diputación Local">Diputación Local</option>
+                            <option value="Ayuntamiento">Ayuntamiento / Alcaldía</option>
                         </select>
                     </th>
                     <th>
@@ -48,156 +32,92 @@
                             <option value="Local">Local</option>
                         </select>
                     </th>
-                    <th>Registro o Nombramiento ante</th>
-                    <th>Fundamento Legal</th>
-                    <th>Duración / Nombramiento</th>
                     <th>
-                        Reelegible<br>
-                        <select id="filtro-reelegible" class="filtro-select">
-                            <option value="">-- Todos --</option>
-                            <option value="SI">SI</option>
-                            <option value="NO">NO</option>
+                        Edad Mínima<br>
+                        <select id="filtro-edad" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="18">18 años</option>
+                            <option value="21">21 años</option>
+                            <option value="25">25 años</option>
+                            <option value="30">30 años</option>
+                            <option value="35">35 años</option>
                         </select>
                     </th>
+                    <th>Requisito de Nacionalidad</th>
+                    <th>
+                        Residencia Mínima<br>
+                        <select id="filtro-residencia" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="No exige">No exige residencia específica</option>
+                            <option value="6 meses">6 meses efectivos</option>
+                            <option value="1 año">1 año efectivo</option>
+                            <option value="5 años">5 años inmediatos</option>
+                            <option value="20 años">20 años de residencia</option>
+                        </select>
+                    </th>
+                    <th>Restricción de Separación del Cargo (Servidores Públicos / Militares)</th>
+                    <th>Fundamento Legal</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="NO">
+                <tr data-cargo="Presidencia" data-ambito="Nacional" data-edad="35" data-residencia="20 años">
                     <td><strong>Presidencia de la República</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Nacional</td>
-                    <td>Consejo General del INE</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 82-84.</td>
-                    <td>6 años</td>
-                    <td><span class="badge no">NO</span></td>
+                    <td><span class="badge edad">35 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, hijo de padre o madre mexicanos.</td>
+                    <td>Haber residido en el país durante 20 años y todo el año anterior a la elección.</td>
+                    <td>6 meses antes del día de la elección (Secretarios, Gobernadores, etc.). No ser ministro de culto.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 82.<br><strong>LGIPE</strong>: Libro V.</td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="SI">
+                <tr data-cargo="Senaduría" data-ambito="Nacional" data-edad="25" data-residencia="No exige">
                     <td><strong>Senadurías</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Nacional</td>
-                    <td>Consejos Locales INE (MR) y Consejo General (RP)</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 56.</td>
-                    <td>6 años</td>
-                    <td><span class="badge si">SI</span></td>
+                    <td><span class="badge edad">25 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si se es titular de algún órgano de gobierno o fuerza pública.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 58 y 55.<br><strong>LGIPE</strong>: Libro V.</td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="SI">
+                <tr data-cargo="Diputación Federal" data-ambito="Nacional" data-edad="21" data-residencia="No exige">
                     <td><strong>Diputaciones Federales</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Nacional</td>
-                    <td>Consejos Distritales (MR) y Consejo General (RP)</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 55.</td>
-                    <td>3 años</td>
-                    <td><span class="badge si">SI</span></td>
+                    <td><span class="badge edad">21 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si ostenta mandos policiales, militares o secretarías estatales.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 55.<br><strong>LGIPE</strong>: Libro V, Art. 7.</td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="NO">
+                <tr data-cargo="Gubernatura" data-ambito="Local" data-edad="30" data-residencia="5 años">
                     <td><strong>Gubernaturas</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Local</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. I.</td>
-                    <td>6 años</td>
-                    <td><span class="badge no">NO</span></td>
+                    <td><span class="badge edad">30 años</span> (Varía según constitución local, máximo constitucional 30).</td>
+                    <td>Mexicano por nacimiento y nativo de la entidad o con residencia.</td>
+                    <td>Residencia efectiva no menor de 5 años inmediatos anteriores al día de la elección.</td>
+                    <td>Variable por estado (comúnmente de 90 a 180 días antes de los comicios).</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. I.<br><strong>Const. Locales</strong>.</td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="SI">
+                <tr data-cargo="Diputación Local" data-ambito="Local" data-edad="18" data-residencia="6 meses">
                     <td><strong>Diputaciones Locales</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Local</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. II.</td>
-                    <td>3 años</td>
-                    <td><span class="badge si">SI</span></td>
+                    <td><span class="badge edad">18 años</span> o 21 según el estado (la Constitución permite desde los 18).</td>
+                    <td>Ciudadano mexicano en pleno ejercicio de sus derechos civiles y políticos.</td>
+                    <td>Vecindad o residencia efectiva en el distrito o estado (usualmente 6 meses o 1 año).</td>
+                    <td>Separación definitiva o licencia temporal entre 90 y 120 días según la legislación de cada entidad.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. II.<br><strong>Leyes Estatales</strong>.</td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="SI">
+                <tr data-cargo="Ayuntamiento" data-ambito="Local" data-edad="18" data-residencia="1 año">
                     <td><strong>Ayuntamientos / Alcaldías</strong></td>
-                    <td>Partido Político</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
                     <td>Local</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115, Fracc. I.</td>
-                    <td>3 años</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="Candidatura Independiente" data-candidatura="SI" data-coalicion="NO" data-ambito="Nacional" data-reelegible="SI">
-                    <td><strong>Candidaturas Independientes (Fed.)</strong></td>
-                    <td>Candidatura Independiente</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>NO</td>
-                    <td>Nacional</td>
-                    <td>Estructura del INE (según el cargo)</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro VII, Título III, Cap. I, Art. 381-385.</td>
-                    <td>Varía por cargo</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="Candidatura Independiente" data-candidatura="SI" data-coalicion="NO" data-ambito="Local" data-reelegible="SI">
-                    <td><strong>Candidaturas Independientes (Loc.)</strong></td>
-                    <td>Candidatura Independiente</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>NO</td>
-                    <td>Local</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115 y 116.</td>
-                    <td>Varía por cargo</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="Autoridad Electoral Administrativa" data-candidatura="NO" data-coalicion="NO" data-ambito="Nacional" data-reelegible="NO">
-                    <td><strong>Consejeros/as del INE</strong></td>
-                    <td>Autoridad Electoral Administrativa</td>
-                    <td><span class="badge no">NO</span></td>
-                    <td>NO</td>
-                    <td>Nacional</td>
-                    <td>Cámara de Diputados</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Cap. III, Art. 36 y 38.<br><strong>CPEUM</strong>: Art. 41, Base V, Apdo. A.</td>
-                    <td>Nombramiento único (9 años)</td>
-                    <td><span class="badge no">NO</span></td>
-                </tr>
-                <tr data-tipo="Autoridad Electoral Administrativa" data-candidatura="NO" data-coalicion="NO" data-ambito="Local" data-reelegible="NO">
-                    <td><strong>Consejeros/as de OPLEs</strong></td>
-                    <td>Autoridad Electoral Administrativa</td>
-                    <td><span class="badge no">NO</span></td>
-                    <td>NO</td>
-                    <td>Local</td>
-                    <td>Consejo General del INE</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título I, Cap. III, Art. 100-101.</td>
-                    <td>Nombramiento único (7 años)</td>
-                    <td><span class="badge no">NO</span></td>
-                </tr>
-                <tr data-tipo="Autoridad Jurisdiccional" data-candidatura="NO" data-coalicion="NO" data-ambito="Nacional" data-reelegible="NO">
-                    <td><strong>Magistrados/as TEPJF (Sala Superior)</strong></td>
-                    <td>Autoridad Jurisdiccional</td>
-                    <td><span class="badge no">NO</span></td>
-                    <td>NO</td>
-                    <td>Nacional</td>
-                    <td>Cámara de Senadores (propuesta SCJN)</td>
-                    <td class="fundamento"><strong>Ley Orgánica PJF</strong>: Cap. IV, Art. 165 y 167.<br><strong>CPEUM</strong>: Art. 99.</td>
-                    <td>Nombramiento único (9 años)</td>
-                    <td><span class="badge no">NO</span></td>
-                </tr>
-                <tr data-tipo="Autoridad Jurisdiccional" data-candidatura="NO" data-coalicion="NO" data-ambito="Local" data-reelegible="NO">
-                    <td><strong>Magistrados/as Tribunales Locales</strong></td>
-                    <td>Autoridad Jurisdiccional</td>
-                    <td><span class="badge no">NO</span></td>
-                    <td>NO</td>
-                    <td>Local</td>
-                    <td>Cámara de Senadores</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título II, Cap. I, Art. 106 y 108.</td>
-                    <td>Nombramiento único (7 años)</td>
-                    <td><span class="badge no">NO</span></td>
+                    <td><span class="badge edad">18 años</span> (En la mayoría de los estados para regidurías; 21/25 para alcaldes).</td>
+                    <td>Ciudadano mexicano por nacimiento o naturalización (según normativa local).</td>
+                    <td>Residencia efectiva en el municipio (varía comúnmente entre 6 meses, 1 año o 3 años).</td>
+                    <td>Separación del cargo de manera formal generalmente entre 60 y 90 días previos a la jornada electoral.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 115, Fracc. I.<br><strong>Leyes Estatales</strong>.</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <script src="registros.js"></script>
+    <script src="requisitos.js"></script>
 </body>
 </html>
