@@ -8,14 +8,18 @@
 </head>
 <body>
 
-    <!-- Selector dinámico de tablas enlazado al XML -->
-    <div class="contenedor-navegacion">
-        <label for="navegador-tablas">Ir a la tabla: </label>
-        <select id="navegador-tablas">
-            <option value="">-- Selecciona una tabla --</option>
-        </select>
-    </div>
+    <!-- Contenedor superior con Título y Menú alineado a la derecha -->
+    <header class="header-tablas">
+        <h1 class="titulo-tabla">Requisitos Constitucionales de Elegibilidad</h1>
+        <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+    </header>
 
+    <!-- Contenedor responsivo sin altura fija -->
     <div class="contenedor-tabla">
         <table id="tabla-dinamica">
             <thead>
@@ -114,6 +118,12 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Footer Institucional en Modo Oscuro -->
+    <footer class="footer-oscuro">
+        <p>Elaborado con G | 2026</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3 (Flexbox &amp; Sticky Layout), JavaScript (ES6+), XML</p>
+    </footer>
 
     <script src="tablas.js"></script>
 </body>
