@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <tabla>
+        <nombre>Home</nombre>
+        <archivo>index.html</archivo>
+    </tabla>
+    <tabla>
+        <nombre>Actores Políticos y Autoridades</nombre>
+        <archivo>actores.html</archivo>
+    </tabla>
+    <tabla>
+        <nombre>Requisitos de Elegibilidad</nombre>
+        <archivo>requisitos.html</archivo>
+    </tabla>
+</menu>

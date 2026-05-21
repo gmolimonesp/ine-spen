@@ -3,25 +3,43 @@
     --ine-purple: #5A2A61;   
     --ine-dark: #333333;     
     --ine-white: #FFFFFF;
-    
-    /* Colores ajustados para mayor contraste en pantalla */
-    --ine-cebrado-dark: #F2F2F2;    /* Gris más visible para filas alternas */
-    --ine-hover-dark: #E1D2E6;      /* Fondo de hover más oscuro y distinguible */
-    --ine-border-dark: #1A1A1A;     /* Borde final de la tabla */
+    --ine-cebrado-dark: #F2F2F2;    
+    --ine-hover-dark: #E1D2E6;      
+    --ine-border-final: #1A1A1A;    
 }
 
 body {
     font-family: 'Arial', sans-serif;
     color: var(--ine-dark);
-    margin: 10px;
+    margin: 15px;
     background-color: #FAFAFA;
 }
 
+/* Área de Navegación XML */
+.contenedor-navegacion {
+    margin-bottom: 15px;
+    background-color: var(--ine-white);
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--ine-pink);
+}
+
+.contenedor-navegacion select {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    font-size: 13px;
+    color: var(--ine-dark);
+    outline: none;
+}
+
+/* Contenedor de la Tabla con Encabezado Fijo */
 .contenedor-tabla {
     width: 100%;
-    max-height: 550px; /* Mantiene el encabezado fijo con scroll vertical */
-    overflow-y: auto;  
-    overflow-x: auto;  /* Scroll horizontal responsivo */
+    max-height: 550px; 
+    overflow-y: auto;  /* El contenido se desplaza verticalmente */
+    overflow-x: auto;  /* Scroll responsivo horizontal */
     -webkit-overflow-scrolling: touch;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -36,15 +54,12 @@ table {
     text-align: left;
 }
 
-table td:nth-child(1),
-table td:nth-child(4),
-table td:nth-child(5),
-table td:nth-child(6) {
+table td {
     white-space: normal;
-    min-width: 180px;
+    min-width: 150px;
 }
 
-/* Encabezado Fijo (Sticky) */
+/* Solo el Encabezado queda Fijo en la parte superior */
 th {
     position: sticky;
     top: 0;
@@ -70,7 +85,6 @@ th {
     color: var(--ine-white);
     font-size: 11px;
     outline: none;
-    cursor: pointer;
 }
 
 .filtro-select option {
@@ -80,56 +94,42 @@ th {
 
 td {
     padding: 12px 10px;
-    border-bottom: 1px solid #D0D0D0; /* Línea divisoria ligeramente más marcada */
+    border-bottom: 1px solid #D0D0D0; 
     line-height: 1.4;
     vertical-align: middle;
 }
 
-/* Efecto Cebrado con alto contraste */
+/* Homologación del Cebrado de Alto Contraste */
 tbody tr:nth-child(even) {
-    background-color: var(--ine-cebrado-dark); /* Gris oscuro alterno */
+    background-color: var(--ine-cebrado-dark);
 }
 
 tbody tr:nth-child(odd) {
-    background-color: var(--ine-white); /* Blanco puro */
+    background-color: var(--ine-white);
 }
 
-/* Efecto Hover oscurecido para distinguir la selección con claridad */
 tbody tr:hover {
     background-color: var(--ine-hover-dark);
 }
 
-/* Borde inferior oscuro para marcar el final de la tabla */
+/* Borde final oscuro unificado */
 tbody tr:last-child td {
-    border-bottom: 5px solid var(--ine-border-dark);
+    border-bottom: 5px solid var(--ine-border-final);
 }
 
-.badge.edad {
+/* Elementos comunes de ambas tablas */
+.badge {
     display: inline-block;
-    padding: 3px 6px;
+    padding: 3px 8px;
     border-radius: 4px;
     font-weight: bold;
     font-size: 11px;
-    background-color: #E8F5E9;
-    color: #2E7D32;
-    border: 1px solid #C8E6C9;
 }
-
-.fundamento {
-    font-family: 'Courier New', monospace;
-    font-size: 11px;
-    font-weight: bold;
-}
+.badge.si, .badge.edad { background-color: #E8F5E9; color: #2E7D32; }
+.badge.no { background-color: #FFEBEE; color: #C62828; }
+.fundamento { font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
 
 @media screen and (max-width: 768px) {
-    body {
-        margin: 5px;
-    }
-    table {
-        font-size: 12px;
-    }
-    .filtro-select {
-        font-size: 12px;
-        padding: 8px 4px;
-    }
+    table { font-size: 12px; }
+    .filtro-select { font-size: 12px; padding: 8px 4px; }
 }

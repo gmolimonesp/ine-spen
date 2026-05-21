@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla Dinámica Responsiva - INE</title>
-    <link rel="stylesheet" href="estilos-registros.css">
+    <title>Actores Políticos y Autoridades - INE</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
 </head>
 <body>
 
-    <!-- Contenedor optimizado para scrolling móvil táctil -->
+    <!-- Selector dinámico de tablas enlazado al XML -->
+    <div class="contenedor-navegacion">
+        <label for="navegador-tablas">Ir a la tabla: </label>
+        <select id="navegador-tablas">
+            <option value="">-- Selecciona una tabla --</option>
+        </select>
+    </div>
+
     <div class="contenedor-tabla">
-        <table id="tabla-actores">
+        <table id="tabla-dinamica">
             <thead>
                 <tr>
                     <th>Actor Político / Autoridad</th>
@@ -198,6 +205,6 @@
         </table>
     </div>
 
-    <script src="registros.js"></script>
+    <script src="tablas.js"></script>
 </body>
 </html>
