@@ -1,12 +1,12 @@
 :root {
-    --ine-pink: #D5007F;     /* Rosa Institucional */
-    --ine-purple: #5A2A61;   /* Púrpura Institucional */
-    --ine-dark: #333333;     
+    --ine-pink: #D5007F;     /* Rosa Institucional del INE */
+    --ine-purple: #5A2A61;   /* Púrpura Institucional del INE */
+    --ine-dark: #333333;     /* Gris Oscuro para Texto */
     --ine-white: #FFFFFF;
-    --ine-cebrado-dark: #F2F2F2;    
-    --ine-hover-dark: #E1D2E6;      
-    --ine-border-final: #1A1A1A;    
-    --ine-footer-bg: #222222;       
+    --ine-cebrado-dark: #F2F2F2;    /* Gris visible para filas alternas */
+    --ine-hover-dark: #E1D2E6;      /* Fondo de hover más oscuro y distinguible */
+    --ine-border-final: #1A1A1A;    /* Borde final de la tabla */
+    --ine-footer-bg: #222222;       /* Fondo oscuro para el Footer */
 }
 
 html, body {
@@ -15,6 +15,7 @@ html, body {
     background-color: #FAFAFA;
     font-family: 'Arial', sans-serif;
     color: var(--ine-dark);
+    width: 100%;
 }
 
 body {
@@ -23,17 +24,19 @@ body {
     min-height: 100vh;
 }
 
-/* --- SOLUCIÓN: Centrado al 96% con márgenes laterales idénticos y simétricos --- */
+/* --- Contenedor Global al 96% de la pantalla real --- */
 .area-de-estudio {
     width: 96%;
     max-width: 96%; 
-    margin: 0 auto; /* Genera el mismo espaciado simétrico a derecha e izquierda */
+    margin: 0 auto; 
     padding: 20px 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
-/* Encabezado superior */
+/* Encabezado superior (Título + Selector) */
 .header-tablas {
     display: flex;
     justify-content: space-between;
@@ -43,6 +46,7 @@ body {
     box-sizing: border-box;
     flex-wrap: wrap;
     gap: 15px;
+    width: 100%;
 }
 
 .titulo-tabla {
@@ -74,26 +78,33 @@ body {
     outline: none;
 }
 
-/* Estructura de la Tabla (Cabeceras fijas de pantalla) */
+/* --- SOLUCIÓN: Caja contenedora que absorbe el scroll de forma aislada --- */
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto; /* Activa el desplazamiento horizontal de forma limpia */
+    -webkit-overflow-scrolling: touch; /* Scroll suave táctil en iOS/Android */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+/* --- SOLUCIÓN: Ancho mínimo forzado para máxima legibilidad --- */
 table {
     width: 100%;
+    min-width: 1200px; /* Evita que las columnas se aplasten en pantallas chicas */
     border-collapse: separate; 
     border-spacing: 0;
     background-color: var(--ine-white);
     font-size: 13px;
     text-align: left;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    overflow: hidden; 
 }
 
 table td {
-    white-space: normal;
-    min-width: 130px; 
+    white-space: normal; /* Permite saltos de línea ordenados en textos largos */
+    padding: 14px 10px;
 }
 
-/* Viñetas internas */
+/* Viñetas internas de las celdas */
 .lista-celda {
     margin: 0;
     padding-left: 14px;
@@ -107,7 +118,7 @@ table td {
     margin-bottom: 0;
 }
 
-/* Cabeceras de columna fijas nativas */
+/* Cabeceras de columna fijas nativas (Sticky al desplazar verticalmente) */
 thead th {
     position: sticky;
     top: 0; 
@@ -147,17 +158,17 @@ td {
     vertical-align: middle;
 }
 
-/* --- SOLUCIÓN CABECERAS DE DESCANSO: Mayúsculas, negritas, fondo fijo opaco completo --- */
+/* Cabeceras de Descanso Horizontales (Tríada Cromática INE) */
 .cabecera-descanso {
-    background-color: #4A1E51 !important; /* Fondo púrpura fijo opaco en toda la fila */
+    background-color: #4A1E51 !important; 
     color: #FFFFFF !important;
     font-family: 'Arial', sans-serif;
     font-size: 13px !important;
-    font-weight: bold !important; /* Estilo negrita explícito */
-    text-transform: uppercase !important; /* Estilo mayúsculas explícito */
+    font-weight: bold !important; 
+    text-transform: uppercase !important; 
     letter-spacing: 1px;
     padding: 14px 15px !important;
-    border-top: 4px solid var(--ine-pink) !important; /* Tríada: Rosa Vibrante */
+    border-top: 4px solid var(--ine-pink) !important; 
     border-bottom: 2px solid #1A1A1A !important;
     text-align: left;
 }
@@ -179,7 +190,7 @@ tbody tr:last-child td {
     border-bottom: 5px solid var(--ine-border-final);
 }
 
-/* Componentes gráficos adicionales */
+/* Badges destacados */
 .badge {
     display: inline-block;
     padding: 3px 8px;
@@ -192,21 +203,17 @@ tbody tr:last-child td {
 .badge.no { background-color: #FFEBEE; color: #C62828; }
 .fundamento { font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
 
-/* Footer Oscuro */
-/* --- SOLUCIÓN: Footer al 100% real en scroll horizontal (Móvil/Tablet) --- */
+/* --- Footer al 100% de la pantalla fija sin sufrir cortes --- */
 .footer-oscuro {
     background-color: var(--ine-footer-bg);
     color: #BBBBBB;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     font-size: 13px;
     border-top: 3px solid var(--ine-pink);
     margin-top: auto; 
-    
-    /* Reglas añadidas para forzar el ancho total del scroll de la tabla */
     width: 100%;
     box-sizing: border-box;
-    display: inline-block; /* Permite que herede el ancho extendido del contenedor */
 }
 
 .footer-oscuro p {
@@ -218,19 +225,24 @@ tbody tr:last-child td {
     color: #888888;
 }
 
-/* Ajustes Responsivos */
-@media screen and (max-width: 992px) {
-    .area-de-estudio { max-width: 98%; width: 98%; }
-}
-
+/* Ajustes Responsivos Móviles */
 @media screen and (max-width: 768px) {
     .area-de-estudio { 
-        max-width: 98%; 
-        width: 98%; 
-        padding: 10px 0;
-        display: inline-table; /* Fuerza al contenedor y al footer a expandirse juntos */
+        max-width: 96%; 
+        width: 96%; 
     }
-    .header-tablas { padding: 10px 0; }
-    table { font-size: 12px; }
+    .header-tablas { 
+        padding: 10px 0; 
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contenedor-navegacion {
+        width: 100%;
+    }
+    .contenedor-navegacion select {
+        width: 100%;
+    }
+    table { 
+        font-size: 12px; 
+    }
 }
-
