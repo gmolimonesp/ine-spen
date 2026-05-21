@@ -24,4 +24,8 @@
         <nombre>Estructura de PP y CI</nombre>
         <archivo>organizaciones.html</archivo>
     </tabla>
+    <tabla>
+        <nombre>Sistema de Medios de Impugnación</nombre>
+        <archivo>impugnaciones.html</archivo>
+    </tabla>
 </menu>
