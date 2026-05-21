@@ -148,7 +148,8 @@ $ley_actual_id = isset($_GET['ley']) ? intval($_GET['ley']) : (!empty($leyes_dis
             <?php for($b=1; $b<=7; $b++): ?>
                 <div id="libro<?php echo $b; ?>" class="book-content <?php echo $b===1?'active':''; ?>">
                     <?php
-                    $stmt = $pdo->prepare("SELECT * FROM articulos WHERE ley_id = ? AND libro_numero = ? ORDER BY id ASC");
+                    /*$stmt = $pdo->prepare("SELECT * FROM articulos WHERE ley_id = ? AND libro_numero = ? ORDER BY id ASC");*/
+                    $stmt = $pdo->prepare("SELECT * FROM articulos WHERE ley_id = ? AND libro_numero = ? ORDER BY libro_numero ASC, cabecera_descanso ASC, CAST(REGEXP_SUBSTR(articulo_numero, '[0-9]+') AS UNSIGNED) ASC, articulo_numero ASC");
                     $stmt->execute([$ley_actual_id, $b]);
                     $articulos = $stmt->fetchAll();
                     
