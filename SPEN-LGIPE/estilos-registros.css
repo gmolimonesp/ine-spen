@@ -2,9 +2,12 @@
     --ine-pink: #D5007F;     
     --ine-purple: #5A2A61;   
     --ine-dark: #333333;     
-    --ine-bg-light: #F5F5F5; /* Color gris leve para el efecto cebrado solicitado */
     --ine-white: #FFFFFF;
-    --ine-border-dark: #1A1A1A; /* Color oscuro para el borde final de la tabla */
+    
+    /* Colores ajustados para mayor contraste en pantalla */
+    --ine-cebrado-dark: #F2F2F2;    /* Gris más visible para filas alternas */
+    --ine-hover-dark: #E1D2E6;      /* Fondo de hover más oscuro y distinguible */
+    --ine-border-dark: #1A1A1A;     /* Borde final de la tabla */
 }
 
 body {
@@ -16,9 +19,9 @@ body {
 
 .contenedor-tabla {
     width: 100%;
-    max-height: 550px; /* Altura máxima para habilitar el scroll con encabezado fijo */
-    overflow-y: auto;  /* Scroll vertical para mantener fijo el header */
-    overflow-x: auto;  /* Scroll horizontal responsivo en pantallas chicas */
+    max-height: 550px; /* Mantiene el encabezado fijo con scroll vertical */
+    overflow-y: auto;  
+    overflow-x: auto;  /* Scroll horizontal responsivo */
     -webkit-overflow-scrolling: touch;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -26,7 +29,7 @@ body {
 
 table {
     width: 100%;
-    border-collapse: separate; /* Cambiado a separate para evitar parpadeos con sticky */
+    border-collapse: separate; 
     border-spacing: 0;
     background-color: var(--ine-white);
     font-size: 13px;
@@ -45,7 +48,7 @@ table td:nth-child(6) {
 th {
     position: sticky;
     top: 0;
-    z-index: 10; /* Asegura que se mantenga por encima de las celdas al hacer zoom o scroll */
+    z-index: 10; 
     background-color: var(--ine-purple);
     color: var(--ine-white);
     font-weight: bold;
@@ -77,27 +80,28 @@ th {
 
 td {
     padding: 12px 10px;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #D0D0D0; /* Línea divisoria ligeramente más marcada */
     line-height: 1.4;
     vertical-align: middle;
 }
 
-/* Efecto Cebrado Explícito con :nth-child(even) */
+/* Efecto Cebrado con alto contraste */
 tbody tr:nth-child(even) {
-    background-color: var(--ine-bg-light);
+    background-color: var(--ine-cebrado-dark); /* Gris oscuro alterno */
 }
 
 tbody tr:nth-child(odd) {
-    background-color: var(--ine-white);
+    background-color: var(--ine-white); /* Blanco puro */
 }
 
+/* Efecto Hover oscurecido para distinguir la selección con claridad */
 tbody tr:hover {
-    background-color: #EFE4F2;
+    background-color: var(--ine-hover-dark);
 }
 
-/* Borde inferior oscuro para marcar de forma clara el final de la tabla */
+/* Borde inferior oscuro para marcar el final de la tabla */
 tbody tr:last-child td {
-    border-bottom: 4px solid var(--ine-border-dark);
+    border-bottom: 5px solid var(--ine-border-dark);
 }
 
 .badge.edad {
