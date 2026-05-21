@@ -193,6 +193,7 @@ tbody tr:last-child td {
 .fundamento { font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
 
 /* Footer Oscuro */
+/* --- SOLUCIÓN: Footer al 100% real en scroll horizontal (Móvil/Tablet) --- */
 .footer-oscuro {
     background-color: var(--ine-footer-bg);
     color: #BBBBBB;
@@ -201,6 +202,11 @@ tbody tr:last-child td {
     font-size: 13px;
     border-top: 3px solid var(--ine-pink);
     margin-top: auto; 
+    
+    /* Reglas añadidas para forzar el ancho total del scroll de la tabla */
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block; /* Permite que herede el ancho extendido del contenedor */
 }
 
 .footer-oscuro p {
@@ -218,6 +224,13 @@ tbody tr:last-child td {
 }
 
 @media screen and (max-width: 768px) {
+    .area-de-estudio { 
+        max-width: 98%; 
+        width: 98%; 
+        padding: 10px 0;
+        display: inline-table; /* Fuerza al contenedor y al footer a expandirse juntos */
+    }
     .header-tablas { padding: 10px 0; }
     table { font-size: 12px; }
 }
+
