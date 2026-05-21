@@ -19,9 +19,7 @@ html, body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    display: block; /* Cambiado de flex a block para evitar el empuje artificial del footer */
 }
 
 /* --- Contenedor Global al 96% de la pantalla real --- */
@@ -29,11 +27,8 @@ body {
     width: 96%;
     max-width: 96%; 
     margin: 0 auto; 
-    padding: 20px 0;
+    padding: 20px 0 0 0; /* Eliminado el padding inferior para recortar espacios */
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 }
 
 /* Encabezado superior (Título + Selector) */
@@ -78,20 +73,20 @@ body {
     outline: none;
 }
 
-/* --- SOLUCIÓN: Caja contenedora que absorbe el scroll de forma aislada --- */
+/* --- Caja contenedora que absorbe el scroll de forma aislada --- */
 .contenedor-tabla {
     width: 100%;
-    overflow-x: auto; /* Activa el desplazamiento horizontal de forma limpia */
-    -webkit-overflow-scrolling: touch; /* Scroll suave táctil en iOS/Android */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reducido el margen de separación con el footer */
 }
 
-/* --- SOLUCIÓN: Ancho mínimo forzado para máxima legibilidad --- */
+/* --- Ancho mínimo forzado para máxima legibilidad --- */
 table {
     width: 100%;
-    min-width: 1200px; /* Evita que las columnas se aplasten en pantallas chicas */
+    min-width: 1200px; 
     border-collapse: separate; 
     border-spacing: 0;
     background-color: var(--ine-white);
@@ -100,7 +95,7 @@ table {
 }
 
 table td {
-    white-space: normal; /* Permite saltos de línea ordenados en textos largos */
+    white-space: normal; 
     padding: 14px 10px;
 }
 
@@ -203,7 +198,7 @@ tbody tr:last-child td {
 .badge.no { background-color: #FFEBEE; color: #C62828; }
 .fundamento { font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
 
-/* --- Footer al 100% de la pantalla fija sin sufrir cortes --- */
+/* --- SOLUCIÓN ACTUALIZADA: El Footer se acopla inmediatamente debajo de la tabla --- */
 .footer-oscuro {
     background-color: var(--ine-footer-bg);
     color: #BBBBBB;
@@ -211,9 +206,9 @@ tbody tr:last-child td {
     text-align: center;
     font-size: 13px;
     border-top: 3px solid var(--ine-pink);
-    margin-top: auto; 
     width: 100%;
     box-sizing: border-box;
+    margin-top: 10px; /* Reducido al mínimo para evitar huecos en blanco */
 }
 
 .footer-oscuro p {
