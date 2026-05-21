@@ -8,19 +8,19 @@
 </head>
 <body>
 
-    <!-- Contenedor superior con Título y Menú alineado a la derecha -->
-    <header class="header-tablas">
-        <h1 class="titulo-tabla">Actores Políticos y Autoridades Electorales</h1>
-        <div class="contenedor-navegacion">
-            <label for="navegador-tablas">Ir a la tabla: </label>
-            <select id="navegador-tablas">
-                <option value="">-- Selecciona una tabla --</option>
-            </select>
-        </div>
-    </header>
+    <!-- Contenedor global de centrado y márgenes laterales -->
+    <div class="area-de-estudio">
 
-    <!-- Contenedor responsivo sin altura fija -->
-    <div class="contenedor-tabla">
+        <header class="header-tablas">
+            <h1 class="titulo-tabla">Actores Políticos y Autoridades Electorales</h1>
+            <div class="contenedor-navegacion">
+                <label for="navegador-tablas">Ir a la tabla: </label>
+                <select id="navegador-tablas">
+                    <option value="">-- Selecciona una tabla --</option>
+                </select>
+            </div>
+        </header>
+
         <table id="tabla-dinamica">
             <thead>
                 <tr>
@@ -29,10 +29,11 @@
                         Tipo de Actor<br>
                         <select id="filtro-tipo" class="filtro-select">
                             <option value="">-- Todos --</option>
-                            <option value="Partido Político">Partido Político</option>
-                            <option value="Candidatura Independiente">Candidatura Independiente</option>
-                            <option value="Autoridad Electoral Administrativa">Autoridad Electoral Administrativa</option>
-                            <option value="Autoridad Jurisdiccional">Autoridad Jurisdiccional</option>
+                            <option value="PP">PP</option>
+                            <option value="CIF">CIF</option>
+                            <option value="CIL">CIL</option>
+                            <option value="AEA">AEA</option>
+                            <option value="AJ">AJ</option>
                         </select>
                     </th>
                     <th>
@@ -55,8 +56,8 @@
                         Ámbito<br>
                         <select id="filtro-ambito" class="filtro-select">
                             <option value="">-- Todos --</option>
-                            <option value="Nacional">Nacional</option>
-                            <option value="Local">Local</option>
+                            <option value="NAL">NAL</option>
+                            <option value="LOC">LOC</option>
                         </select>
                     </th>
                     <th>Registro o Nombramiento ante</th>
@@ -73,133 +74,133 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="NO">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="NO">
                     <td><strong>Presidencia de la República</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Consejo General del INE</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 82-84.</td>
                     <td>6 años</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="SI">
                     <td><strong>Senadurías</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Consejos Locales INE (MR) y Consejo General (RP)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 56.</td>
                     <td>6 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Nacional" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="SI">
                     <td><strong>Diputaciones Federales</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Consejos Distritales (MR) y Consejo General (RP)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 55.</td>
                     <td>3 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="NO">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="NO">
                     <td><strong>Gubernaturas</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Instituto Electoral Local (OPLE)</td>
                     <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. I.</td>
                     <td>6 años</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="SI">
                     <td><strong>Diputaciones Locales</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Instituto Electoral Local (OPLE)</td>
                     <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. II.</td>
                     <td>3 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Partido Político" data-candidatura="SI" data-coalicion="SI" data-ambito="Local" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="SI">
                     <td><strong>Ayuntamientos / Alcaldías</strong></td>
-                    <td>Partido Político</td>
+                    <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Instituto Electoral Local (OPLE)</td>
                     <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115, Fracc. I.</td>
                     <td>3 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Candidatura Independiente" data-candidatura="SI" data-coalicion="NO" data-ambito="Nacional" data-reelegible="SI">
+                <tr data-tipo="CIF" data-candidatura="SI" data-coalicion="NO" data-ambito="NAL" data-reelegible="SI">
                     <td><strong>Candidaturas Independientes (Fed.)</strong></td>
-                    <td>Candidatura Independiente</td>
+                    <td>CIF</td>
                     <td><span class="badge si">SI</span></td>
                     <td>NO</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Estructura del INE (según el cargo)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro VII, Título III, Cap. I, Art. 381-385.</td>
                     <td>Varía por cargo</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Candidatura Independiente" data-candidatura="SI" data-coalicion="NO" data-ambito="Local" data-reelegible="SI">
+                <tr data-tipo="CIL" data-candidatura="SI" data-coalicion="NO" data-ambito="LOC" data-reelegible="SI">
                     <td><strong>Candidaturas Independientes (Loc.)</strong></td>
-                    <td>Candidatura Independiente</td>
+                    <td>CIL</td>
                     <td><span class="badge si">SI</span></td>
                     <td>NO</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Instituto Electoral Local (OPLE)</td>
                     <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115 y 116.</td>
                     <td>Varía por cargo</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="Autoridad Electoral Administrativa" data-candidatura="NO" data-coalicion="NO" data-ambito="Nacional" data-reelegible="NO">
+                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-ambito="NAL" data-reelegible="NO">
                     <td><strong>Consejeros/as del INE</strong></td>
-                    <td>Autoridad Electoral Administrativa</td>
+                    <td>AEA</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Cámara de Diputados</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro III, Cap. III, Art. 36 y 38.<br><strong>CPEUM</strong>: Art. 41, Base V, Apdo. A.</td>
                     <td>Nombramiento único (9 años)</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="Autoridad Electoral Administrativa" data-candidatura="NO" data-coalicion="NO" data-ambito="Local" data-reelegible="NO">
+                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-ambito="LOC" data-reelegible="NO">
                     <td><strong>Consejeros/as de OPLEs</strong></td>
-                    <td>Autoridad Electoral Administrativa</td>
+                    <td>AEA</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Consejo General del INE</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título I, Cap. III, Art. 100-101.</td>
                     <td>Nombramiento único (7 años)</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="Autoridad Jurisdiccional" data-candidatura="NO" data-coalicion="NO" data-ambito="Nacional" data-reelegible="NO">
+                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-ambito="NAL" data-reelegible="NO">
                     <td><strong>Magistrados/as TEPJF (Sala Superior)</strong></td>
-                    <td>Autoridad Jurisdiccional</td>
+                    <td>AJ</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>Nacional</td>
+                    <td>NAL</td>
                     <td>Cámara de Senadores (propuesta SCJN)</td>
                     <td class="fundamento"><strong>Ley Orgánica PJF</strong>: Cap. IV, Art. 165 y 167.<br><strong>CPEUM</strong>: Art. 99.</td>
                     <td>Nombramiento único (9 años)</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="Autoridad Jurisdiccional" data-candidatura="NO" data-coalicion="NO" data-ambito="Local" data-reelegible="NO">
+                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-ambito="LOC" data-reelegible="NO">
                     <td><strong>Magistrados/as Tribunales Locales</strong></td>
-                    <td>Autoridad Jurisdiccional</td>
+                    <td>AJ</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>Local</td>
+                    <td>LOC</td>
                     <td>Cámara de Senadores</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título II, Cap. I, Art. 106 y 108.</td>
                     <td>Nombramiento único (7 años)</td>
@@ -207,12 +208,12 @@
                 </tr>
             </tbody>
         </table>
-    </div>
 
-    <!-- Footer Institucional en Modo Oscuro -->
+    </div> <!-- Cierre del área de estudio -->
+
     <footer class="footer-oscuro">
         <p>Elaborado con G | 2026</p>
-        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3 (Flexbox &amp; Sticky Layout), JavaScript (ES6+), XML</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3, JavaScript (ES6+), XML</p>
     </footer>
 
     <script src="tablas.js"></script>

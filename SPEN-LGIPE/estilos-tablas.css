@@ -1,32 +1,47 @@
 :root {
-    --ine-pink: #D5007F;     /* Rosa Institucional del INE */
-    --ine-purple: #5A2A61;   /* Púrpura Institucional del INE */
-    --ine-dark: #333333;     /* Gris Oscuro para Texto */
+    --ine-pink: #D5007F;     
+    --ine-purple: #5A2A61;   
+    --ine-dark: #333333;     
     --ine-white: #FFFFFF;
-    --ine-cebrado-dark: #F2F2F2;    /* Gris visible para filas alternas */
-    --ine-hover-dark: #E1D2E6;      /* Fondo de hover más oscuro y distinguible */
-    --ine-border-final: #1A1A1A;    /* Borde final de la tabla */
-    --ine-footer-bg: #222222;       /* Fondo oscuro para el Footer */
+    --ine-cebrado-dark: #F2F2F2;    
+    --ine-hover-dark: #E1D2E6;      
+    --ine-border-final: #1A1A1A;    
+    --ine-footer-bg: #222222;       
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-family: 'Arial', sans-serif;
+    color: var(--ine-dark);
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    color: var(--ine-dark);
-    margin: 0; 
-    padding: 20px;
-    background-color: #FAFAFA;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Permite que el footer se mantenga al fondo si hay poco contenido */
+    min-height: 100vh;
 }
 
-/* --- Estructura del Encabezado (Título + Menú derecho) --- */
+/* --- Contenedor que centra la tabla y da espacio a izquierda y derecha --- */
+.area-de-estudio {
+    width: 100%;
+    max-width: 85%; /* Limita el ancho al 85% de la pantalla */
+    margin: 0 auto; /* Centra la estructura horizontalmente */
+    padding: 20px 0;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* Encabezado superior (Título + Menú) */
 .header-tablas {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap; /* Soporte responsivo para móviles */
+    padding: 10px 0 20px 0;
+    background-color: #FAFAFA;
+    box-sizing: border-box;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -38,7 +53,6 @@ body {
     padding-left: 12px;
 }
 
-/* --- Ajuste de la navegación superior derecha --- */
 .contenedor-navegacion {
     background-color: var(--ine-white);
     padding: 10px 15px;
@@ -60,17 +74,7 @@ body {
     outline: none;
 }
 
-/* --- Contenedor de la Tabla (Desplazamiento normal con Header Fijo) --- */
-.contenedor-tabla {
-    width: 100%;
-    overflow-x: auto;  /* Scroll horizontal responsivo en pantallas móviles */
-    -webkit-overflow-scrolling: touch;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    margin-bottom: 40px; /* Separación con el footer */
-    flex: 1; /* Permite que la tabla ocupe el espacio disponible */
-}
-
+/* Estructura de la Tabla (Cabeceras fijas globales) */
 table {
     width: 100%;
     border-collapse: separate; 
@@ -78,22 +82,26 @@ table {
     background-color: var(--ine-white);
     font-size: 13px;
     text-align: left;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden; /* Mantiene las esquinas redondeadas limpias */
 }
 
 table td {
     white-space: normal;
-    min-width: 150px;
+    min-width: 130px; /* Reducido ligeramente gracias a las siglas */
 }
 
-/* --- El encabezado queda fijo con respecto al scroll del navegador completo --- */
-th {
+/* Cabeceras estrictamente fijas a la pantalla */
+thead th {
     position: sticky;
-    top: 0;
-    z-index: 10; 
-    background-color: var(--ine-purple);
+    top: 0; 
+    z-index: 100; 
+    background-color: var(--ine-purple) !important; 
     color: var(--ine-white);
     font-weight: bold;
-    padding: 12px 10px;
+    padding: 14px 10px;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 0.3px;
@@ -119,32 +127,30 @@ th {
 }
 
 td {
-    padding: 12px 10px;
-    border-bottom: 1px solid #D0D0D0; /* Línea divisoria marcada */
+    padding: 14px 10px;
+    border-bottom: 1px solid #D0D0D0; 
     line-height: 1.4;
     vertical-align: middle;
 }
 
-/* --- Homologación del Cebrado de Alto Contraste --- */
+/* Cebrado unificado de alto contraste */
 tbody tr:nth-child(even) {
-    background-color: var(--ine-cebrado-dark); /* Gris oscuro alterno */
+    background-color: var(--ine-cebrado-dark); 
 }
 
 tbody tr:nth-child(odd) {
-    background-color: var(--ine-white); /* Blanco puro */
+    background-color: var(--ine-white); 
 }
 
-/* --- Efecto Hover oscurecido para distinguir la selección --- */
 tbody tr:hover {
     background-color: var(--ine-hover-dark);
 }
 
-/* --- Borde final oscuro unificado --- */
 tbody tr:last-child td {
     border-bottom: 5px solid var(--ine-border-final);
 }
 
-/* --- Elementos comunes de diseño (Badges y Fuentes) --- */
+/* Elementos gráficos */
 .badge {
     display: inline-block;
     padding: 3px 8px;
@@ -169,7 +175,7 @@ tbody tr:last-child td {
     font-weight: bold; 
 }
 
-/* --- Estilo del Footer en Modo Oscuro --- */
+/* Footer Oscuro */
 .footer-oscuro {
     background-color: var(--ine-footer-bg);
     color: #BBBBBB;
@@ -177,8 +183,7 @@ tbody tr:last-child td {
     text-align: center;
     font-size: 13px;
     border-top: 3px solid var(--ine-pink);
-    margin-top: auto; /* Lo ancla al final de la página si el contenido es corto */
-    border-radius: 6px 6px 0 0;
+    margin-top: auto; 
 }
 
 .footer-oscuro p {
@@ -190,23 +195,22 @@ tbody tr:last-child td {
     color: #888888;
 }
 
-/* --- Ajustes de Media Queries para Tablets y Móviles --- */
+/* Ajustes Responsivos */
+@media screen and (max-width: 992px) {
+    .area-de-estudio {
+        max-width: 95%; /* Da más espacio en pantallas medianas o tablets */
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .area-de-estudio {
+        max-width: 98%; 
+        padding: 10px 0;
+    }
     .header-tablas {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .contenedor-navegacion {
-        width: 100%;
-    }
-    .contenedor-navegacion select {
-        width: 100%;
+        padding: 10px 0;
     }
     table { 
         font-size: 12px; 
-    }
-    .filtro-select { 
-        font-size: 12px; 
-        padding: 8px 4px; 
     }
 }
