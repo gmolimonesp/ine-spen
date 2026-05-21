@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Comparativo de Procesos - INE</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+
+    <div class="area-de-estudio">
+
+        <header class="header-tablas">
+            <h1 class="titulo-tabla">Análisis Comparativo de Procesos y Mecanismos</h1>
+            <div class="contenedor-navegacion">
+                <label for="navegador-tablas">Ir a la tabla: </label>
+                <select id="navegador-tablas">
+                    <option value="">-- Selecciona una tabla --</option>
+                </select>
+            </div>
+        </header>
+
+        <table id="tabla-dinamica">
+            <thead>
+                <tr>
+                    <th>Mecanismo</th>
+                    <th>Plazos Clave</th>
+                    <th>Activación (LN)</th>
+                    <th>Opciones Boleta</th>
+                    <th>Mesa Directiva de Casilla</th>
+                    <th>Atribución Exclusiva INE</th>
+                    <th>Atribución Exclusiva OPLE</th>
+                    <th>Vinculatoriedad</th>
+                    <th>Veda / Medios</th>
+                    <th>Fundamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- ================= CABECERA DE DESCANSO 1 ================= -->
+                <tr>
+                    <td colspan="10" class="cabecera-descanso">
+                        汇 PROCESOS ELECTORALES CONSTITUCIONALES ORDINARIOS FEDERALES [CONVOCANTE: INE]
+                    </td>
+                </tr>
+
+                <tr data-tipo="PEF">
+                    <td><strong>PEF</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Inicio:</strong> Septiembre del año previo a la elección.</li>
+                            <li><strong>Registro Candidaturas:</strong> Febrero-Marzo del año de la elección.</li>
+                            <li><strong>Campañas:</strong> 60 a 90 días (según cargo).</li>
+                        </ul>
+                    </td>
+                    <td>Automática por mandato constitucional (renovación periódica de poderes).</td>
+                    <td>Casillas con logotipos individuales por partido político, coaliciones de partidos y recuadros exclusivos para candidaturas independientes y candidatos no registrados.</td>
+                    <td>
+                        <strong>9 integrantes en total:</strong>
+                        <ul class="lista-celda">
+                            <li>1 Presidencia</li>
+                            <li>2 Secretarías</li>
+                            <li>3 Escrutinios</li>
+                            <li>3 Suplencias Generales</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Organización total del proceso federal.</li>
+                            <li>Capacitación electoral e integración de casillas.</li>
+                            <li>Administración única de tiempos de Radio y TV.</li>
+                            <li>Fiscalización consolidada de ingresos y gastos.</li>
+                        </ul>
+                    </td>
+                    <td>No aplica (el proceso es estrictamente de competencia central federal).</td>
+                    <td>Mayoría relativa o representación proporcional según las fórmulas constitucionales asignadas a cada cargo.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Suspensión completa de propaganda gubernamental durante las campañas.</li>
+                            <li>Inicio de la veda electoral 3 días antes de la jornada.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 41, 55, 56, 82.<br><strong>LGIPE</strong>:<br>Libro Quinto.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO 2 ================= -->
+                <tr>
+                    <td colspan="10" class="cabecera-descanso">
+                        🤝 PROCESOS LOCALES (PEL) Y CONCURRENTES (PEC) [CONVOCANTE: OPLE / INE]
+                    </td>
+                </tr>
+
+                <tr data-tipo="PEL">
+                    <td><strong>PEL / PEC</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Inicio:</strong> Determinado por el calendario de cada legislación local.</li>
+                            <li><strong>Jornada Electoral:</strong> Primer domingo de junio (homologada en PEC).</li>
+                            <li><strong>Campañas:</strong> 30 a 60 días (según leyes estatales).</li>
+                        </ul>
+                    </td>
+                    <td>Automática conforme a las constituciones estatales y estatutos de cada entidad federativa.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Boletas locales impresas por el OPLE para Gubernatura, Diputaciones y Ayuntamientos.</li>
+                            <li>En caso de <strong>PEC</strong>, se instala una <strong>Casilla Única</strong> con escrutinio federal y local simultáneos.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <strong>Casilla Única Concurrente (10 integrantes en total):</strong>
+                        <ul class="lista-celda">
+                            <li>1 Presidencia</li>
+                            <li>2 Secretarías (1 Federal, 1 Local)</li>
+                            <li>4 Escrutinios (2 Federales, 2 Locales)</li>
+                            <li>3 Suplencias Generales</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Geografía electoral (distritación local).</li>
+                            <li>Padrón Electoral y Lista Nominal.</li>
+                            <li>Ubicación de casillas y designación de funcionarios.</li>
+                            <li>Capacitación de los funcionarios de la <strong>Casilla Única</strong>.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Derechos y prerrogativas locales de partidos.</li>
+                            <li>Preparación e impresión de boletas y materiales locales.</li>
+                            <li>Escrutinio, cómputos, declaración de validez y entrega de constancias locales.</li>
+                            <li>Operación de su propio PREP local.</li>
+                        </ul>
+                    </td>
+                    <td>Fórmulas locales de mayoría relativa, porcentaje de votación estatal emitida y asignación de representación proporcional local.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Se homologan los tiempos de veda con el orden federal en elecciones concurrentes.</li>
+                            <li>Administración de tiempos de radio y televisión coordinada exclusivamente por el INE para ambos niveles.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 115, 116.<br><strong>LGIPE</strong>:<br>Libro Quinto, Título Único.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO 3 ================= -->
+                <tr>
+                    <td colspan="10" class="cabecera-descanso">
+                        ⚖️ PROCEDIMIENTOS EXTRAORDINARIOS Y SENTENCIAS TEPJF [CONVOCANTE: TEPJF / CONG]
+                    </td>
+                </tr>
+
+                <tr data-tipo="EXTRA">
+                    <td><strong>EXTRA</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Sentencia de Nulidad:</strong> Dictada por Salas del TEPJF tras agotar juicios de inconformidad.</li>
+                            <li><strong>Convocatoria:</strong> El Congreso emite el decreto extraordinario dentro de los plazos mandatados por el Tribunal.</li>
+                        </ul>
+                    </td>
+                    <td>Activación jurisdiccional obligatoria tras decretarse la nulidad de una elección ordinaria por violación a principios constitucionales.</td>
+                    <td>Ajustada por acuerdo del Consejo General del INE; se restringe la participación de los partidos políticos que perdieron el registro o candidatos sancionados con pérdida del derecho.</td>
+                    <td>
+                        <strong>7 integrantes en total (Modelo compactado extraordinario):</strong>
+                        <ul class="lista-celda">
+                            <li>1 Presidencia</li>
+                            <li>1 Secretaría</li>
+                            <li>2 Escrutinios</li>
+                            <li>3 Suplencias Generales</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Asumir de forma total o parcial la organización si el Tribunal así lo mandata.</li>
+                            <li>Fiscalización estricta de las campañas extraordinarias compactadas.</li>
+                            <li>Administración absoluta de los tiempos de pauta en Radio y TV.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Organizar los cómputos distritales o municipales bajo el nuevo calendario extraordinario local.</li>
+                            <li>Impresión urgente de las nuevas boletas electorales específicas.</li>
+                        </ul>
+                    </td>
+                    <td>Determinada por mayoría de votos válidos de la jornada electoral extraordinaria bajo la vigilancia directa del INE y el Tribunal.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Reglas de fiscalización y veda estrictas y compactadas en el calendario extraordinario.</li>
+                            <li>Prohibición total de rebasar topes fijados bajo pena de nueva nulidad.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 41, Base VI y Art. 99.<br><strong>LGIPE</strong>:<br>Libro Quinto.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO 4 ================= -->
+                <tr>
+                    <td colspan="10" class="cabecera-descanso">
+                        📣 MECANISMOS DE DEMOCRACIA DIRECTA Y PARTICIPACIÓN [CONVOCANTE: CONG]
+                    </td>
+                </tr>
+
+                <tr data-tipo="RM">
+                    <td><strong>RM</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Petición:</strong> Dentro de los 3 meses posteriores al tercer año constitucional.</li>
+                            <li><strong>Recolección firmas:</strong> Plazo máximo de 90 días naturales.</li>
+                            <li><strong>Convocatoria INE:</strong> Emitida dentro de los 20 días siguientes a la validación de firmas.</li>
+                        </ul>
+                    </td>
+                    <td>Equivalente al menos al <strong>3% de los ciudadanos de la LN</strong>, distribuidos en por lo menos 17 entidades federativas.</td>
+                    <td>
+                        Dos opciones redactadas textualmente:
+                        <ul class="lista-celda">
+                            <li>Que se le revoque el mandato por pérdida de la confianza.</li>
+                            <li>Que siga en la Presidencia de la República.</li>
+                            <li><em>Nota analítica:</em> Se computan por separado los votos nulos (la "tercera respuesta" formal de conteo).</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <strong>7 integrantes en total (Modelo base de consulta):</strong>
+                        <ul class="lista-celda">
+                            <li>1 Presidencia</li>
+                            <li>1 Secretaría</li>
+                            <li>2 Escrutinios</li>
+                            <li>3 Suplencias Generales</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Organización, desarrollo y cómputo total y definitivo del proceso.</li>
+                            <li>Validación de las firmas de apoyo ciudadano mediante el RFE.</li>
+                            <li>Emisión de la declaración de resultados finales.</li>
+                        </ul>
+                    </td>
+                    <td>No aplica (es un proceso de exclusiva ejecución central federalizado por el INE).</td>
+                    <td>Se requiere una participación de al menos el <strong>40% de la LN</strong> total para que el resultado sea obligatorio.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Veda total desde la convocatoria hasta la jornada.</li>
+                            <li>INE es la única autoridad autorizada para difundir el mecanismo.</li>
+                            <li>Partidos no pueden contratar medios.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 35, Fracc. IX.<br><strong>LGRM</strong>:<br>Art. 7, 36, 52.</td>
+                </tr>
+
+                <tr data-tipo="CP">
+                    <td><strong>CP</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Petición:</strong> Presentación ante las Cámaras del Congreso según el origen.</li>
+                            <li><strong>Revisión Corte:</strong> SCJN resuelve la constitucionalidad de la pregunta en un plazo de 20 días de forma inapelable.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        Modelos de activación:
+                        <ul class="lista-celda">
+                            <li>Presidencia de la República.</li>
+                            <li>33% de integrantes de cualquiera de las Cámaras.</li>
+                            <li>Al menos el <strong>2% de la LN</strong> ciudadana.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        Dos opciones universales estipuladas por ley:
+                        <ul class="lista-celda">
+                            <li>SÍ</li>
+                            <li>NO</li>
+                            <li><em>Nota analítica:</em> En actas de cómputo se desglosa la casilla obligatoria de votos nulos.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <strong>7 integrantes en total (Modelo base de consulta):</strong>
+                        <ul class="lista-celda">
+                            <li>1 Presidencia</li>
+                            <li>1 Secretaría</li>
+                            <li>2 Escrutinios</li>
+                            <li>3 Suplencias Generales</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Organización, desarrollo, cómputo y declaración de resultados de las consultas de carácter federal.</li>
+                            <li>Verificación del porcentaje de apoyo ciudadano requerido.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Organizar y computar las consultas populares de carácter estrictamente estatal o municipal, conforme a sus leyes locales.</li>
+                        </ul>
+                    </td>
+                    <td>Se requiere una participación de al menos el <strong>40% de la LN</strong> total para que el veredicto obligue a las autoridades.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Prohibida la propaganda gubernamental desde la convocatoria hasta la conclusión de la jornada.</li>
+                            <li>Partidos y servidores públicos deben abstenerse de influir en los ciudadanos.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 35, Fracc. VIII.<br><strong>LGCP</strong>:<br>Art. 12, 26, 61.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer class="footer-oscuro">
+        <p>Elaborado con G | 2026</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3, JavaScript (ES6+), XML</p>
+    </footer>
+
+    <script src="tablas.js"></script>
+</body>
+</html>

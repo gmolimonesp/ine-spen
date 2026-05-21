@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Partidos e Independientes - INE</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+
+    <div class="area-de-estudio">
+
+        <header class="header-tablas">
+            <h1 class="titulo-tabla">Análisis de Partidos Políticos y Candidaturas Independientes</h1>
+            <div class="contenedor-navegacion">
+                <label for="navegador-tablas">Ir a la tabla: </label>
+                <select id="navegador-tablas">
+                    <option value="">-- Selecciona una tabla --</option>
+                </select>
+            </div>
+        </header>
+
+        <table id="tabla-dinamica">
+            <thead>
+                <tr>
+                    <th>Organización</th>
+                    <th>Plazos de Registro</th>
+                    <th>Porcentaje Constitución</th>
+                    <th>Dispersión Territorial</th>
+                    <th>Umbral de Conservación</th>
+                    <th>Derechos y Prerrogativas</th>
+                    <th>Obligaciones Críticas</th>
+                    <th>Causa de Extinción</th>
+                    <th>Fundamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- ================= CABECERA DE DESCANSO 1 ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        🏢 RÉGIMEN DE PARTIDOS POLÍTICOS [CONVOCANTE: CONSEJO GENERAL / OPLE]
+                    </td>
+                </tr>
+
+                <tr data-tipo="PPN">
+                    <td><strong>PPN</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Constitución:</strong> Cada 6 años (enero del año posterior a la elección presidencial).</li>
+                            <li><strong>Registro definitivo:</strong> Surtirá efectos constitutivos el 1° de agosto del año previo a la elección ordinaria.</li>
+                        </ul>
+                    </td>
+                    <td>Haber afiliado al menos al <strong>0.26% del Padrón Electoral</strong> federal utilizado en la elección ordinaria inmediata anterior.</td>
+                    <td>
+                        Modelos alternativos obligatorios de asambleas:
+                        <ul class="lista-celda">
+                            <li>Al menos 20 asambleas estatales con 3,000 afiliados c/u, o bien:</li>
+                            <li>Al menos 200 asambleas distritales con 300 afiliados c/u.</li>
+                            <li>No debe existir doble afiliación entre partidos.</li>
+                        </ul>
+                    </td>
+                    <td>Alcanzar al menos el <strong>3% de la Votación Válida Emitida (VVE)</strong> en cualquiera de las elecciones federales ordinarias (Presidencia, Senadurías o Diputaciones).</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Acceso al financiamiento público (Fórmula 70/30).</li>
+                            <li>Pauta exclusiva y gratuita en Radio y TV administrada por el INE.</li>
+                            <li>Acreditación de representantes con voz ante todos los consejos institucionales.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Garantizar estrictamente la paridad de género en postulaciones.</li>
+                            <li>Someterse al Sistema de Fiscalización en línea del INE.</li>
+                            <li>Mantener el mínimo de afiliados legales vigentes.</li>
+                        </ul>
+                    </td>
+                    <td>No alcanzar el umbral mínimo del 3% de la VVE en la elección ordinaria federal, o ser disuelto por sentencia o incumplimiento grave.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 41.<br><strong>LGPP</strong>:<br>Art. 10, 23, 25, 94.</td>
+                </tr>
+
+                <tr data-tipo="PPL">
+                    <td><strong>PPL</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Constitución:</strong> Cada 6 años ante el OPLE local correspondiente.</li>
+                            <li><strong>Plazos de notificación:</strong> Enero del año posterior a la elección de la Gubernatura del estado.</li>
+                        </ul>
+                    </td>
+                    <td>Haber afiliado al menos al <strong>0.26% del Padrón Electoral local</strong> utilizado en la elección ordinaria estatal previa.</td>
+                    <td>
+                        Modelos alternativos locales obligatorios:
+                        <ul class="lista-celda">
+                            <li>Asambleas en al menos 2/3 partes de los municipios del estado, o bien:</li>
+                            <li>Asambleas en al menos 2/3 partes de los distritos electorales locales de la entidad.</li>
+                        </ul>
+                    </td>
+                    <td>Alcanzar al menos el <strong>3% de la Votación Válida Emitida</strong> en cualquiera de las elecciones locales de la entidad (Gubernatura, Diputaciones o Ayuntamientos).</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Financiamiento público local estatal otorgado por el OPLE.</li>
+                            <li>Acceso a pautas locales de Radio y TV a través de la ventanilla única del INE.</li>
+                            <li>Representación formal con voz ante el Consejo General del OPLE.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Reportar contabilidad al Sistema de Fiscalización centralizado del INE.</li>
+                            <li>Cumplir con las acciones afirmativas locales vigentes en la entidad.</li>
+                            <li>Destinar recursos mínimos por ley a la capacitación política de mujeres.</li>
+                        </ul>
+                    </td>
+                    <td>No alcanzar el umbral mínimo del 3% de la votación local obligatoria, o perder la acreditación jurídica dictada por el OPLE estatal.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 116.<br><strong>LGPP</strong>:<br>Art. 10, 23, 94.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO 2 ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        👤 SISTEMA DE CANDIDATURAS INDEPENDIENTES [CONVOCANTE: INE / OPLE]
+                    </td>
+                </tr>
+
+                <tr data-tipo="CIF">
+                    <td><strong>CIF</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Manifestación de Intención:</strong> Convocatoria abierta previa al Proceso Electoral Federal.</li>
+                            <li><strong>Registro formal:</strong> Febrero-Marzo del año de la elección tras validarse los apoyos por el RFE.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        Porcentaje variable según el cargo de elección popular:
+                        <ul class="lista-celda">
+                            <li><strong>Presidencia:</strong> 1% de la LN nacional.</li>
+                            <li><strong>Senadurías y Diputaciones:</strong> 2% de la LN correspondiente a la entidad o distrito.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Presidencia:</strong> Firmas distribuidas en al menos 17 entidades federativas con el 1% de LN c/u.</li>
+                            <li><strong>Senadurías:</strong> Mitad de los distritos federales de la entidad con el 1% de LN c/u.</li>
+                            <li><strong>Diputaciones:</strong> Mitad de las secciones del distrito electoral con el 1% de LN c/u.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>El derecho es temporal y para la elección en curso.</li>
+                            <li>Para acceder a financiamiento de campaña o RP posterior, se aplican reglas de asignación individual de votos directos de la jornada.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Financiamiento público de campaña (equivalente en conjunto a un partido de nuevo registro).</li>
+                            <li>Acceso a tiempos de pauta en Radio y TV dentro de la bolsa unificada de independientes.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Constituir obligatoriamente una Asociación Civil (AC) con cuenta bancaria exclusiva para fiscalizar.</li>
+                            <li>Rechazar cualquier tipo de financiamiento ilícito o extranjero.</li>
+                            <li>Sujetarse a topes de gastos privados regulados por el INE.</li>
+                        </ul>
+                    </td>
+                    <td>No alcanzar el porcentaje de firmas de apoyo ciudadano en el plazo fijado, o rebasar los topes presupuestales en la etapa de recolección de apoyos.</td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Libro Séptimo,<br>Art. 366, 371,<br>381 - 385.</td>
+                </tr>
+
+                <tr data-tipo="CIL">
+                    <td><strong>CIL</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Manifestación de Intención:</strong> Emitida por el OPLE según los plazos locales de la entidad.</li>
+                            <li><strong>Registro definitivo:</strong> Febrero-Abril de la elección local según el código electoral estatal.</li>
+                        </ul>
+                    </td>
+                    <td>Determinado por la legislación o código de cada estado (comúnmente oscila entre el <strong>1.5% y el 3% de la LN local</strong>).</td>
+                    <td>Distribución geográfica de apoyo ciudadano focalizada en secciones electorales del municipio o distrito local (varía según reglas del OPLE).</td>
+                    <td>El derecho se extingue al concluir el Proceso Electoral Local de la entidad donde se postuló la fórmula ciudadana.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Financiamiento público local de campaña dispersado por el OPLE estatal.</li>
+                            <li>Acceso proporcional a Radio y TV bajo el catálogo de pautas asignado por el INE en el estado.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Uso obligatorio de la aplicación móvil del INE para capturar firmas de apoyo local.</li>
+                            <li>Someterse a la fiscalización centralizada de la Unidad Técnica de Fiscalización (UTF) del INE.</li>
+                        </ul>
+                    </td>
+                    <td>No acreditar el umbral de firmas o la dispersión seccional local solicitada, o registrar irregularidades graves de origen en la fiscalización de egresos.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>:<br>Art. 115, 116.<br><strong>Leyes Estatales / Códigos Locales</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer class="footer-oscuro">
+        <p>Elaborado con G | 2026</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3, JavaScript (ES6+), XML</p>
+    </footer>
+
+    <script src="tablas.js"></script>
+</body>
+</html>

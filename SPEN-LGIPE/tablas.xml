@@ -16,4 +16,12 @@
         <nombre>Atribuciones de Órganos INE</nombre>
         <archivo>atribuciones.html</archivo>
     </tabla>
+    <tabla>
+        <nombre>Análisis Comparativo de Procesos</nombre>
+        <archivo>procesos.html</archivo>
+    </tabla>
+    <tabla>
+        <nombre>Estructura de PP y CI</nombre>
+        <archivo>organizaciones.html</archivo>
+    </tabla>
 </menu>
