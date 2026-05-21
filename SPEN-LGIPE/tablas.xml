@@ -12,4 +12,8 @@
         <nombre>Requisitos de Elegibilidad</nombre>
         <archivo>requisitos.html</archivo>
     </tabla>
+    <tabla>
+        <nombre>Atribuciones de Órganos INE</nombre>
+        <archivo>atribuciones.html</archivo>
+    </tabla>
 </menu>

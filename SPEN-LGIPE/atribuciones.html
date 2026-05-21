@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribuciones de Órganos del INE</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+
+    <div class="area-de-estudio">
+
+        <header class="header-tablas">
+            <h1 class="titulo-tabla">Atribuciones, Integración y Etapas Electorales</h1>
+            <div class="contenedor-navegacion">
+                <label for="navegador-tablas">Ir a la tabla: </label>
+                <select id="navegador-tablas">
+                    <option value="">-- Selecciona una tabla --</option>
+                </select>
+            </div>
+        </header>
+
+        <table id="tabla-dinamica">
+            <thead>
+                <tr>
+                    <th>Cargo</th>
+                    <th>
+                        Tipo de Órgano<br>
+                        <select id="filtro-tipo" class="filtro-select">
+                            <option value="">-- Todos --</option>
+                            <option value="Consejo">Consejo (Dirección)</option>
+                            <option value="Presidencia">Presidencia (Unipersonal)</option>
+                            <option value="Secretaría">Secretaría (Unipersonal)</option>
+                            <option value="Junta Ejecutiva">Junta Ejecutiva</option>
+                        </select>
+                    </th>
+                    <th>Integrantes</th>
+                    <th>Duración</th>
+                    <th>
+                        Permanencia<br>
+                        <select id="filtro-permanencia" class="filtro-select">
+                            <option value="">-- Todos --</option>
+                            <option value="PERMANENTE">PERMANENTE</option>
+                            <option value="TEMPORAL">TEMPORAL</option>
+                        </select>
+                    </th>
+                    <th>Etapas: Previa, Inicio y Durante el Proceso</th>
+                    <th>Etapa: Jornada Electoral</th>
+                    <th>Etapa: Resultados y Cierre del Proceso</th>
+                    <th>Fundamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- ================= CABECERA DE DESCANSO: NAL ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        🌐 ESTRUCTURA CENTRAL / NACIONAL NAL
+                    </td>
+                </tr>
+
+                <tr data-tipo="Consejo" data-permanencia="PERMANENTE">
+                    <td><strong>CG</strong></td>
+                    <td>Consejo</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>1 Consejería Presidenta o Presidente (con voto)</li>
+                            <li>10 Consejerías Electorales (con voto)</li>
+                            <li>Consejeros del Poder Legislativo (solo con voz)</li>
+                            <li>Representantes de los Partidos Políticos (solo con voz)</li>
+                        </ul>
+                    </td>
+                    <td>9 años (sin reelección).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Dictar lineamientos generales del PEF.</li>
+                            <li>Aprobar topes de gastos de precampaña y campaña.</li>
+                            <li>Registrar las plataformas electorales de los partidos.</li>
+                            <li>Vigilar el cumplimiento de la paridad de género.</li>
+                            <li>Aprobar el modelo de la credencial para votar.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Declararse en sesión permanente desde el inicio de la votación.</li>
+                            <li>Vigilar la instalación de las casillas en todo el país.</li>
+                            <li>Dar seguimiento al conteo rápido y tendencias oficiales.</li>
+                            <li>Recibir reportes en tiempo real del sistema de incidencias.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Efectuar el cómputo total de la elección de Senadurías por RP.</li>
+                            <li>Efectuar el cómputo total de la elección de Diputaciones por RP.</li>
+                            <li>Declarar la validez de las elecciones de representación proporcional.</li>
+                            <li>Emitir las constancias de asignación correspondientes.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 35 - 44</td>
+                </tr>
+                <tr data-tipo="Presidencia" data-permanencia="PERMANENTE">
+                    <td><strong>PRES CG / JGE</strong></td>
+                    <td>Presidencia</td>
+                    <td>1 persona (Funge simultáneamente como Consejero Presidente del CG y Presidente de la JGE).</td>
+                    <td>9 años (Nombramiento único).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Convocar y presidir las sesiones del CG y de la JGE.</li>
+                            <li>Proponer al Consejo General la terna para el Secretario Ejecutivo.</li>
+                            <li>Establecer vínculos con los Poderes de la Unión para asuntos del Instituto.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Mantener comunicación directa con autoridades federales para el orden público.</li>
+                            <li>Vigilar el funcionamiento global de las estructuras centrales del INE.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Remitir al TEPJF los informes de las impugnaciones presidenciales recibidas.</li>
+                            <li>Firmar, junto al Secretario Ejecutivo, las constancias de mayoría y asignación.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 45</td>
+                </tr>
+                <tr data-tipo="Secretaría" data-permanencia="PERMANENTE">
+                    <td><strong>SRIA CG / JGE</strong></td>
+                    <td>Secretaría</td>
+                    <td>1 persona (Titular de la Secretaría Ejecutiva del INE, con voz pero sin voto en el CG).</td>
+                    <td>6 años (Reelegible por un periodo más).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Preparar el orden del día de las sesiones del Consejo General.</li>
+                            <li>Dar fe de lo actuado en las sesiones y firmar las actas institucionales.</li>
+                            <li>Coordinar operativamente las Direcciones Ejecutivas y Unidades Técnicas.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Certificar oficialmente el quórum legal del Consejo General.</li>
+                            <li>Verificar la correcta recepción de los reportes informáticos centrales.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Dar fe pública de los resultados globales asentados en actas de cómputo.</li>
+                            <li>Resguardar el archivo general del Proceso Electoral Federal.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 46</td>
+                </tr>
+                <tr data-tipo="Junta Ejecutiva" data-permanencia="PERMANENTE">
+                    <td><strong>JGE</strong></td>
+                    <td>Junta Ejecutiva</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Presidencia del Consejo General (Preside)</li>
+                            <li>Secretaría Ejecutiva del Instituto (Secretario de la Junta)</li>
+                            <li>Dirección Ejecutiva del Registro Federal de Electores</li>
+                            <li>Dirección Ejecutiva de Prerrogativas y Partidos Políticos</li>
+                            <li>Dirección Ejecutiva de Organización Electoral</li>
+                            <li>Dirección Ejecutiva de Servicio Profesional Electoral Nacional</li>
+                            <li>Dirección Ejecutiva de Capacitación Electoral y Educación Cívica</li>
+                            <li>Dirección Ejecutiva de Administración</li>
+                        </ul>
+                    </td>
+                    <td>Mapeado al cargo técnico o nombramiento de las direcciones.</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Coordinar la administración de los recursos financieros y humanos del Instituto.</li>
+                            <li>Supervisar el desarrollo técnico y las evaluaciones del SPEN.</li>
+                            <li>Supervisar la producción de las boletas y materiales electorales nacionales.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Monitorear operativamente el correcto funcionamiento de los sistemas informáticos.</li>
+                            <li>Coordinar el soporte de telecomunicaciones del Instituto a nivel nacional.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Evaluar los informes técnicos consolidados post-electorales de cada dirección.</li>
+                            <li>Integrar la memoria general del Proceso Electoral Federal correspondiente.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 47 - 48</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO: LOC ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        📍 DELEGACIONES ESTATALES / LOCALES LOC
+                    </td>
+                </tr>
+
+                <tr data-tipo="Consejo" data-permanencia="TEMPORAL">
+                    <td><strong>CL</strong></td>
+                    <td>Consejo</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>6 Consejerías Ciudadanas Estatales (con voz y voto)</li>
+                            <li>1 Vocalía Ejecutiva de la Junta Local (Preside con voz y voto)</li>
+                            <li>Resto de Vocales de la Junta Local Ejecutiva (solo con voz)</li>
+                            <li>Representantes de los Partidos Políticos (solo con voz)</li>
+                        </ul>
+                    </td>
+                    <td>Vigente únicamente durante el Proceso Electoral Federal.</td>
+                    <td><span class="badge no">TEMPORAL</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Garantizar la oportuna instalación de los Consejos Distritales.</li>
+                            <li>Resolver en primera instancia los recursos de revisión interpuestos.</li>
+                            <li>Acreditar formalmente a los observadores electorales locales.</li>
+                            <li>Supervisar el desarrollo de las precampañas en la entidad.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Mantener sesión permanente durante toda la jornada electoral local.</li>
+                            <li>Monitorear la instalación de casillas en los distritos de la entidad.</li>
+                            <li>Reportar incidentes mayores de seguridad o logística al Consejo General.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Realizar el cómputo de entidad federativa para la elección de Senadurías de MR.</li>
+                            <li>Realizar el cómputo de entidad federativa para la elección de Senadurías de RP.</li>
+                            <li>Declarar la validez de la elección de Senadurías y expedir constancias de mayoría.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 65 - 68</td>
+                </tr>
+                <tr data-tipo="Presidencia" data-permanencia="PERMANENTE">
+                    <td><strong>VEL</strong></td>
+                    <td>Presidencia</td>
+                    <td>1 persona (El Vocal Ejecutivo de la JLE funje de forma automática como Consejero Presidente del CL).</td>
+                    <td>Permanente (Miembro del SPEN del INE).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Convocar a sesiones ordinarias y extraordinarias del Consejo Local.</li>
+                            <li>Coordinar el despliegue estratégico y administrativo del personal del SPEN estatal.</li>
+                            <li>Firma de convenios de apoyo logístico con el OPLE de la entidad federativa.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Supervisar de manera directa los mecanismos de recolección de paquetes de las JDE.</li>
+                            <li>Dar seguimiento prioritario a contingencias operativas mayores en el estado.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Presidir los cómputos estatales y firmar las actas oficiales de Senadurías.</li>
+                            <li>Remitir los expedientes consolidados de la entidad al Consejo General y al TEPJF.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 64 y 69</td>
+                </tr>
+                <tr data-tipo="Secretaría" data-permanencia="PERMANENTE">
+                    <td><strong>VSL</strong></td>
+                    <td>Secretaría</td>
+                    <td>1 persona (El Vocal Secretario de la JLE funje como Secretario del CL, con voz pero sin voto).</td>
+                    <td>Permanente (Miembro del SPEN del INE).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Auxiliar al Consejo Local en la sustanciación de los recursos de revisión.</li>
+                            <li>Certificar legalmente la publicación de las listas de integrantes de los CD.</li>
+                            <li>Ejercer las atribuciones delegadas de Oficialía Electoral en el ámbito estatal.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Verificar la validez de los acuerdos tomados en el pleno del Consejo Local.</li>
+                            <li>Dar fe de las incidencias reportadas ante el consejo durante la jornada.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Firmar junto al Vocal Ejecutivo las actas finales de cómputo de la entidad.</li>
+                            <li>Tramitar formalmente los juicios de inconformidad promovidos contra los resultados.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 64 y 70</td>
+                </tr>
+                <tr data-tipo="Junta Ejecutiva" data-permanencia="PERMANENTE">
+                    <td><strong>JLE</strong></td>
+                    <td>Junta Ejecutiva</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Vocalía Ejecutiva Local (Preside)</li>
+                            <li>Vocalía de Organización Electoral</li>
+                            <li>Vocalía del Registro Federal de Electores</li>
+                            <li>Vocalía de Capacitación Electoral y Educación Cívica</li>
+                            <li>Vocalía Secretaría (Secretario de la Junta)</li>
+                        </ul>
+                    </td>
+                    <td>Permanente (Estructura desconcentrada del SPEN).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Supervisar de manera permanente las campañas de actualización del Padrón Electoral.</li>
+                            <li>Evaluar el cumplimiento operativo técnico-administrativo de las Juntas Distritales.</li>
+                            <li>Coordinar la distribución de materiales electorales a las cabeceras distritales.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Garantizar el soporte logístico e instrumental para los sistemas informáticos estatales.</li>
+                            <li>Mantener guardias operativas técnico-administrativas durante toda la jornada.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Concentrar los informes distritales detallados de incidencias de la jornada.</li>
+                            <li>Resguardar y archivar la documentación electoral de la entidad federativa.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 61 - 64</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO: DIS ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        🏢 SUBDELEGACIONES TERRITORIALES / DISTRITALES DIS
+                    </td>
+                </tr>
+
+                <tr data-tipo="Consejo" data-permanencia="TEMPORAL">
+                    <td><strong>CD</strong></td>
+                    <td>Consejo</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>6 Consejerías Ciudadanas Distritales (con voz y voto)</li>
+                            <li>1 Vocalía Ejecutiva Distrital (Preside con voz y voto)</li>
+                            <li>Resto de Vocales de la Junta Distrital Ejecutiva (solo con voz)</li>
+                            <li>Representantes de los Partidos Políticos (solo con voz)</li>
+                        </ul>
+                    </td>
+                    <td>Vigente únicamente durante el Proceso Electoral Federal.</td>
+                    <td><span class="badge no">TEMPORAL</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Determinar de manera formal el número y ubicación exacta de las casillas.</li>
+                            <li>Realizar el sorteo e insaculación legal de los ciudadanos del distrito.</li>
+                            <li>Aprobar la designación final de los funcionarios de las Mesas Directivas de Casilla.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Mantener sesión permanente de vigilancia durante el desarrollo de la votación.</li>
+                            <li>Vigilar estrictamente la recepción física de los paquetes electorales distritales.</li>
+                            <li>Dar fe de incidencias o sustituciones de funcionarios de casilla de última hora.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Realizar los cómputos distritales de la elección de Presidencia.</li>
+                            <li>Realizar los cómputos distritales de las elecciones de Diputaciones y Senadurías de MR.</li>
+                            <li>Remitir los expedientes jurídicos y paquetes electorales consolidados a las salas del TEPJF.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 76 - 79</td>
+                </tr>
+                <tr data-tipo="Presidencia" data-permanencia="PERMANENTE">
+                    <td><strong>VED</strong></td>
+                    <td>Presidencia</td>
+                    <td>1 persona (El Vocal Ejecutivo Distrital funje de forma automática como Consejero Presidente del CD).</td>
+                    <td>Permanente (Miembro del SPEN del INE).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Coordinar directamente los programas permanentes de educación cívica del distrito.</li>
+                            <li>Vigilar y firmar las entregas oficiales de las notificaciones de insaculación.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Proveer de forma inmediata los insumos o papelería faltante en las casillas instaladas.</li>
+                            <li>Autorizar por escrito la entrega final de paquetes electorales a los presidentes de casilla.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Presidir la sesión formal de cómputos distritales de la demarcación.</li>
+                            <li>Ordenar la apertura de paquetes electorales bajo supuestos legales obligatorios de recuento.</li>
+                            <li>Expedir de manera oficial la constancia de mayoría a la fórmula ganadora de MR.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 75 and 80</td>
+                </tr>
+                <tr data-tipo="Secretaría" data-permanencia="PERMANENTE">
+                    <td><strong>VSD</strong></td>
+                    <td>Secretaría</td>
+                    <td>1 persona (El Vocal Secretario de la JDE funje como Secretario de CD, con voz pero sin voto).</td>
+                    <td>Permanente (Miembro del SPEN del INE).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Expedir las certificaciones oficiales de acreditación de representantes de partidos.</li>
+                            <li>Auxiliar de forma directa en las diligencias locales de Oficialía Electoral del distrito.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Levantar constancia circunstanciada y firmada de la recepción física de los paquetes electorales.</li>
+                            <li>Dar fe de las condiciones de sellado de los paquetes al ingresar al consejo distrital.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Auxiliar directamente en el desarrollo formal del cotejo de actas y recuentos de votos.</li>
+                            <li>Levantar de forma legal y oportuna el acta definitiva del cómputo distrital.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 75 y 81</td>
+                </tr>
+                <tr data-tipo="Junta Ejecutiva" data-permanencia="PERMANENTE">
+                    <td><strong>JDE</strong></td>
+                    <td>Junta Ejecutiva</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Vocalía Ejecutiva Distrital (Preside)</li>
+                            <li>Vocalía de Organización Electoral</li>
+                            <li>Vocalía del Registro Federal de Electores</li>
+                            <li>Vocalía de Capacitación Electoral y Educación Cívica</li>
+                            <li>Vocalía Secretaría (Secretario de la Junta)</li>
+                        </ul>
+                    </td>
+                    <td>Permanente (Estructura desconcentrada del SPEN).</td>
+                    <td><span class="badge si">PERMANENTE</span></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Capacitar formalmente a los ciudadanos insaculados seleccionados para integrar las casillas.</li>
+                            <li>Ejecutar la planeación logística y presupuestal para el equipamiento físico de las casillas.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Operar técnicamente el Programa de Resultados Electorales Preliminares (PREP) distrital.</li>
+                            <li>Operar el Sistema de Información sobre el Desarrollo de la Jornada Electoral (SIJE).</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Recibir, registrar y resguardar físicamente todos los paquetes electorales del distrito.</li>
+                            <li>Garantizar la seguridad absoluta y el sellado de la bodega electoral distrital tras el cierre.</li>
+                        </ul>
+                    </td>
+                    <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 72 - 75</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer class="footer-oscuro">
+        <p>Elaborado con G | 2026</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3, JavaScript (ES6+), XML</p>
+    </footer>
+
+    <script src="tablas.js"></script>
+</body>
+</html>

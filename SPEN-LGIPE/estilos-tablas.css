@@ -1,6 +1,6 @@
 :root {
-    --ine-pink: #D5007F;     
-    --ine-purple: #5A2A61;   
+    --ine-pink: #D5007F;     /* Rosa Institucional */
+    --ine-purple: #5A2A61;   /* Púrpura Institucional */
     --ine-dark: #333333;     
     --ine-white: #FFFFFF;
     --ine-cebrado-dark: #F2F2F2;    
@@ -23,17 +23,17 @@ body {
     min-height: 100vh;
 }
 
-/* --- Contenedor que centra la tabla y da espacio a izquierda y derecha --- */
+/* --- SOLUCIÓN: Centrado al 96% con márgenes laterales idénticos y simétricos --- */
 .area-de-estudio {
-    width: 100%;
-    max-width: 85%; /* Limita el ancho al 85% de la pantalla */
-    margin: 0 auto; /* Centra la estructura horizontalmente */
+    width: 96%;
+    max-width: 96%; 
+    margin: 0 auto; /* Genera el mismo espaciado simétrico a derecha e izquierda */
     padding: 20px 0;
     box-sizing: border-box;
     flex: 1;
 }
 
-/* Encabezado superior (Título + Menú) */
+/* Encabezado superior */
 .header-tablas {
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@ body {
     outline: none;
 }
 
-/* Estructura de la Tabla (Cabeceras fijas globales) */
+/* Estructura de la Tabla (Cabeceras fijas de pantalla) */
 table {
     width: 100%;
     border-collapse: separate; 
@@ -85,15 +85,29 @@ table {
     margin-bottom: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    overflow: hidden; /* Mantiene las esquinas redondeadas limpias */
+    overflow: hidden; 
 }
 
 table td {
     white-space: normal;
-    min-width: 130px; /* Reducido ligeramente gracias a las siglas */
+    min-width: 130px; 
 }
 
-/* Cabeceras estrictamente fijas a la pantalla */
+/* Viñetas internas */
+.lista-celda {
+    margin: 0;
+    padding-left: 14px;
+}
+
+.lista-celda li {
+    margin-bottom: 4px;
+}
+
+.lista-celda li:last-child {
+    margin-bottom: 0;
+}
+
+/* Cabeceras de columna fijas nativas */
 thead th {
     position: sticky;
     top: 0; 
@@ -133,7 +147,22 @@ td {
     vertical-align: middle;
 }
 
-/* Cebrado unificado de alto contraste */
+/* --- SOLUCIÓN CABECERAS DE DESCANSO: Mayúsculas, negritas, fondo fijo opaco completo --- */
+.cabecera-descanso {
+    background-color: #4A1E51 !important; /* Fondo púrpura fijo opaco en toda la fila */
+    color: #FFFFFF !important;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px !important;
+    font-weight: bold !important; /* Estilo negrita explícito */
+    text-transform: uppercase !important; /* Estilo mayúsculas explícito */
+    letter-spacing: 1px;
+    padding: 14px 15px !important;
+    border-top: 4px solid var(--ine-pink) !important; /* Tríada: Rosa Vibrante */
+    border-bottom: 2px solid #1A1A1A !important;
+    text-align: left;
+}
+
+/* Cebrado de alto contraste */
 tbody tr:nth-child(even) {
     background-color: var(--ine-cebrado-dark); 
 }
@@ -150,7 +179,7 @@ tbody tr:last-child td {
     border-bottom: 5px solid var(--ine-border-final);
 }
 
-/* Elementos gráficos */
+/* Componentes gráficos adicionales */
 .badge {
     display: inline-block;
     padding: 3px 8px;
@@ -159,21 +188,9 @@ tbody tr:last-child td {
     font-size: 11px;
 }
 
-.badge.si, .badge.edad { 
-    background-color: #E8F5E9; 
-    color: #2E7D32; 
-}
-
-.badge.no { 
-    background-color: #FFEBEE; 
-    color: #C62828; 
-}
-
-.fundamento { 
-    font-family: 'Courier New', monospace; 
-    font-size: 11px; 
-    font-weight: bold; 
-}
+.badge.si, .badge.edad { background-color: #E8F5E9; color: #2E7D32; }
+.badge.no { background-color: #FFEBEE; color: #C62828; }
+.fundamento { font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
 
 /* Footer Oscuro */
 .footer-oscuro {
@@ -197,20 +214,10 @@ tbody tr:last-child td {
 
 /* Ajustes Responsivos */
 @media screen and (max-width: 992px) {
-    .area-de-estudio {
-        max-width: 95%; /* Da más espacio en pantallas medianas o tablets */
-    }
+    .area-de-estudio { max-width: 98%; width: 98%; }
 }
 
 @media screen and (max-width: 768px) {
-    .area-de-estudio {
-        max-width: 98%; 
-        padding: 10px 0;
-    }
-    .header-tablas {
-        padding: 10px 0;
-    }
-    table { 
-        font-size: 12px; 
-    }
+    .header-tablas { padding: 10px 0; }
+    table { font-size: 12px; }
 }

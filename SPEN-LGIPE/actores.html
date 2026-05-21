@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Contenedor global de centrado y márgenes laterales -->
+    <!-- Contenedor global homologado al 96% con márgenes simétricos -->
     <div class="area-de-estudio">
 
         <header class="header-tablas">
@@ -52,14 +52,6 @@
                             <option value="NO">NO</option>
                         </select>
                     </th>
-                    <th>
-                        Ámbito<br>
-                        <select id="filtro-ambito" class="filtro-select">
-                            <option value="">-- Todos --</option>
-                            <option value="NAL">NAL</option>
-                            <option value="LOC">LOC</option>
-                        </select>
-                    </th>
                     <th>Registro o Nombramiento ante</th>
                     <th>Fundamento Legal</th>
                     <th>Duración / Nombramiento</th>
@@ -74,133 +66,137 @@
                 </tr>
             </thead>
             <tbody>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="NO">
+                
+                <!-- ================= CABECERA DE DESCANSO: NAL ================= -->
+                <tr>
+                    <td colspan="8" class="cabecera-descanso">
+                        🌐 RÉGIMEN FEDERAL / NACIONAL NAL
+                    </td>
+                </tr>
+
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="NO">
                     <td><strong>Presidencia de la República</strong></td>
                     <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>NAL</td>
                     <td>Consejo General del INE</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 82-84.</td>
                     <td>6 años</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="SI">
                     <td><strong>Senadurías</strong></td>
                     <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>NAL</td>
                     <td>Consejos Locales INE (MR) y Consejo General (RP)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 56.</td>
                     <td>6 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="NAL" data-reelegible="SI">
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="SI">
                     <td><strong>Diputaciones Federales</strong></td>
                     <td>PP</td>
                     <td><span class="badge si">SI</span></td>
                     <td>SI</td>
-                    <td>NAL</td>
                     <td>Consejos Distritales (MR) y Consejo General (RP)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro V, Cap. II, Art. 237-238.<br><strong>CPEUM</strong>: Art. 55.</td>
                     <td>3 años</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="NO">
-                    <td><strong>Gubernaturas</strong></td>
-                    <td>PP</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
-                    <td>LOC</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. I.</td>
-                    <td>6 años</td>
-                    <td><span class="badge no">NO</span></td>
-                </tr>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="SI">
-                    <td><strong>Diputaciones Locales</strong></td>
-                    <td>PP</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
-                    <td>LOC</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. II.</td>
-                    <td>3 años</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-ambito="LOC" data-reelegible="SI">
-                    <td><strong>Ayuntamientos / Alcaldías</strong></td>
-                    <td>PP</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>SI</td>
-                    <td>LOC</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115, Fracc. I.</td>
-                    <td>3 años</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="CIF" data-candidatura="SI" data-coalicion="NO" data-ambito="NAL" data-reelegible="SI">
+                <tr data-tipo="CIF" data-candidatura="SI" data-coalicion="NO" data-reelegible="SI">
                     <td><strong>Candidaturas Independientes (Fed.)</strong></td>
                     <td>CIF</td>
                     <td><span class="badge si">SI</span></td>
                     <td>NO</td>
-                    <td>NAL</td>
                     <td>Estructura del INE (según el cargo)</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro VII, Título III, Cap. I, Art. 381-385.</td>
                     <td>Varía por cargo</td>
                     <td><span class="badge si">SI</span></td>
                 </tr>
-                <tr data-tipo="CIL" data-candidatura="SI" data-coalicion="NO" data-ambito="LOC" data-reelegible="SI">
-                    <td><strong>Candidaturas Independientes (Loc.)</strong></td>
-                    <td>CIL</td>
-                    <td><span class="badge si">SI</span></td>
-                    <td>NO</td>
-                    <td>LOC</td>
-                    <td>Instituto Electoral Local (OPLE)</td>
-                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115 y 116.</td>
-                    <td>Varía por cargo</td>
-                    <td><span class="badge si">SI</span></td>
-                </tr>
-                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-ambito="NAL" data-reelegible="NO">
+                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-reelegible="NO">
                     <td><strong>Consejeros/as del INE</strong></td>
                     <td>AEA</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>NAL</td>
                     <td>Cámara de Diputados</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro III, Cap. III, Art. 36 y 38.<br><strong>CPEUM</strong>: Art. 41, Base V, Apdo. A.</td>
                     <td>Nombramiento único (9 años)</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-ambito="LOC" data-reelegible="NO">
-                    <td><strong>Consejeros/as de OPLEs</strong></td>
-                    <td>AEA</td>
-                    <td><span class="badge no">NO</span></td>
-                    <td>NO</td>
-                    <td>LOC</td>
-                    <td>Consejo General del INE</td>
-                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título I, Cap. III, Art. 100-101.</td>
-                    <td>Nombramiento único (7 años)</td>
-                    <td><span class="badge no">NO</span></td>
-                </tr>
-                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-ambito="NAL" data-reelegible="NO">
+                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-reelegible="NO">
                     <td><strong>Magistrados/as TEPJF (Sala Superior)</strong></td>
                     <td>AJ</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>NAL</td>
                     <td>Cámara de Senadores (propuesta SCJN)</td>
                     <td class="fundamento"><strong>Ley Orgánica PJF</strong>: Cap. IV, Art. 165 y 167.<br><strong>CPEUM</strong>: Art. 99.</td>
                     <td>Nombramiento único (9 años)</td>
                     <td><span class="badge no">NO</span></td>
                 </tr>
-                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-ambito="LOC" data-reelegible="NO">
+
+                <!-- ================= CABECERA DE DESCANSO: LOC ================= -->
+                <tr>
+                    <td colspan="8" class="cabecera-descanso">
+                        📍 RÉGIMEN ESTATAL / LOCAL LOC
+                    </td>
+                </tr>
+
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="NO">
+                    <td><strong>Gubernaturas</strong></td>
+                    <td>PP</td>
+                    <td><span class="badge si">SI</span></td>
+                    <td>SI</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. I.</td>
+                    <td>6 años</td>
+                    <td><span class="badge no">NO</span></td>
+                </tr>
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="SI">
+                    <td><strong>Diputaciones Locales</strong></td>
+                    <td>PP</td>
+                    <td><span class="badge si">SI</span></td>
+                    <td>SI</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 116, Fracc. II.</td>
+                    <td>3 años</td>
+                    <td><span class="badge si">SI</span></td>
+                </tr>
+                <tr data-tipo="PP" data-candidatura="SI" data-coalicion="SI" data-reelegible="SI">
+                    <td><strong>Ayuntamientos / Alcaldías</strong></td>
+                    <td>PP</td>
+                    <td><span class="badge si">SI</span></td>
+                    <td>SI</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115, Fracc. I.</td>
+                    <td>3 años</td>
+                    <td><span class="badge si">SI</span></td>
+                </tr>
+                <tr data-tipo="CIL" data-candidatura="SI" data-coalicion="NO" data-reelegible="SI">
+                    <td><strong>Candidaturas Independientes (Loc.)</strong></td>
+                    <td>CIL</td>
+                    <td><span class="badge si">SI</span></td>
+                    <td>NO</td>
+                    <td>Instituto Electoral Local (OPLE)</td>
+                    <td class="fundamento"><strong>Leyes Locales / Códigos Estatales</strong>.<br><strong>CPEUM</strong>: Art. 115 y 116.</td>
+                    <td>Varía por cargo</td>
+                    <td><span class="badge si">SI</span></td>
+                </tr>
+                <tr data-tipo="AEA" data-candidatura="NO" data-coalicion="NO" data-reelegible="NO">
+                    <td><strong>Consejeros/as de OPLEs</strong></td>
+                    <td>AEA</td>
+                    <td><span class="badge no">NO</span></td>
+                    <td>NO</td>
+                    <td>Consejo General del INE</td>
+                    <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título I, Cap. III, Art. 100-101.</td>
+                    <td>Nombramiento único (7 años)</td>
+                    <td><span class="badge no">NO</span></td>
+                </tr>
+                <tr data-tipo="AJ" data-candidatura="NO" data-coalicion="NO" data-reelegible="NO">
                     <td><strong>Magistrados/as Tribunales Locales</strong></td>
                     <td>AJ</td>
                     <td><span class="badge no">NO</span></td>
                     <td>NO</td>
-                    <td>LOC</td>
                     <td>Cámara de Senadores</td>
                     <td class="fundamento"><strong>LGIPE</strong>: Libro III, Título II, Cap. I, Art. 106 y 108.</td>
                     <td>Nombramiento único (7 años)</td>
@@ -209,7 +205,7 @@
             </tbody>
         </table>
 
-    </div> <!-- Cierre del área de estudio -->
+    </div>
 
     <footer class="footer-oscuro">
         <p>Elaborado con G | 2026</p>
