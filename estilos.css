@@ -484,3 +484,45 @@ footer {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+/* ==========================================================================
+   CONFIGURACIÓN RESPONSIVA FINAL (Unificada)
+   ========================================================================== */
+
+/* 1. ESTILOS BASE (Pantallas grandes/Monitores) */
+.desktop-menu { display: flex !important; }
+.mobile-menu { display: none !important; }
+
+/* 2. ESTILOS PARA TABLETS Y MÓVILES (Menor a 900px) */
+@media screen and (max-width: 900px) {
+    
+    /* Alternar menús */
+    .desktop-menu { display: none !important; }
+    .mobile-menu { display: block !important; }
+
+    /* Ocultar elementos innecesarios */
+    .page-title, .header-logo { display: none !important; }
+
+    /* Buscador compacto */
+    .search-container {
+        position: fixed;
+        top: 10px;
+        right: 60px;
+        z-index: 3000;
+    }
+    #searchInput { width: 150px; }
+
+    /* Tabla y contenido */
+    .book-content {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 5px;
+    }
+    .table-header, th { position: static !important; }
+
+    /* Ajuste de fuentes */
+    td, th {
+        padding: 8px 4px !important;
+        font-size: 12px !important;
+    }
+}

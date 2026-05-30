@@ -1,7 +1,8 @@
-// CONTROLADOR DE CAMBIO DE PESTAÑAS (Preserva el texto de búsqueda)
+// CONTROLADOR DE CAMBIO DE PESTAÑAS
 function openBook(evt, bookId) {
     var i, bookContent, tabButtons;
     
+    // Ocultar todos los libros y quitar clase active
     bookContent = document.getElementsByClassName("book-content");
     for (i = 0; i < bookContent.length; i++) {
         bookContent[i].classList.remove("active");
@@ -12,15 +13,28 @@ function openBook(evt, bookId) {
         tabButtons[i].classList.remove("active");
     }
 
-    document.getElementById(bookId).classList.add("active");
+    // Activar el libro seleccionado
+    var activeTab = document.getElementById(bookId);
+    activeTab.classList.add("active");
     if(evt) evt.currentTarget.classList.add("active");
 
-    // MODIFICACIÓN: Ya no se vacía el input. Ejecuta la búsqueda automáticamente
-    // en el nuevo libro usando la palabra que ya estaba escrita.
+    // Ejecuta la búsqueda automáticamente
     searchInActiveTab();
+
+    // SCROLL SUAVE AL ENCABEZADO DEL LIBRO
+    var targetElement = activeTab.querySelector('.table-header');
+    if (targetElement) {
+        window.scrollTo({
+            top: targetElement.getBoundingClientRect().top + window.pageYOffset - 80,
+            behavior: 'smooth'
+        });
+    }
+    
+    var selectMenu = document.querySelector(".tabs-select");
+    if(selectMenu) selectMenu.value = bookId;
 }
 
-// BUSCADOR INTELIGENTE CON RESALTADO EN TIEMPO REAL
+// BUSCADOR INTELIGENTE
 function searchInActiveTab() {
     var input, filter, activeTab, table, tr, td, i, j;
     input = document.getElementById("searchInput");
@@ -62,6 +76,7 @@ function searchInActiveTab() {
     }
 }
 
+// FUNCIONES DE RESALTADO
 function highlightText(element, needle) {
     if (!needle) return;
     var escapedNeedle = needle.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -91,14 +106,11 @@ function removeHighlight(element) {
     });
 }
 
-// ==========================================================================
-// 📌 DETECCIÓN DE SCROLL PARA EL BOTÓN "TOP"
-// ==========================================================================
+// CONTROL DE BOTÓN TOP
 window.onscroll = function() { scrollControl() };
 
 function scrollControl() {
     var mybutton = document.getElementById("btnTop");
-    // Si baja más de 300px desde el inicio, el botón aparece con estilo flex
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         mybutton.style.display = "flex";
     } else {
@@ -106,10 +118,15 @@ function scrollControl() {
     }
 }
 
-// Función de retorno al inicio de la pantalla con suavizado técnico
 function topFunction() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' /* Transición suave de lectura */
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('.sticky-dashboard-header');
+    if (window.scrollY > 50) {
+        header.classList.add('shrink');
+    } else {
+        header.classList.remove('shrink');
+    }
+});

@@ -175,14 +175,31 @@ body {
 /* ==========================================================================
    📌 BLOQUE SUPERIOR TOTALMENTE CONGELADO (STICKY HEADER SIN BRINCOS)
    ========================================================================== */
-.sticky-dashboard-header {
+/*.sticky-dashboard-header {
     position: sticky;
-    top: 65px;               /* Pegado abajo de la barra de navegación */
+    top: 0px;               
     background-color: var(--bg-color);
-    z-index: 2500;           /* Capa superior para cubrir las filas */
+    z-index: 2500;           
     padding-top: 20px;
-    padding-bottom: 0;       /* Forzado a cero para evitar saltos de margen */
+    padding-bottom: 0;       
     margin-bottom: 0;
+}*/
+
+/* Estado original del header */
+.sticky-dashboard-header {
+    transition: all 0.3s ease; 
+    padding: 20px 0;
+}
+
+/* Cuando tenga la clase 'shrink', se hace pequeño */
+.sticky-dashboard-header.shrink {
+    padding: 5px 0;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sticky-dashboard-header.shrink h1 {
+    display: none; /* Ocultamos el título al hacer scroll */
 }
 
 header {
@@ -256,6 +273,8 @@ header .subtitle {
     border-radius: 0;        /* Cuadrado para evitar cortes de píxeles al fijar */
     margin-bottom: 35px;
     padding: 0;
+    /*overflow-x: auto;  Esto es correcto, no lo cambies a hidden */
+    overflow-y: visible; /* Asegúrate de que esto sea visible */
 }
 
 .book-content.active {
@@ -263,18 +282,23 @@ header .subtitle {
 }
 
 /* 📌 TÍTULO DEL LIBRO FIJO (AJUSTADO A 285PX) */
+/* 📌 ENCABEZADO DE TABLA INTELIGENTE (STICKY CON LIMITES) */
 .table-header {
     background-color: var(--secondary-color);
     color: white;
     padding: 15px 20px;
     font-weight: bold;
     font-size: 16px;
+    
+    /* Cambiamos a sticky inteligente */
     position: sticky;
-    top: 276px;              /* Tu calibración exacta */
-    z-index: 2400;           /* Capa intermedia superior */
+    top: 65px; /* Bajo la barra superior fija */
+    
+    z-index: 2100;
     margin: 0;
     box-sizing: border-box;
     border-radius: 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra para que se distinga al pegarse */
 }
 
 table {
@@ -285,7 +309,7 @@ table {
 /* 📌 ENCABEZADOS DE COLUMNA TOTALMENTE FIJOS (AJUSTADO A 336PX) */
 th {
     position: sticky;
-    top: 327px;              /* Tu calibración exacta */
+    top: 118px;              /* Debajo de la barra fija y del título del libro */
     background-color: #2d4356;
     color: white;
     padding: 12px;
@@ -483,4 +507,46 @@ footer {
     color: #63b3ed;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   CONFIGURACIÓN RESPONSIVA FINAL (Unificada)
+   ========================================================================== */
+
+/* 1. ESTILOS BASE (Pantallas grandes/Monitores) */
+.desktop-menu { display: flex !important; }
+.mobile-menu { display: none !important; }
+
+/* 2. ESTILOS PARA TABLETS Y MÓVILES (Menor a 900px) */
+@media screen and (max-width: 900px) {
+    
+    /* Alternar menús */
+    .desktop-menu { display: none !important; }
+    .mobile-menu { display: block !important; }
+
+    /* Ocultar elementos innecesarios */
+    .page-title, .header-logo { display: none !important; }
+
+    /* Buscador compacto */
+    .search-container {
+        position: fixed;
+        top: 10px;
+        right: 60px;
+        z-index: 3000;
+    }
+    #searchInput { width: 150px; }
+
+    /* Tabla y contenido */
+    .book-content {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 5px;
+    }
+    /* .table-header, th { position: static !important; } */ /************************/
+
+    /* Ajuste de fuentes */
+    td, th {
+        padding: 8px 4px !important;
+        font-size: 12px !important;
+    }
 }
