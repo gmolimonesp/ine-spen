@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Medios de Impugnación - INE</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+
+    <div class="area-de-estudio">
+
+        <header class="header-tablas">
+            <h1 class="titulo-tabla">Sistema de Medios de Impugnación en Materia Electoral</h1>
+            <div class="contenedor-navegacion">
+                <label for="navegador-tablas">Ir a la tabla: </label>
+                <select id="navegador-tablas">
+                    <option value="">-- Selecciona una tabla --</option>
+                </select>
+            </div>
+        </header>
+        <table id="contenedor-tabla">
+        <table id="tabla-dinamica">
+            <thead>
+                <tr>
+                    <th>Medio de Impugnación</th>
+                    <th>Actor Legitimado</th>
+                    <th>Acto Impugnado</th>
+                    <th>Autoridad Responsable / Resolutora</th>
+                    <th>Plazo de Interposición</th>
+                    <th>Efecto Analítico (Sentencia)</th>
+                    <th>Regla del Tiempo</th>
+                    <th>Efecto Suspensivo</th>
+                    <th>Fundamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- ================= CABECERA DE DESCANSO 1 ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        ⚖️ RECURSOS DE CONTROL ADMINISTRATIVO Y REVISIÓN CONSEJOS INE
+                    </td>
+                </tr>
+
+                <tr data-tipo="RECURSO">
+                    <td><strong>RR (Recurso de Revisión)</strong></td>
+                    <td>Partidos políticos y agrupaciones políticas nacionales (a través de sus representantes legítimos).</td>
+                    <td>Actos o resoluciones emitidos estrictamente por los órganos desconcentrados del INE (Juntas y Consejos Locales o Distritales).</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Responsable:</strong> Junta o Consejo Distrital/Local.</li>
+                            <li><strong>Resolutora:</strong> Órgano jerárquico superior del INE (v.g. Consejo Local o Consejo General).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge si">4 DÍAS</span> contados a partir del día siguiente a aquel en que se tenga conocimiento del acto o notificación.</td>
+                    <td>Confirmar, modificar o revocar el acto administrativo impugnado, obligando al órgano del INE a reponer el procedimiento afectado.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>En Proceso:</strong> Todos los días y horas son hábiles.</li>
+                            <li><strong>Fuera de Proceso:</strong> Solo días hábiles (L-V).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge no">NO</span> La interposición jamás suspende los efectos del acto.</td>
+                    <td class="fundamento"><strong>LGSMIME</strong>:<br>Art. 35 y 36.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO 2 ================= -->
+                <tr>
+                    <td colspan="9" class="cabecera-descanso">
+                        🏛️ JUICIOS Y RECURSOS JURISDICCIONALES (COMPETENCIA DE SALAS TEPJF)
+                    </td>
+                </tr>
+
+                <tr data-tipo="RECURSO">
+                    <td><strong>RAP (Recurso de Apelación)</strong></td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Partidos políticos.</li>
+                            <li>Ciudadanos y personas físicas/morales por sanciones.</li>
+                        </ul>
+                    </td>
+                    <td>Resoluciones del Consejo General del INE, informes de fiscalización de la UTF y sanciones del régimen sancionador ordinario.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Responsable:</strong> Consejo General o UTF del INE.</li>
+                            <li><strong>Resolutora:</strong> Sala Superior del TEPJF (o Sala Regional según el ámbito territorial).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge si">4 DÍAS</span> contados a partir del día siguiente al de la notificación formal de la resolución.</td>
+                    <td>Revocar o modificar las sanciones o multas impuestas por el INE, o confirmar la legalidad de los acuerdos del Consejo General.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>En Proceso:</strong> Todos los días y horas son hábiles.</li>
+                            <li><strong>Fuera de Proceso:</strong> Solo días hábiles (L-V).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge no">NO</span> La interposición jamás suspende los efectos del acto.</td>
+                    <td class="fundamento"><strong>LGSMIME</strong>:<br>Art. 40 - 45.</td>
+                </tr>
+
+                <tr data-tipo="JUICIO">
+                    <td><strong>JIN (Juicio de Inconformidad)</strong></td>
+                    <td>Partidos políticos y, de forma exclusiva en supuestos específicos de elegibilidad, candidatos independientes.</td>
+                    <td>Resultados consignados en las actas de cómputo distrital o estatal, declaraciones de validez y entrega de constancias de mayoría en el PEF.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Responsable:</strong> Consejos Distritales o Locales del INE.</li>
+                            <li><strong>Resolutora:</strong> Salas Regionales (Diputaciones/Senadurías) o Sala Superior (Presidencia) del TEPJF.</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge si">4 DÍAS</span> contados a partir del día siguiente a que concluya la sesión de cómputo respectiva en el INE.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li>Anular la votación recibida en una o varias casillas.</li>
+                            <li>Revocar constancias de mayoría y otorgarlas a la fórmula ganadora legítima.</li>
+                            <li>Declarar la nulidad de una elección completa.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Siempre en Proceso:</strong> Todos los días y horas son hábiles de forma absoluta.</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge no">NO</span> La interposición jamás suspende los efectos del acto.</td>
+                    <td class="fundamento"><strong>LGSMIME</strong>:<br>Art. 49 - 55.</td>
+                </tr>
+
+                <tr data-tipo="RECURSO">
+                    <td><strong>REC (Recurso de Reconsideración)</strong></td>
+                    <td>Partidos políticos y candidatos (en coadyuvancia con su partido para defender su elegibilidad).</td>
+                    <td>Sentencias de fondo dictadas exclusivamente por las Salas Regionales del TEPJF en los Juicios de Inconformidad (JIN) o inaplicación de leyes por inconstitucionalidad.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Responsable:</strong> Salas Regionales del TEPJF.</li>
+                            <li><strong>Resolutora:</strong> Sala Superior del TEPJF (Última instancia definitiva).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge si">3 DÍAS</span> contados a partir del día siguiente al de la notificación de la sentencia de la Sala Regional.</td>
+                    <td>Confirmar, modificar o revocar de manera definitiva e inapelable las sentencias de las Salas Regionales, fijando el resultado electoral final.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Siempre en Proceso:</strong> Todos los días y horas son hábiles de forma absoluta.</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge no">NO</span> La interposición jamás suspende los efectos del acto.</td>
+                    <td class="fundamento"><strong>LGSMIME</strong>:<br>Art. 61 - 63.</td>
+                </tr>
+
+                <tr data-tipo="JUICIO">
+                    <td><strong>JDC (Juicio para la Protección de los Derechos Político-Electorales del Ciudadano)</strong></td>
+                    <td>Ciudadanos por propio derecho de manera individual, o asociados para la defensa de sus derechos.</td>
+                    <td>Actos o resoluciones que vulneren el derecho de votar, ser votado, asociarse individual y libremente o afiliarse a partidos políticos.</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>Responsable:</strong> Órganos del INE (v.g. Dirección Ejecutiva del RFE), OPLEs o partidos políticos.</li>
+                            <li><strong>Resolutora:</strong> Salas Regionales o Sala Superior del TEPJF (según el cargo en disputa).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge si">4 DÍAS</span> contados a partir del día siguiente a aquel en que se tenga conocimiento o notificación del acto.</td>
+                    <td>Restituir al ciudadano de forma inmediata en el goce del derecho político-electoral que le haya sido violado (v.g. ordenar expedir credencial o registrar candidatura).</td>
+                    <td>
+                        <ul class="lista-celda">
+                            <li><strong>En Proceso:</strong> Todos los días y horas son hábiles.</li>
+                            <li><strong>Fuera de Proceso:</strong> Solo días hábiles (L-V).</li>
+                        </ul>
+                    </td>
+                    <td><span class="badge no">NO</span> La interposición jamás suspende los efectos del acto.</td>
+                    <td class="fundamento"><strong>LGSMIME</strong>:<br>Art. 79 - 84.</td>
+                </tr>
+            </tbody>
+        </table></table>
+
+    </div>
+
+    <footer class="footer-oscuro">
+        <p>Elaborado con G | 2026</p>
+        <p class="tecnologias">Tecnologías utilizadas: HTML5, CSS3, JavaScript (ES6+), XML</p>
+    </footer>
+
+    <script src="tablas.js"></script>
+</body>
+</html>

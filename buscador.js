@@ -130,3 +130,17 @@ window.addEventListener('scroll', function() {
         header.classList.remove('shrink');
     }
 });
+
+function toggleSearch() {
+    var searchBox = document.getElementById("searchBox");
+    var searchInput = document.getElementById("searchInput");
+    
+    searchBox.classList.toggle("visible");
+    
+    if (searchBox.classList.contains("visible")) {
+        searchInput.focus();
+    } else {
+        searchInput.value = "";
+        searchInActiveTab();
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Requisitos Constitucionales de Elegibilidad - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body>
+
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button class="dropbtn">📚 Ley Activa: ACTORES ▾</button>
+                <div class="dropdown-content">
+                    <a href="index.html">👉 <strong>HOME</strong> - Inicio</a>
+                    <a href="01_lgipe.html">👉 <strong>LGIPE</strong> - Ley General de Instituciones y Procedimientos Electorales</a>
+                    <a href="02_lgmde.html">👉 <strong>LGMDE</strong> - Ley General en Materia de Delitos Electorales</a>
+                    <a href="03_lgpp.html">👉 <strong>LGPP</strong> - Ley General de Partidos Políticos</a>
+                    <a href="04_lgsmime.html">👉 <strong>LGSMIME</strong> - Ley General del Sistema de Medios de Impugnación</a>
+                    <a href="05_lfcp.html">👉 <strong>LFCP</strong> - Ley Federal de Consulta Popular</a>
+                    <a href="06_lfrm.html">👉 <strong>LFRM</strong> - Ley Federal de Revocación de Mandato</a>
+                </div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Requisitos Constitucionales de Elegibilidad</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+            <thead class="sticky-header">
+                <tr>
+                    <th>Cargo de Elección</th>
+                    <th>
+                        Edad Mínima<br>
+                        <select id="filtro-edad" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="18">18 años</option>
+                            <option value="21">21 años</option>
+                            <option value="25">25 años</option>
+                            <option value="30">30 años</option>
+                            <option value="35">35 años</option>
+                        </select>
+                    </th>
+                    <th>Requisito de Nacionalidad</th>
+                    <th>
+                        Residencia Mínima<br>
+                        <select id="filtro-residencia" class="filtro-select">
+                            <option value="">-- Todas --</option>
+                            <option value="No exige">No exige residencia específica</option>
+                            <option value="6 meses">6 meses efectivos</option>
+                            <option value="1 año">1 año efectivo</option>
+                            <option value="5 años">5 años inmediatos</option>
+                            <option value="20 años">20 años de residencia</option>
+                        </select>
+                    </th>
+                    <th>Restricción de Separación del Cargo (Servidores Públicos / Militares)</th>
+                    <th>Fundamento Legal</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- ================= CABECERA DE DESCANSO: NAL ================= -->
+                <tr>
+                    <td colspan="6" class="cabecera-descanso">
+                        🌐 RÉGIMEN FEDERAL / NACIONAL NAL
+                    </td>
+                </tr>
+
+                <tr data-edad="35" data-residencia="20 años">
+                    <td><strong>Presidencia de la República</strong></td>
+                    <td><span class="badge edad">35 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, hijo de padre o madre mexicanos.</td>
+                    <td>Haber residido en el país durante 20 años y todo el año anterior a la elección.</td>
+                    <td>6 meses antes del día de la elección (Secretarios, Gobernadores, etc.). No ser ministro de culto.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 82.<br><strong>LGIPE</strong>: Libro V.</td>
+                </tr>
+                <tr data-edad="25" data-residencia="No exige">
+                    <td><strong>Senadurías</strong></td>
+                    <td><span class="badge edad">25 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si se es titular de algún órgano de gobierno o fuerza pública.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 58 y 55.<br><strong>LGIPE</strong>: Libro V.</td>
+                </tr>
+                <tr data-edad="21" data-residencia="No exige">
+                    <td><strong>Diputaciones Federales</strong></td>
+                    <td><span class="badge edad">21 años</span> al día de la elección.</td>
+                    <td>Mexicano por nacimiento, en pleno goce de sus derechos.</td>
+                    <td>Ser originario de la entidad federativa o vecino con residencia efectiva de más de 6 meses.</td>
+                    <td>90 días antes de la elección si ostenta mandos policiales, militares o secretarías estatales.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 55.<br><strong>LGIPE</strong>: Libro V, Art. 7.</td>
+                </tr>
+
+                <!-- ================= CABECERA DE DESCANSO: LOC ================= -->
+                <tr>
+                    <td colspan="6" class="cabecera-descanso">
+                        📍 RÉGIMEN ESTATAL / LOCAL LOC
+                    </td>
+                </tr>
+
+                <tr data-edad="30" data-residencia="5 años">
+                    <td><strong>Gubernaturas</strong></td>
+                    <td><span class="badge edad">30 años</span> (Varía según constitución local, máximo constitucional 30).</td>
+                    <td>Mexicano por nacimiento y nativo de la entidad o con residencia.</td>
+                    <td>Residencia efectiva no menor de 5 años inmediatos anteriores al día de la elección.</td>
+                    <td>Variable por estado (comúnmente de 90 a 180 días antes de los comicios).</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. I.<br><strong>Const. Locales</strong>.</td>
+                </tr>
+                <tr data-edad="18" data-residencia="6 meses">
+                    <td><strong>Diputaciones Locales</strong></td>
+                    <td><span class="badge edad">18 años</span> o 21 según el estado (la Constitución permite desde los 18).</td>
+                    <td>Ciudadano mexicano en pleno ejercicio de sus derechos civiles y políticos.</td>
+                    <td>Vecindad o residencia efectiva en el distrito o estado (usualmente 6 meses o 1 año).</td>
+                    <td>Separación definitiva o licencia temporal entre 90 y 120 días según la legislación de cada entidad.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 116, Fracc. II.<br><strong>Leyes Estatales</strong>.</td>
+                </tr>
+                <tr data-edad="18" data-residencia="1 año">
+                    <td><strong>Ayuntamientos / Alcaldías</strong></td>
+                    <td><span class="badge edad">18 años</span> (En la mayoría de los estados para regidurías; 21/25 para alcaldes).</td>
+                    <td>Ciudadano mexicano por nacimiento o naturalización (según normativa local).</td>
+                    <td>Residencia efectiva en el municipio (varía comúnmente entre 6 meses, 1 año o 3 años).</td>
+                    <td>Separación del cargo de manera formal generalmente entre 60 y 90 días previos a la jornada electoral.</td>
+                    <td class="fundamento"><strong>CPEUM</strong>: Art. 115, Fracc. I.<br><strong>Leyes Estatales</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+
+    <script src="tablas.js"></script>
+</body>
+</html>

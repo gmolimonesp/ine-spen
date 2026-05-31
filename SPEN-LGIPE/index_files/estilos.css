@@ -9,6 +9,7 @@
     --text-color: #333333;
     --card-bg: #ffffff;
     --tab-inactive: #e0e6ed;
+    --rosa-ine: #d5007f;
     --border-radius: 8px;
 }
 
@@ -97,7 +98,13 @@ body {
     border-radius: var(--border-radius);
     overflow: hidden;
     z-index: 3100;
-    margin-top: 5px;
+    
+    /* MODIFICACIÓN AQUÍ: Añadimos un pequeño margen superior o padding superior
+       para que el menú "nazca" más cerca del botón o tenga un área de contacto */
+    margin-top: 0px; 
+    
+    /* Opcional: Un pequeño borde superior invisible para conectar */
+    border: 10px 0 solid transparent; 
 }
 
 .dropdown-content a {
@@ -187,7 +194,11 @@ body {
 
 /* Estado original del header */
 .sticky-dashboard-header {
-    transition: all 0.3s ease; 
+    position: sticky;
+    top: 18px; /* Se pega al tope de la ventana */
+    background-color: var(--bg-color);
+    z-index: 1000;
+    transition: all 0.3s ease;
     padding: 20px 0;
 }
 
@@ -200,6 +211,23 @@ body {
 
 .sticky-dashboard-header.shrink h1 {
     display: none; /* Ocultamos el título al hacer scroll */
+}
+
+.tabla-maestra thead {
+    position: sticky;
+    top: 65px; 
+    z-index: 1000; /* Un valor alto para que esté siempre al frente */
+    background-color: #ffffff; /* Importante: Pon el color de fondo de tu tabla */
+}
+
+.sticky-header th {
+    position: sticky;
+    top: 65px;
+    background-color: var(--secondary-color);
+    z-index: 1000;
+    padding: 15px;
+    font-weight: bold;
+    text-transform: uppercase; /* Opcional: para mayor rigor editorial */
 }
 
 header {
@@ -240,7 +268,9 @@ header .subtitle {
     flex-wrap: wrap;
     gap: 4px;
     margin-bottom: 0;
-}
+    background-color: inherit; /* Hereda el color del padre contraído o expandido */
+    padding-top: 10px;
+}                       
 
 .tab-button {
     background-color: var(--tab-inactive);
@@ -292,7 +322,7 @@ header .subtitle {
     
     /* Cambiamos a sticky inteligente */
     position: sticky;
-    top: 65px; /* Bajo la barra superior fija */
+    top: 162px; /* Bajo la barra superior fija */
     
     z-index: 2100;
     margin: 0;
@@ -347,7 +377,111 @@ tr:hover td {
     text-align: left;
     border-left: 5px solid var(--accent-color);
     position: relative;
-    z-index: 10;
+    z-index: 5;
+}
+
+/************************************
+    ESTILOS DE LA TABLA MAESTRA
+*************************************/
+
+.tabla-maestra {
+    width: 100%;          /* Antes estaba al 100% */
+    max-width: 1400px;   /* Evita que se estire demasiado en pantallas grandes */
+    margin: 20px auto;   /* Centra la tabla en la página */
+    border-collapse: collapse;
+}
+
+/* Ajuste de columnas para dar más espacio a la Numeralia */
+.tabla-maestra th:nth-child(5) { width: 180px; } 
+
+/* Mejorar el aspecto visual de las celdas */
+.tabla-maestra td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-maestra a{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.tabla-maestra a::before {
+    content: "\25B6";   /* Agrega un ícono de flecha antes del texto */
+    margin-right: 10px; 
+    color: var(--rosa-ine);
+    font-size: 12px;
+}
+
+/* Efecto al pasar el cursor sobre el ícono */
+.tabla-maestra a:hover {
+    /*transform: scale(1.2);
+    display: inline-block;
+    transition: transform 0.2s;    */
+    color: var(--rosa-ine);
+    
+}
+
+.num-ley {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 60px;
+}
+
+.resumen-ejecutivo {
+    border-bottom: 1px solid var(--rosa-ine);
+    padding-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: left; 
+}
+
+.resumen-ejecutivo-bullets {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 20px;
+    color: #555;
+}
+
+.resumen-ejecutivo-bullets::before {
+    content: "•";
+    color: var(--rosa-ine);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.btn-acceso {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-acceso:hover {
+    filter: brightness(1.1);
+}
+
+.header-dashboard {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    color: var(--text-color); /* Ajusta según tu variable global */
+}
+
+.header-dashboard h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.header-dashboard p {
+    font-size: 16px;
+    opacity: 0.8;
 }
 
 /* ==========================================================================
@@ -454,6 +588,30 @@ mark.match-highlight {
     padding: 0 2px;
 }
 
+/* Estilo para el CONTENEDOR DE NAVEGACIÓN de tablas */
+.contenedor-navegacion {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--tab-inactive);
+    text-align: center;
+}
+
+.contenedor-navegacion label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.contenedor-navegacion select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--tab-inactive);
+    background-color: white;
+    cursor: pointer;
+}
+
 /* ==========================================================================
    BOTÓN FLOTANTE "TOP" INTERACTIVO
    ========================================================================== */
@@ -507,6 +665,54 @@ footer {
     color: #63b3ed;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   BUSCADOR FLOTANTE TIPO CAJÓN (Posición Superior Derecha)
+   ========================================================================== */
+.search-floating {
+    position: fixed;
+    top: 80px; /* Ajusta este valor si necesitas moverlo más abajo */
+    right: 100px; /* Separado del borde derecho para no encimarse con scrollbars */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+#searchIcon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#searchBox {
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    white-space: nowrap;
+}
+
+#searchBox.visible {
+    width: 200px; /* Ajusta el ancho del cajón aquí */
+    opacity: 1;
+}
+
+#searchInput {
+    padding: 8px;
+    border: 1px solid var(--tab-inactive);
+    border-radius: 20px;
+    width: 180px; /* Un poco menos que el contenedor */
+    outline: none;
 }
 
 /* ==========================================================================

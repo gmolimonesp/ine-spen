@@ -5,27 +5,27 @@
         <archivo>index.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Actores Políticos y Autoridades</nombre>
-        <archivo>actores.html</archivo>
+        <nombre>Actores Políticos y Autoridades Electorales</nombre>
+        <archivo>tabla-actores.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Requisitos de Elegibilidad</nombre>
-        <archivo>requisitos.html</archivo>
+        <nombre>Requisitos Constitucionales de Elegibilidad</nombre>
+        <archivo>tabla-requisitos.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Atribuciones de Órganos INE</nombre>
-        <archivo>atribuciones.html</archivo>
+        <nombre>Atribuciones de los Órganos del INE</nombre>
+        <archivo>tabla-atribuciones.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Análisis Comparativo de Procesos</nombre>
-        <archivo>procesos.html</archivo>
+        <nombre>Análisis Comparativo de Procesos y Mecanismos</nombre>
+        <archivo>tabla-procesos.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Estructura de PP y CI</nombre>
-        <archivo>organizaciones.html</archivo>
+        <nombre>Análisis de PP y CI</nombre>
+        <archivo>tabla-organizaciones.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Sistema de Medios de Impugnación</nombre>
-        <archivo>impugnaciones.html</archivo>
+        <nombre>Sistema de Medios de Impugnación en Materia Electoral</nombre>
+        <archivo>tabla-impugnaciones.html</archivo>
     </tabla>
 </menu>
