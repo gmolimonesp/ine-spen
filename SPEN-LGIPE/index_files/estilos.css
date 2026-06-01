@@ -672,8 +672,8 @@ footer {
    ========================================================================== */
 .search-floating {
     position: fixed;
-    top: 80px; /* Ajusta este valor si necesitas moverlo más abajo */
-    right: 100px; /* Separado del borde derecho para no encimarse con scrollbars */
+    top: 120px; /* Ajusta este valor si necesitas moverlo más abajo */
+    right: 30px; /* Separado del borde derecho para no encimarse con scrollbars */
     z-index: 9999;
     display: flex;
     align-items: center;
