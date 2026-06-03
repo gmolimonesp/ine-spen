@@ -93,9 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(error => console.error("Error leyendo tablas.xml:", error));
 
+        // AJUSTE AQUÍ: Evitamos que intente navegar si el valor es nulo o es el carácter neutro (#)
         selectorTablas.addEventListener("change", (e) => {
-            if (e.target.value) {
-                window.location.href = e.target.value;
+            const destino = e.target.value;
+            if (destino && destino !== "#") {
+                window.location.href = destino;
             }
         });
     }

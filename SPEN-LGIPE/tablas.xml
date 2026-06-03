@@ -5,6 +5,12 @@
         <nombre>HOME -- Home</nombre>
         <archivo>index.html</archivo>
     </tabla>
+
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>-- Selecciona una tabla de la LGIPE --</nombre>
+        <archivo>#</archivo>
+    </tabla>
     <tabla>
         <ley>LGIPE</ley>
         <nombre>LGIPE -- Actores Políticos y Autoridades Electorales</nombre>
@@ -50,10 +56,22 @@
         <nombre>LGIPE -- Reglas y Modalidades del Voto en el Extranjero</nombre>
         <archivo>tabla-voto-extranjero.html</archivo>
     </tabla>
+
+    <tabla>
+        <ley>LGPP</ley>
+        <nombre>-- Selecciona una tabla de la LGPP --</nombre>
+        <archivo>#</archivo>
+    </tabla>
     <tabla>
         <ley>LGPP</ley>
         <nombre>LGPP -- Análisis de PP y CI</nombre>
         <archivo>tabla-organizaciones.html</archivo>
+    </tabla>
+
+    <tabla>
+        <ley>LGSMIME</ley>
+        <nombre>-- Selecciona una tabla de la LGSMIME --</nombre>
+        <archivo>#</archivo>
     </tabla>
     <tabla>
         <ley>LGSMIME</ley>
