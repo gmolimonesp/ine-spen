@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reglas y Modalidades del Voto en el Extranjero - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Reglas y Modalidades del Voto en el Extranjero</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Fase Cronológica<br>
+                <select id="filtro-fase" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todas --</option>
+                    <option value="Registro">1. Registro</option>
+                    <option value="Anticipado">2. Voto Anticipado</option>
+                    <option value="Jornada">3. Voto en Jornada</option>
+                    <option value="Computo">4. Cierre y Escrutinio</option>
+                </select>
+            </th>
+            <th class="col-fase">Modalidad / Vía</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CG">Consejo General</option>
+                    <option value="DERFE">DERFE</option>
+                    <option value="MDC-E">MDC Especial</option>
+                </select>
+            </th>
+            
+            <th style="width: 22%; min-width: 300px;">Logística del Procedimiento</th>
+            <th style="width: 22%; min-width: 300px;">Causales de Excepción / Reglas Críticas</th>
+            <th style="width: 15%; min-width: 180px;">Periodo / Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= FASE 1: REGISTRO Y PADRÓN ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📅 ETAPA 1: INCORPORACIÓN AL LISTADO NOMINAL ESPECIAL
+            </td>
+        </tr>
+
+        <tr data-fase="Registro" data-organo="DERFE">
+            <td><strong>1. Registro</strong></td>
+            <td><strong>Inscripción a la LNERE</strong><br><span class="texto-secundario">Trámite Obligatorio</span></td>
+            <td><span class="badge-sigla">DERFE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Solicitud de alta</strong><br>El ciudadano con credencial para votar vigente desde el extranjero (o nacional) solicita formalmente su inscripción a la Lista Nominal Especial.</li>
+                    <li><strong>Baja temporal de la LN</strong><br>Al ser aprobado su registro en la LNERE, el INE lo da de baja temporalmente de la sección electoral de su domicilio en territorio nacional para evitar la duplicidad del voto.</li>
+                    <li><strong>Selección de modalidad</strong><br>En este mismo paso, el elector debe elegir obligatoriamente qué vía utilizará para emitir su sufragio: Postal o Internet.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Validación Registral</strong><br>Si la DERFE detecta inconsistencias o datos falsos en el comprobante de domicilio extranjero, la solicitud se rechaza y el ciudadano permanece en la Lista Nominal ordinaria de México.</li>
+                    <li><strong>Doble Vía Prohibida</strong><br>No se permite el registro simultáneo en dos modalidades; la elección de la vía en esta fase determina el método de votación definitivo.</li>
+                </ul>
+            </td>
+            <td>Periodo determinado por el Consejo General (típicamente concluye en el mes de <strong>febrero</strong> del año de la elección).</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 331-334</td>
+        </tr>
+
+        <!-- ================= FASE 2: VOTO ANTICIPADO ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ✉️ ETAPA 2: MODALIDADES DE VOTACIÓN ANTICIPADA DESDE EL EXTERIOR
+            </td>
+        </tr>
+
+        <tr data-fase="Anticipado" data-organo="DERFE">
+            <td><strong>2. Voto Anticipado</strong></td>
+            <td><strong>Modalidad Postal</strong><br><span class="texto-secundario">Envío Físico</span></td>
+            <td><span class="badge-sigla">DERFE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Despacho de boletas</strong><br>El INE envía por mensajería internacional el Paquete Electoral Postal (PEP) que contiene las boletas impresas, instructivos y sobres resguardados.</li>
+                    <li><strong>Retorno automatizado</strong><br>El ciudadano sufraga en secreto, introduce las boletas en el sobre de seguridad y lo envía sin costo utilizando una guía prepagada.</li>
+                    <li><strong>Concentración centralizada</strong><br>Los sobres devueltos llegan directamente a un <strong>Apartado Postal Especial en México</strong> custodiado por la autoridad electoral.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Plazo de Recepción Fatal</strong><br>Los sobres postales deben llegar físicamente al Apartado Postal Especial en México a más tardar a las <strong>08:00 h del sábado anterior</strong> a la Jornada Electoral. Paquetes rezagados no se abren ni se computan.</li>
+                    <li><strong>Custodia de Estado</strong><br>Al vencer el plazo del sábado, el personal de la DERFE recoge los sobres acumulados y los traslada con resguardo militar a la bodega central de resguardo seguro.</li>
+                </ul>
+            </td>
+            <td>El envío de paquetes inicia en <strong>abril o mayo</strong>; la recepción cierra el <strong>sábado previo a la elección a las 08:00 h</strong>.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 342-343</td>
+        </tr>
+
+        <tr data-fase="Anticipado" data-organo="CG">
+            <td><strong>2. Voto Anticipado</strong></td>
+            <td><strong>Modalidad Internet</strong><br><span class="texto-secundario">Sistema SIVEI</span></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Generación de accesos</strong><br>Se envían las claves personalizadas y contraseñas cifradas al correo electrónico verificado del ciudadano.</li>
+                    <li><strong>Apertura de plataforma</strong><br>El Sistema de Voto Electrónico por Internet (SIVEI) se habilita en una ventana de días previos para recibir los sufragios virtuales de forma anticipada.</li>
+                    <li><strong>Cifrado de votos</strong><br>La plataforma encripta los votos en una bóveda digital y rompe el vínculo entre la identidad del elector y el sentido de su voto para blindar el anonimato.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Puesta en Cero Obligatoria</strong><br>Antes de abrir el sistema al electorado, el Consejo General y los auditores externos deben verificar de forma pública que las bases de datos de la plataforma estén completamente en ceros.</li>
+                    <li><strong>Prevalencia de Modalidad</strong><br>Si un ciudadano inscrito por internet intenta cambiar de parecer e ir a un consulado presencial, el sistema bloquea su cuenta virtual si ya registró un sufragio previo en la plataforma.</li>
+                </ul>
+            </td>
+            <td>La plataforma virtual opera durante los <strong>días previos asignados</strong> y cierra formalmente el mismo domingo de la elección.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 344-346</td>
+        </tr>
+
+        <!-- ================= FASE 3: JORNADA ELECTORAL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🗳️ ETAPA 3: MODALIDAD PRESENCIAL SIMULTÁNEA EL DÍA DE LA ELECCIÓN
+            </td>
+        </tr>
+
+        <tr data-fase="Jornada" data-organo="DERFE">
+            <td><strong>3. Voto en Jornada</strong></td>
+            <td><strong>Modalidad Consular</strong><br><span class="texto-secundario">Módulos Presenciales</span></td>
+            <td><span class="badge-sigla">DERFE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Instalación de módulos</strong><br>Se habilitan urnas electrónicas especiales en las sedes consulares autorizadas por el INE en el extranjero.</li>
+                    <li><strong>Identificación en sitio</strong><br>El ciudadano acude físicamente con su Credencial para Votar para que los operadores validen su estatus en el sistema de la LNERE.</li>
+                    <li><strong>Sufragio en urna virtual</strong><br>Se asigna un token o tarjeta de acceso temporal para que el elector pase a la cabina electrónica y emita sus votos en la pantalla táctil.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Logística Transfronteriza</strong><br>Los módulos consulares operan con base en los husos horarios locales de cada consulado, pero coordinados estrictamente para sincronizarse con el desarrollo del ejercicio en el territorio nacional.</li>
+                    <li><strong>Cierre de fila</strong><br>Aplica la misma regla general: si al cumplirse la hora de conclusión hay ciudadanos formados en el módulo consular, se les permite votar hasta desalojar la fila.</li>
+                </ul>
+            </td>
+            <td>Se ejecuta de manera presencial el mismo <strong>domingo de la Jornada Electoral</strong>.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 347</td>
+        </tr>
+
+        <!-- ================= FASE 4: CIERRE Y CÓMPUTO ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📊 ETAPA 4: CIERRE DE PLATAFORMAS, RECEPCIÓN FINAL Y ESCRUTINIO CENTRALIZADO
+            </td>
+        </tr>
+
+        <tr data-fase="Computo" data-organo="MDC-E">
+            <td><strong>4. Cierre y Escrutinio</strong></td>
+            <td><strong>Escrutinio Especial Centralizado</strong><br><span class="texto-secundario">Sede Única en México</span></td>
+            <td><span class="badge-sigla">MDC-E</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Instalación de Mesas</strong><br>A las 17:00 h del domingo, se instalan formalmente las Mesas Directivas de Casilla Especiales de Escrutinio y Cómputo (MDC-E) en el local central designado en México.</li>
+                    <li><strong>Cierre y descarga virtual</strong><br>A las 18:00 h del centro de México, se bloquea el sistema de internet y se descargan las llaves criptográficas para abrir la bóveda digital.</li>
+                    <li><strong>Apertura de sobres físicos</strong><br>Se abren los contenedores militares y las MDC-E extraen las boletas físicas de los sobres postales válidos recibidos el sábado.</li>
+                    <li><strong>Conteo y actas</strong><br>Se realiza la sumatoria de votos (postales, internet y consulares) asentando los resultados oficiales en actas especiales de escrutinio.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prohibición de Apertura Previa</strong><br>Bahu ninguna circunstancia se pueden abrir los sobres postales o desencriptar los votos de internet antes de la instalación legal de las mesas especiales a las 17:00 h del domingo; violar el sello anticipadamente anula la votación.</li>
+                    <li><strong>Integración de Resultados</strong><br>Las actas de esta sede central se remiten directamente al Consejo General del INE para sumarse a los cómputos distritales nacionales de Presidencia y Senadurías.</li>
+                </ul>
+            </td>
+            <td>Inicia con la instalación de mesas a las <strong>17:00 h del domingo de la elección</strong> hasta concluir los cómputos especiales.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 350-354</td>
+        </tr>
+
+    </tbody>
+    
+    <!-- ================= NOTAS DE REGLAS GENERALES AL PIE ================= -->
+    <tfoot>
+        <tr>
+            <td colspan="7" class="nota-pie-tabla">
+                <strong>💡 Nota Jurídica Importante (Cargos Elegibles):</strong> Todas las modalidades de este régimen especial aplican de manera estricta y exclusiva para los cargos de <strong>Presidencia de la República</strong> y <strong>Senadurías</strong> a nivel Federal. En el ámbito local, aplicará únicamente para <strong>Gubernaturas</strong> o <strong>Jefatura de Gobierno de la CDMX</strong>, siempre y cuando la Constitución política del estado de origen del ciudadano prevea expresamente el derecho al voto desde el extranjero (Art. 329 de la LGIPE). Queda totalmente excluida la votación para Diputaciones y Ayuntamientos.
+            </td>
+        </tr>
+    </tfoot>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

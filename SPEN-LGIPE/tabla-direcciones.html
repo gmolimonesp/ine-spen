@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Atribuciones de las Direcciones Ejecutivas del INE - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Atribuciones de las Direcciones Ejecutivas del INE</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th>
+                DE / UT<br>
+                <select id="filtro-tipo" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <!-- Bloque 1 -->
+                    <option value="DERFE">DERFE</option>
+                    <option value="DEPPP">DEPPP</option>
+                    <option value="DEOE">DEOE</option>
+                    <!-- Bloque 2 -->
+                    <option value="DESPEN">DESPEN</option>
+                    <option value="DECEYEC">DECEYEC</option>
+                    <option value="DEA">DEA</option>
+                    <!-- Bloque 3 -->
+                    <option value="UTF">UTF</option>
+                    <option value="UTVOPLE">UTVOPLE</option>
+                    <option value="UTCE">UTCE</option>
+                </select>
+            </th>
+            <th>Periodo Ordinario</th>
+            <th>Prep. Elección (Etapa 1)</th>
+            <th>Jornada Electoral (Etapa 2)</th>
+            <th>Post-Jornada (Etapas 3 y 4)</th>
+            <th>Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= CABECERA DE DESCANSO 1 ================= -->
+        <tr>
+            <td colspan="6" class="cabecera-descanso">
+                🗂️ DIRECCIONES EJECUTIVAS DE EJECUCIÓN OPERATIVA Y REGISTRAL
+            </td>
+        </tr>
+
+        <!-- DERFE -->
+        <tr data-tipo="DERFE">
+            <td><strong>DERFE</strong></td>
+            <td>
+                • Campaña permanente de actualización del Padrón Electoral.<br>
+                • Expedición y renovación continua de la Credencial para Votar.<br>
+                • Depuración permanente del padrón por defunciones o pérdida de derechos políticos.<br>
+                • Mantenimiento y actualización de la cartografía electoral nacional.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Cierre de la campaña intensa de credencialización.<br>
+                • Determinación de fechas límite para trámites y reposiciones.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Generación e impresión de las Listas Nominales preliminares.<br>
+                • Exhibición de listados para observaciones de partidos políticos.<br>
+                <strong>Veda Electoral</strong><br>
+                • Resguardo en bóvedas de credenciales no recogidas por los ciudadanos.<br>
+                • Generación de los listados nominales definitivos con fotografía.
+            </td>
+            <td>
+                • Entrega y distribución de los listados nominales definitivos en papel de seguridad para las casillas.<br>
+                • Dotación de los tantos de la Lista Nominal a las representaciones de los partidos políticos.<br>
+                • Soporte técnico continuo en los distritos ante dudas sobre la vigencia o estatus de credenciales.<br>
+                • Monitoreo de incidencias del sistema registral asociadas a la mesa de casilla.<br>
+                • Resguardo de los sistemas informáticos del padrón contra hackeos o accesos no autorizados.
+            </td>
+            <td>
+                • Reapertura inmediata del sistema de trámites en los Módulos de Atención Ciudadana (MAC).<br>
+                • Atención expedita a los requerimientos de información por parte de las Salas del TEPJF.<br>
+                • Entrega de copias de los listados nominales bajo resguardo judicial para el desahogo de impugnaciones.<br>
+                • Reincorporación de ciudadanos que recuperan sus derechos políticos.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 54 y 55.</td>
+        </tr>
+
+        <!-- DEPPP -->
+        <tr data-tipo="DEPPP">
+            <td><strong>DEPPP</strong></td>
+            <td>
+                • Administración y entrega del financiamiento público ordinario a los partidos políticos.<br>
+                • Control del libro de registro de los partidos y agrupaciones políticas nacionales.<br>
+                • Coordinación permanente con el Comité de Radio y Televisión.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Recepción y validación de las plataformas electorales de los partidos.<br>
+                • Aprobación de las pautas de transmisión en Radio y TV para precampaña e intercampaña.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Registro formal de convenios de coalición y candidaturas (partidos e independientes).<br>
+                • Elaboración de las pautas específicas de spots para el periodo de campañas.<br>
+                <strong>Veda Electoral</strong><br>
+                • Sustitución de urgencia de candidaturas por fallecimiento o inhabilitación.<br>
+                • Verificación de la suspensión de toda pauta partidista en medios masivos.
+            </td>
+            <td>
+                • Monitoreo y verificación en tiempo real de las transmisiones de Radio y TV a nivel nacional.<br>
+                • Fiscalización del estricto cumplimiento del periodo de silencio (cero spots de partidos).<br>
+                • Reporte inmediato de incidencias o violaciones por transmisiones fuera de pauta en la jornada.<br>
+                • Acreditación final y control de los representantes de partidos políticos ante las casillas y consejos.<br>
+                • Enlace técnico con el Comité de Radio y Televisión para el desahogo de quejas urgentes.
+            </td>
+            <td>
+                • Cómputo analítico para la asignación de senadurías y diputaciones por Representación Proporcional.<br>
+                • Elaboración de los dictámenes de asignación de curules "plurinominales" para el Consejo General.<br>
+                • Verificación oficial sobre qué partidos no alcanzaron el 3% de votación para iniciar la pérdida de registro.<br>
+                • Registro formal de los informes de sustitución definitiva de cargos electos.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 56 y 57.</td>
+        </tr>
+
+        <!-- DEOE -->
+        <tr data-tipo="DEOE">
+            <td><strong>DEOE</strong></td>
+            <td>
+                • Inventario, mantenimiento y resguardo del material electoral reutilizable en bodegas.<br>
+                • Desarrollo de estudios técnicos sobre geografía electoral nacional y distrital.<br>
+                • Formulación de propuestas operativas para la redistritación.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Emisión de lineamientos técnicos para la ubicación física de las casillas.<br>
+                • Diseño de formatos de boletas, actas de jornada y de escrutinio.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Coordinación de la impresión masiva de boletas en talleres oficiales.<br>
+                • Distribución con resguardo militar de boletas y actas a los consejos distritales.<br>
+                <strong>Veda Electoral</strong><br>
+                • Armado de los paquetes electorales en los consejos distritales.<br>
+                • Entrega de los paquetes sellados a las presidencias de las Mesas Directivas de Casilla.
+            </td>
+            <td>
+                • Operación y supervisión del Sistema de Información sobre el Desarrollo de la Jornada Electoral (SIJE).<span style="color: red;">*1</span><br>
+                • Reporte y monitoreo continuo sobre la instalación y apertura de casillas en todo el país.<br>
+                • Registro del flujo de sustituciones de funcionarios de casilla en fila por ausentismo.<br>
+                • Seguimiento y consolidación del reporte de incidencias operativas y de seguridad en campo.<br>
+                • Coordinación de los Mecanismos de Recolección y Traslado (CRYT/DAT) al cierre de las casillas.<br>
+                • Logística de recepción y resguardo militar de los paquetes electorales en las sedes distritales.<br>
+                • Supervisión del inicio de la captura de actas para el PREP y los sistemas informáticos locales.
+            </td>
+            <td>
+                • Sistematización y agregación oficial de los resultados de los cómputos distritales.<br>
+                • Despliegue de la logística para los recuentos totales o parciales de votos (voto por voto).<br>
+                • Resguardo físico y custodia de los paquetes electorales impugnados por los partidos.<br>
+                • Remisión formal de los expedientes de cómputo distrital a las salas competentes del TEPJF.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 58 y 59.</td>
+        </tr>
+
+        <!-- ================= CABECERA DE DESCANSO 2 ================= -->
+        <tr>
+            <td colspan="6" class="cabecera-descanso">
+                💼 DIRECCIONES EJECUTIVAS DE GESTIÓN INSTITUCIONAL Y PROFESIONALIZACIÓN
+            </td>
+        </tr>
+
+        <!-- DESPEN -->
+        <tr data-tipo="DESPEN">
+            <td><strong>DESPEN</strong></td>
+            <td>
+                • Planeación de los concursos públicos de oposición para ingreso al Servicio Profesional.<br>
+                • Coordinación de los programas permanentes de formación y especialización del personal de carrera.<br>
+                • Gestión de la estructura de cargos y puestos del SPEN tanto en el INE como en los OPLE.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Validación de las plantillas del personal del Servicio adscrito a juntas locales y distritales.<br>
+                • Suspensión temporal de cambios de adscripción ordinarios para no desestabilizar las juntas.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Supervisión del cumplimiento de metas especiales asignadas al personal de carrera en campo.<br>
+                <strong>Veda Electoral</strong><br>
+                • Habilitación operativa de guardias de personal profesional para la cobertura de la jornada.
+            </td>
+            <td>
+                • Monitoreo de la presencia y desempeño del personal de carrera en sus puestos asignados (juntas y consejos).<br>
+                • Activación de protocolos de sustitución urgente de vocales distritales por causas de fuerza mayor.<br>
+                • Seguimiento técnico del personal de carrera que funge como enlace directo con los centros de captura PREP.<br>
+                • Reporte de incidencias graves de conducta o abandono de funciones del personal del Servicio en casillas o consejos.<br>
+                • Soporte administrativo de incidencias laborales bajo el estatuto del Servicio Profesional Electoral.
+            </td>
+            <td>
+                • Reactivación de los procedimientos ordinarios de evaluación del desempeño del Proceso Electoral.<br>
+                • Sustanciación de quejas o procedimientos administrativos disciplinarios derivados de faltas en la jornada.<br>
+                • Procesamiento de los incentivos al personal del Servicio que destacó por su labor operativa en los distritos.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 60 y 61.</td>
+        </tr>
+
+        <!-- DECEYEC -->
+        <tr data-tipo="DECEYEC">
+            <td><strong>DECEYEC</strong></td>
+            <td>
+                • Diseño de los programas permanentes de educación cívica y cultura democrática.<br>
+                • Actualización de manuales técnicos para la capacitación de la ciudadanía.<br>
+                • Evaluación de las estrategias de capacitación de procesos electorales anteriores.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Contratación y adiestramiento de Supervisores Electorales (SE) y Capacitadores-Asistentes (CAE).<br>
+                • Coordinación de la primera insaculación (sorteo del 13% del padrón electoral basado en el mes).<br>
+                <strong>Campaña Electoral</strong><br>
+                • Visita, notificación y primera capacitación de los ciudadanos sorteados en sus domicilios.<br>
+                • Segunda insaculación para asignar cargos específicos de la Mesa Directiva según la letra del apellido.<br>
+                <strong>Veda Electoral</strong><br>
+                • Realización de simulacros finales y prácticas de la jornada electoral con los funcionarios designados.<br>
+                • Entrega de nombramientos definitivos y nombramientos de reserva.
+            </td>
+            <td>
+                • Despliegue en campo de los miles de CAE y SE para asistir en la instalación oportuna de las casillas.<br>
+                • Sustitución de funcionarios ausentes utilizando a los ciudadanos de la fila, bajo criterios legales establecidos.<br>
+                • Auxilio logístico de los CAE a las Mesas Directivas durante el desarrollo y flujo de votantes.<br>
+                • Asistencia técnica y pedagógica a los funcionarios en el llenado de las actas de escrutinio y cómputo.<br>
+                • Reporte de la tasa de sustitución de funcionarios en casillas y de incidencias de asistencia al SIJE.<br>
+                • Apoyo en la integración física del paquete electoral y acompañamiento para su traslado seguro.
+            </td>
+            <td>
+                • Conclusión de los contratos del personal eventual (CAE y SE) tras la entrega de paquetes.<br>
+                • Integración de las estadísticas definitivas sobre la participación ciudadana en las mesas de casilla.<br>
+                • Redacción de memorias e informes analíticos sobre el comportamiento de la capacitación en campo.<br>
+                • Gestión de los apoyos económicos finales y reconocimientos a los ciudadanos que actuaron como funcionarios.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 62 y 63.</td>
+        </tr>
+
+        <!-- DEA -->
+        <tr data-tipo="DEA">
+            <td><strong>DEA</strong></td>
+            <td>
+                • Elaboración del anteproyecto del presupuesto anual consolidado del INE.<br>
+                • Administración de las nóminas, prestaciones y recursos humanos permanentes.<br>
+                • Licitaciones públicas para la adquisición de bienes institucionales y arrendamiento de inmuebles.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Ministración de los recursos financieros aprobados para las juntas locales y distritales.<br>
+                • Contratación masiva de personal eventual para módulos y apoyo en juntas de todo el país.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Pago de arrendamientos de inmuebles adicionales para bodegas y sedes alternas de los consejos.<br>
+                • Adquisición y distribución de uniformes e insumos de identificación para CAE y SE.<br>
+                <strong>Veda Electoral</strong><br>
+                • Dispersión de fondos de caja chica a los consejos distritales para gastos de alimentación de la jornada.
+            </td>
+            <td>
+                • Monitoreo de contingencias financieras urgentes (gastos médicos de personal en campo, fallas en servicios).<br>
+                • Garantizar el suministro eléctrico y plantas de luz de emergencia en las 300 sedes distritales.<br>
+                • Coordinación de la flota vehicular e insumos de combustible para el traslado de paquetes electorales.<br>
+                • Operación de los sistemas de comunicación y redes de datos contratadas para la transmisión de reportes.<br>
+                • Registro administrativo inmediato de incidencias por siniestros o pérdidas de material institucional.
+            </td>
+            <td>
+                • Procesamiento de los pagos finales y finiquitos de las estructuras operativas eventuales.<br>
+                • Consolidación del gasto del Proceso Electoral para rendición de cuentas e informes financieros.<br>
+                • Atención inmediata a las auditorías del Órgano Interno de Control (OIC) y de la Auditoría Superior de la Federación.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 64 y 65.</td>
+        </tr>
+
+        <!-- ================= CABECERA DE DESCANSO 3 ================= -->
+        <tr>
+            <td colspan="6" class="cabecera-descanso">
+                ⚙️ UNIDADES TÉCNICAS (SOPORTE OPERATIVO TRANSVERSAL)
+            </td>
+        </tr>
+
+        <!-- UTF -->
+        <tr data-tipo="UTF">
+            <td><strong>UTF</strong></td>
+            <td>
+                • Fiscalización continua de los ingresos y gastos de los partidos políticos y agrupaciones nacionales.<br>
+                • Recepción de informes anuales de actividades ordinarias de los partidos.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Fiscalización de los informes de ingresos y gastos de precampaña e intención independiente.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Despliegue de auditores para verificar eventos de campaña y espectaculares (registro en el SIF).<br>
+                <strong>Veda Electoral</strong><br>
+                • Cierre de la captura en el Sistema de Contabilidad En Línea por parte de los candidatos.
+            </td>
+            <td>
+                • Monitoreo de campo en casillas para detectar propaganda no reportada (lonas, transporte organizado).<br>
+                • Registro y compulsa de gastos realizados el día de la jornada electoral (alimentos de representantes, etc.).<br>
+                • Levantamiento de actas de auditoría ante quejas de partidos por supuesto reparto de dádivas o recursos.<br>
+                • Coordinación regulatoria con la Unidad de Inteligencia Financiera (UIF) y bancos ante flujos sospechosos.
+            </td>
+            <td>
+                • Consolidación de los dictámenes y resoluciones de los gastos de campaña dentro de plazos compactados.<br>
+                • Determinación del rebase de topes de gastos de campaña (causal constitucional de nulidad).<br>
+                • Defensa jurídica de los dictámenes ante las impugnaciones interpuestas en el TEPJF.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 190 y 192.</td>
+        </tr>
+
+        <!-- UTVOPLE -->
+        <tr data-tipo="UTVOPLE">
+            <td><strong>UTVOPLE</strong></td>
+            <td>
+                • Enlace institucional permanente entre el INE y los 32 institutos electorales locales.<br>
+                • Seguimiento a la integración de los consejos generales de los OPLE (designaciones y remociones).
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Coordinación del Calendario Integral de los Procesos Electorales Concurrentes.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Supervisión de los convenios de coordinación y anexos financieros firmados con cada OPLE.<br>
+                <strong>Veda Electoral</strong><br>
+                • Seguimiento a la producción de documentación y material local bajo estándares del INE.
+            </td>
+            <td>
+                • Monitoreo conjunto (INE-OPLE) del avance en la instalación de las casillas únicas.<br>
+                • Mesa de control permanente para resolver diferencias competenciales en las casillas concurrentes.<br>
+                • Reporte unificado al Consejo General del INE sobre el desarrollo de las jornadas locales.<br>
+                • Enlace informativo ante caídas de sistemas de los PREP locales o contingencias de seguridad pública.<br>
+                • Coordinación de rutas de traslado compartidas para paquetes federales y estatales.
+            </td>
+            <td>
+                • Seguimiento a los cómputos locales, declaraciones de validez y entrega de constancias en los estados.<br>
+                • Consolidación de informes sobre el resultado de los PREP locales y los conteos rápidos locales.<br>
+                • Sistematización del estatus de las impugnaciones que se presenten ante los tribunales electorales locales.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 60, párrafo 1, inc. k).</td>
+        </tr>
+
+        <!-- UTCE -->
+        <tr data-tipo="UTCE">
+            <td><strong>UTCE</strong></td>
+            <td>
+                • Tramitación de Procedimientos Ordinarios Sancionadores (POS) por faltas fuera de proceso.<br>
+                • Mantenimiento del Registro Nacional de Personas Sancionadas en Materia de Violencia Política de Género.
+            </td>
+            <td>
+                <strong>Precampaña e Intercampaña</strong><br>
+                • Recepción y desahogo expedito de quejas por actos anticipados de precampaña.<br>
+                <strong>Campaña Electoral</strong><br>
+                • Tramitación de Procedimientos Especiales Sancionadores (PES) por calumnia o uso indebido de pauta.<br>
+                <strong>Veda Electoral</strong><br>
+                • Elaboración de propuestas de medidas cautelares de urgencia (bajar spots o publicaciones prohibidas).
+            </td>
+            <td>
+                • Guardia de 24 horas para la recepción de quejas de partidos por violaciones flagrantes a la veda electoral.<br>
+                • Dictado en pocas horas de medidas cautelares urgentes (órdenes de retiro de propaganda, bloqueo de enlaces).<br>
+                • Instrucción de actas de oficialía electoral para dar fe pública de violaciones cometidas en la jornada.<br>
+                • Remisión urgente de expedientes incidentales a la Sala Especializada del TEPJF.
+            </td>
+            <td>
+                • Sustanciación final de los cuadernillos de queja acumulados durante la jornada y post-jornada.<br>
+                • Envío de las investigaciones completas a la Sala Especializada para el dictado de sentencias de fondo.<br>
+                • Integración de los expedientes de sanción que sirvan de base al TEPJF para evaluar la validez de la elección.
+            </td>
+            <td class="fundamento"><strong>LGIPE</strong>:<br>Art. 459, 470 y sigs.</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- ================= SECCIÓN DE NOTAS AL PIE DE TABLA ================= -->
+<div class="notas-tabla" style="margin-top: 15px; font-size: 0.85em; color: #555; line-height: 1.4;">
+    <p><strong style="color: red;">*1</strong> <strong>Nota 1 (Coordinación de Casilla Única):</strong> Durante la Jornada Electoral en procesos concurrentes, la DEOE coordina la logística de la casilla única junto con los OPLE, asegurando que el flujo de escrutinio diferencie correctamente los paquetes federales de los locales.</p>
+</div>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

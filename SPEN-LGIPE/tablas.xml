@@ -1,31 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
     <tabla>
-        <nombre>Home</nombre>
+        <ley>HOME</ley>
+        <nombre>HOME -- Home</nombre>
         <archivo>index.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Actores Políticos y Autoridades Electorales</nombre>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Actores Políticos y Autoridades Electorales</nombre>
         <archivo>tabla-actores.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Requisitos Constitucionales de Elegibilidad</nombre>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Requisitos Constitucionales de Elegibilidad</nombre>
         <archivo>tabla-requisitos.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Atribuciones de los Órganos del INE</nombre>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Atribuciones de los Órganos del INE</nombre>
         <archivo>tabla-atribuciones.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Análisis Comparativo de Procesos y Mecanismos</nombre>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Atribuciones de las DE del INE</nombre>
+        <archivo>tabla-direcciones.html</archivo>
+    </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Análisis Comparativo de Procesos y Mecanismos</nombre>
         <archivo>tabla-procesos.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Análisis de PP y CI</nombre>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Operación y Logística del Proceso Electoral</nombre>
+        <archivo>tabla-operacion-logistica.html</archivo>
+    </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Reglas del Cómputo Distrital y Recuentos</nombre>
+        <archivo>tabla-computos-distritales.html</archivo>
+    </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Sistemas de Información y Resultados Preliminares</nombre>
+        <archivo>tabla-prep-conteos.html</archivo>
+    </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Reglas y Modalidades del Voto en el Extranjero</nombre>
+        <archivo>tabla-voto-extranjero.html</archivo>
+    </tabla>
+    <tabla>
+        <ley>LGPP</ley>
+        <nombre>LGPP -- Análisis de PP y CI</nombre>
         <archivo>tabla-organizaciones.html</archivo>
     </tabla>
     <tabla>
-        <nombre>Sistema de Medios de Impugnación en Materia Electoral</nombre>
+        <ley>LGSMIME</ley>
+        <nombre>LGSMIME -- Sistema de Medios de Impugnación en Materia Electoral</nombre>
         <archivo>tabla-impugnaciones.html</archivo>
     </tabla>
 </menu>

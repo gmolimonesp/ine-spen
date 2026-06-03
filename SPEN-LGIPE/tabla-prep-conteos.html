@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistemas de Información y Resultados Preliminares - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Sistemas de Información y Resultados Preliminares</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Sistema / Mecanismo<br>
+                <select id="filtro-sistema" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="SIJE">SIJE</option>
+                    <option value="PREP">PREP</option>
+                    <option value="Conteo">CR</option>
+                </select>
+            </th>
+            <th class="col-fase">Fase Operativa</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CG">Consejo General</option>
+                    <option value="CD">Consejo Distrital</option>
+                    <option value="CAE">CAE / Personal</option>
+                </select>
+            </th>
+            
+            <th style="width: 22%; min-width: 300px;">Logística del Procedimiento</th>
+            <th style="width: 22%; min-width: 300px;">Causales de Excepción / Reglas Críticas</th>
+            <th style="width: 15%; min-width: 180px;">Periodo / Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= BLOQUE 1: SIJE Y REPORTES EN CAMPO ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📡 SECCIÓN I: SISTEMA DE INFORMACIÓN DE LA JORNADA ELECTORAL (SIJE)
+            </td>
+        </tr>
+
+        <tr data-sistema="SIJE" data-organo="CAE">
+            <td><strong>SIJE</strong></td>
+            <td><strong>Flujo Informativo de la Jornada</strong></td>
+            <td><span class="badge-sigla">CAE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Primer Reporte (Instalación)</strong><br>Confirmación física del inicio de la instalación de la casilla y la hora exacta de apertura al electorado.</li>
+                    <li><strong>Segundo Reporte (Integración)</strong><br>Verificación detallada de la estructura final de la MDC (propietarios o sustituciones tomadas de la fila) y el conteo de representaciones de PP presentes.</li>
+                    <li><strong>Reporte Continuo (Incidencias)</strong><br>Alimentación del sistema en tiempo real con eventualidades de seguridad, logística o alteraciones al orden que ocurran en el perímetro de la casilla.</li>
+                    <li><strong>Consolidación en Consejos</strong><br>Transmisión de los datos recolectados para nutrir las sábanas de información estadística de las juntas distritales.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cierre Prolongado por Fila</strong><br>Si se alcanzan las 18:00 h pero permanecen ciudadanos formados para sufragar, la casilla prorroga su cierre legal y el estatus de recolección de incidencias continúa activo hasta que vote el último elector en fila.</li>
+                    <li><strong>Falta de Conectividad</strong><br>Ante fallas de red móvil en el ARE, el CAE se traslada obligatoriamente a los nodos de transmisión predeterminados para vaciar de golpe los cortes de instalación e integración.</li>
+                </ul>
+            </td>
+            <td><strong>Cortes horarios específicos:</strong><br>- Primer reporte (Instalación): Corte crítico a las <strong>10:00 h</strong>.<br>- Segundo reporte (MDC y PP): Consolidación a las <strong>13:00 h</strong>.<br>- Incidencias: Flujo continuo desde el inicio de la instalación hasta el cierre definitivo de la casilla.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 306</td>
+        </tr>
+
+        <!-- ================= BLOQUE 2: PREP Y CAPTURA DIGITAL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                💻 SECCIÓN II: PROGRAMA DE RESULTADOS ELECTORALES PRELIMINARES (PREP)
+            </td>
+        </tr>
+
+        <tr data-sistema="PREP" data-organo="CD">
+            <td><strong>PREP</strong></td>
+            <td><strong>Acopio, Digitalización y Publicación</strong></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Extracción del sobre</strong><br>Se recibe el paquete electoral en el Consejo Distrital y se extrae el sobre transparente adherido al exterior con el "Acta PREP".</li>
+                    <li><strong>Digitalización inmediata</strong><br>El personal del Centro de Acopio y Transmisión de Datos (CATD) escanea el acta para convertirla en imagen digital.</li>
+                    <li><strong>Doble captura ciega</strong><br>Dos operadores independientes capturan numéricamente los votos de la imagen sin ver los datos del otro para evitar errores humanos.</li>
+                    <li><strong>Divulgación pública</strong><br>Verificados los datos, la imagen y el resultado se publican en tiempo real en los portales espejo de difusión nacional.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inconsistencias de Origen</strong><br>Si el acta viene dentro del paquete cerrado (por error de la MDC) o resulta ilegible por daño físico, el sistema bloquea su captura ordinaria y la cataloga públicamente como "Acta en paquete" o "Ilegible".</li>
+                    <li><strong>Carácter Informativo</strong><br>Los resultados del PREP son estrictamente preliminares; carecen de efectos jurídicos vinculantes y no sustituyen bajo ninguna circunstancia a los cómputos distritales.</li>
+                </ul>
+            </td>
+            <td>Inicia a las <strong>20:00 h del domingo</strong> de la elección y opera por un plazo máximo de <strong>24 horas</strong>.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 307-308</td>
+        </tr>
+
+        <!-- ================= BLOQUE 3: CONTEO RÁPIDO Y TENDENCIAS ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📊 SECCIÓN III: CONTEO RÁPIDO Y ESTIMACIONES ESTADÍSTICAS TENDENCIALES
+            </td>
+        </tr>
+
+        <tr data-sistema="Conteo" data-organo="CG">
+            <td><strong>CR</strong></td>
+            <td><strong>Muestreo Científico y Comité Asesor</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Diseño de la muestra</strong><br>Un comité técnico de científicos define una muestra probabilística de casillas representativa de todo el territorio.</li>
+                    <li><strong>Transmisión prioritaria</strong><br>En cuanto termina el escrutinio en las casillas seleccionadas, el CAE transmite los datos numéricos con máxima prioridad.</li>
+                    <li><strong>Cálculo de intervalos</strong><br>Los matemáticos procesan las muestras recibidas mediante modelos estadísticos concurrentes para estimar los rangos de votación.</li>
+                    <li><strong>Anuncio oficial</strong><br>El Presidente del Consejo General comunica al país las tendencias e intervalos de participación y votación de los candidatos.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Casos de Traslape</strong><br>Si los intervalos de votación de los dos candidatos punteros se cruzan o traslapan estadísticamente, el comité técnico de expertos declarará una tendencia no concluyente.</li>
+                    <li><strong>Estricta Confidencialidad</strong><br>Los miembros del comité operan en aislamiento total la noche de la elección; está prohibido filtrar datos parciales de la muestra antes del anuncio oficial.</li>
+                </ul>
+            </td>
+            <td>Se difunde la <strong>misma noche de la Jornada Electoral</strong>.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 309</td>
+        </tr>
+
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Operación y Logística del Proceso Electoral - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+    <header class="header-dashboard">
+        <h1>Operación y Logística del Proceso Electoral (Libro Quinto LGIPE)</h1>
+    </header>
+
+    <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Etapa del Proceso (Art. 225)<br>
+                <select id="filtro-etapa" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todas --</option>
+                    <option value="Preparación">Preparación</option>
+                    <option value="Jornada">Jornada Electoral</option>
+                    <option value="Resultados">Resultados y Validez</option>
+                </select>
+            </th>
+            <th class="col-fase">Fase Operativa</th>
+            <th class="col-organo">
+                Órgano Resp. INE<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CG">CG</option>
+                    <option value="CD">CD</option>
+                    <option value="JDE">JDE</option>
+                    <option value="MDC">MDC</option>
+                </select>
+            </th>
+            
+            <th style="width: 22%; min-width: 300px;">Logística</th>
+            <th style="width: 22%; min-width: 300px;">Causales de Excepción / Reglas Críticas</th>
+            <th style="width: 15%; min-width: 180px;">Periodo / Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📦 BLOQUE I: LOGÍSTICA DE CASILLAS Y CIUDADANÍA (ETAPA DE PREPARACIÓN)
+            </td>
+        </tr>
+
+        <tr data-etapa="Preparación" data-organo="JDE">
+            <td><strong>Preparación</strong></td>
+            <td><strong>Recorridos de Examinación</strong><br><span class="texto-secundario">Ubicación de Casillas</span></td>
+            <td><span class="badge-sigla">JDE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Planificación de rutas</strong><br>El personal técnico diseña los mapas de recorrido por sección electoral priorizando áreas de alta densidad de votantes.</li>
+                    <li><strong>Visitas de campo</strong><br>Inspección física de inmuebles para medir dimensiones, verificar condiciones de techado, iluminación artificial y ventilación natural.</li>
+                    <li><strong>Análisis de accesibilidad</strong><br>Evaluación de rampas y accesos libres de obstáculos para garantizar el voto de personas con discapacidad o movilidad reducida.</li>
+                    <li><strong>Convenios institucionales</strong><br>Firma de acuerdos con el sector educativo público para asegurar el préstamo y uso de los planteles el día de la elección.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Lugares Prohibidos</strong><br>No pueden ubicarse en templos, locales de culto, sedes de partidos, fábricas, cantinas, ni fincas de candidatos o servidores públicos de mando.</li>
+                    <li><strong>Excepción de Negativa</strong><br>Si el propietario de un inmueble privado preaprobado revoca el permiso de última hora, la JDE debe sesionar de emergencia para trasladar la casilla a la escuela pública más cercana.</li>
+                    <li><strong>Restricciones de Cercanía</strong><br>Las casillas no pueden instalarse a menos de 50 metros de oficinas de corporaciones policiacas o agencias del ministerio público activas.</li>
+                </ul>
+            </td>
+            <td>Del <strong>15 de enero al 15 de febrero</strong> del año de la elección.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 255-256</td>
+        </tr>
+
+        <tr data-etapa="Preparación" data-organo="JDE">
+            <td><strong>Preparación</strong></td>
+            <td><strong>Segunda Insaculación</strong><br><span class="texto-secundario">Integración de MDC</span></td>
+            <td><span class="badge-sigla">JDE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Filtrado de aptitud</strong><br>Se procesa la base de datos de los ciudadanos que resultaron aptos y aceptaron la capacitación durante la primera etapa.</li>
+                    <li><strong>Sorteo automatizado</strong><br>El sistema selecciona aleatoriamente de ese subuniverso a los ciudadanos requeridos por sección electoral.</li>
+                    <li><strong>Asignación jerárquica</strong><br>Se ordenan los cargos de mayor a menor nivel de escolaridad acreditada para definir quién ocupará la Presidencia, Secretarías y Escrutinios.</li>
+                    <li><strong>Nombramiento y entrega</strong><br>Impresión formal de los nombramientos oficiales y despliegue de capacitadores para recabar la firma de aceptación final.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Sustituciones por Prelación</strong><br>Si un funcionario propietario renuncia antes del sábado previo a la elección, la JDE reasigna el cargo de forma automática siguiendo el orden de la lista de suplentes generales.</li>
+                    <li><strong>Criterio de Desempate</strong><br>A igual nivel de escolaridad entre dos ciudadanos elegibles para la Presidencia, el sistema prioriza a aquel que tenga la mayor edad en años.</li>
+                    <li><strong>Cuotas de Género en Capacitación</strong><br>Las sustituciones masivas deben vigilar un balance equitativo de género para evitar que la MDC quede integrada de forma exclusiva por un solo sexo.</li>
+                </ul>
+            </td>
+            <td>A más tardar el <strong>6 de abril</strong> del año de la elección.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 254</td>
+        </tr>
+
+        <tr data-etapa="Preparación" data-organo="CD">
+            <td><strong>Preparación</strong></td>
+            <td><strong>Publicación del Encarte</strong></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Aprobación del listado</strong><br>El Consejo Distrital valida en sesión plenaria el catálogo definitivo de casillas y sus respectivos integrantes de MDC.</li>
+                    <li><strong>Impresión masiva</strong><br>Generación de los listados oficiales bajo estrictas especificaciones técnicas para su distribución.</li>
+                    <li><strong>Fijación en campo</strong><br>El personal del INE coloca físicamente las sábanas impresas en las oficinas públicas más transitadas de cada sección electoral.</li>
+                    <li><strong>Notificación a partidos</strong><br>Entrega de copias certificadas digitales del Encarte a las representaciones partidistas acreditadas ante el consejo.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Modificaciones de Causa Mayor</strong><br>Posterior a la publicación, sólo se permite cambiar de lugar una casilla por destrucción del inmueble, epidemias de salud o condiciones extremas de inseguridad.</li>
+                    <li><strong>Aviso Inmediato Obligatorio</strong><br>Cualquier cambio de ubicación aprobado de última hora debe publicarse mediante avisos de redirección urgentes en las fachadas del inmueble originalmente asignado.</li>
+                    <li><strong>Impugnación del Listado</strong><br>Los partidos cuentan con plazos perentorios para interponer recursos de revisión si detectan nombres de personas ligadas a dirigencias sindicales operando en las MDC.</li>
+                </ul>
+            </td>
+            <td>A más tardar <strong>15 días antes</strong> de la Jornada Electoral.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 257</td>
+        </tr>
+
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🗳️ BLOQUE II: DESARROLLO Y FLUJO DE LA JORNADA ELECTORAL
+            </td>
+        </tr>
+
+        <tr data-etapa="Preparación" data-organo="CG">
+            <td><strong>Preparación</strong></td>
+            <td><strong>Inicio Formal del Proceso</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Convocatoria a sesión</strong><br>Citación formal a todos los consejeros y representantes partidistas para la apertura del año electoral.</li>
+                    <li><strong>Declaratoria oficial</strong><br>Emisión del pronunciamiento institucional que arranca el calendario electoral federal.</li>
+                    <li><strong>Habilitación de términos</strong><br>Activación del régimen jurídico especial donde todos los días y horas se consideran hábiles para la interposición de recursos.</li>
+                    <li><strong>Calendario de instalación</strong><br>Notificación de fechas límite para que los órganos delegacionales (CL) y subdelegacionales (CD) procedan a instalarse.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Conflicto de Fechas</strong><br>Si por causas de fuerza mayor o reformas constitucionales federales varía el arranque, el CG debe emitir un acuerdo general de reajuste de plazos concurrentes.</li>
+                    <li><strong>Falta de Quórum Inicial</strong><br>Si no se reúne la mayoría de consejeros con derecho a voto, la sesión se posterga obligatoriamente para 24 horas después, notificando al Tribunal Electoral.</li>
+                </ul>
+            </td>
+            <td>Durante la <strong>primera semana de septiembre</strong> del año previo a la elección.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 225, Párp. 1</td>
+        </tr>
+
+        <tr data-etapa="Jornada" data-organo="MDC">
+            <td><strong>Jornada</strong></td>
+            <td><strong>Instalación y Apertura</strong></td>
+            <td><span class="badge-sigla">MDC</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Encuentro y verificación</strong><br>Reunión de los funcionarios a las 07:30 h para recibir el paquete y cotejar que los sellos de seguridad estén intactos.</li>
+                    <li><strong>Conteo físico</strong><br>Apertura del paquete, conteo manual de las boletas recibidas y registro estricto de los folios iniciales y finales en las actas.</li>
+                    <li><strong>Armado de urnas</strong><br>Ensamblaje de las urnas transparentes a la vista de los representantes de partidos para certificar que están totalmente vacías.</li>
+                    <li><strong>Firma de inicio</strong><br>Llenado y firma obligatoria del apartado de instalación del Acta de la Jornada Electoral por parte de todos los presentes.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Ausencia de Funcionarios</strong><br>A las 08:15 h, si falta el Presidente, asume el Primer Secretario. A las 10:00 h, si persisten ausencias, el Consejo Distrital faculta al Presidente para tomar electores directamente de la fila.</li>
+                    <li><strong>Restricción de la Fila</strong><br>Los ciudadanos habilitados de emergencia de la fila deben pertenecer obligatoriamente a la sección electoral de la casilla y aparecer vigentes en la Lista Nominal.</li>
+                    <li><strong>Prohibición de Servidores Públicos</strong><br>Bajo ninguna circunstancia se puede integrar a la MDC a funcionarios con cargo de mando, policías en activo ni representantes de partidos políticos que estén en la fila.</li>
+                </ul>
+            </td>
+            <td>Inicio de instalación a las <strong>07:30 h</strong>; inicio de votación a las <strong>08:00 h</strong> del primer domingo de junio.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 273-274</td>
+        </tr>
+
+        <tr data-etapa="Jornada" data-organo="MDC">
+            <td><strong>Jornada</strong></td>
+            <td><strong>Cierre de Casilla y Escrutinio</strong></td>
+            <td><span class="badge-sigla">MDC</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Declaración de clausura</strong><br>El Presidente anuncia el fin de la votación y traza líneas diagonales sobre los espacios en blanco de la Lista Nominal.</li>
+                    <li><strong>Inhabilitación de sobrantes</strong><br>Los escrutadores inutilizan con dos rayas de tinta bolígrafo todas las boletas que no fueron entregadas a los electores.</li>
+                    <li><strong>Extracción y clasificación</strong><br>Se abren las urnas, se extraen los votos y se clasifican por partido, coalición, candidatura independiente o votos nulos.</li>
+                    <li><strong>Llenado de actas</strong><br>Asignación numérica en el Acta de Escrutinio y Cómputo, firma de conformidad y entrega de copias al carbón de alta legibilidad a los partidos.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cierre Anticipado</strong><br>La votación puede cerrarse antes de las 18:00 h únicamente si el Secretario certifica que ya votó el 100% de los ciudadanos inscritos en la Lista Nominal.</li>
+                    <li><strong>Cierre Prolongado</strong><br>Si a las 18:00 h aún permanecen ciudadanos formados en la fila, la casilla no puede cerrarse hasta que sufrague el último elector que llegó antes de la hora límite.</li>
+                    <li><strong>Votos de Partidos en Coalición</strong><br>Si el elector marca dos o más logotipos de partidos coaligados, el voto cuenta como válido para el candidato, pero logísticamente se anota en un rubro especial para fines de distribución de prerrogativas.</li>
+                </ul>
+            </td>
+            <td>A las <strong>18:00 h</strong> del día de la Jornada Electoral.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 280-287</td>
+        </tr>
+
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🛡️ BLOQUE III: CADENA DE CUSTODIA, PREP Y CÓMPUTOS DISTRITALES
+            </td>
+        </tr>
+
+        <tr data-etapa="Resultados" data-organo="MDC">
+            <td><strong>Resultados</strong></td>
+            <td><strong>Remisión de Paquetes</strong><br><span class="texto-secundario">Cadena de Custodia</span></td>
+            <td><span class="badge-sigla">MDC</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Empaque documental</strong><br>Resguardo de actas de escrutinio, votos válidos, boletas canceladas y lista nominal dentro de la bolsa plástica de seguridad.</li>
+                    <li><strong>Sellado e inviolabilidad</strong><br>Cierre hermético del Paquete Electoral mediante cinta de seguridad firmada de forma transversal por los representantes de casilla.</li>
+                    <li><strong>Mecanismo de traslado</strong><br>El Presidente de la casilla asume la responsabilidad del transporte directo o entrega al Mecanismo de Recolección del INE.</li>
+                    <li><strong>Ruta directa</strong><br>Desplazamiento sin desvíos ni paradas intermedias desde el lugar de la casilla hasta las oficinas centrales del Consejo Distrital.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Ruptura de Sellos</strong><br>Si el paquete llega al CD con la cinta de seguridad violada, rasgada o sin las firmas correspondientes, se rompe la cadena de custodia y se activa la apertura obligatoria del paquete para recuento.</li>
+                    <li><strong>Exceso de Plazos de Traslado</strong><br>La entrega fuera de los plazos legales establecidos sin justificación de caso fortuito (ej. deslaves o fallas mecánicas documentadas) genera responsabilidad administrativa y penal electoral.</li>
+                    <li><strong>Negativa de Acompañamiento</strong><br>Se prohíbe impedir que los representantes de partido sigan físicamente el vehículo de traslado del paquete; violar esta disposición vicia el procedimiento de recolección.</li>
+                </ul>
+            </td>
+            <td><strong>Inmediato</strong> tras la clausura. Plazos máximos: 12h (urbana), 24h (rural), 36h (alta dispersión).</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 299-300</td>
+        </tr>
+
+        <tr data-etapa="Resultados" data-organo="CD">
+            <td><strong>Resultados</strong></td>
+            <td><strong>Recepción de Paquetes y PREP</strong></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Filtro de recepción</strong><br>El personal del CD recibe el paquete, verifica visualmente el estado de la caja y entrega un recibo oficial foliado con la hora exacta.</li>
+                    <li><strong>Desglose del acta PREP</strong><br>Se extrae la copia del Acta de Escrutinio destinada a la comunidad digital del Programa de Resultados Electorales Preliminares.</li>
+                    <li><strong>Digitalización y captura</strong><br>Escaneo del acta en las terminales del CD para su transmisión inmediata a los centros nacionales de verificación y publicación.</li>
+                    <li><strong>Resguardo en Bodega</strong><br>Colocación física del paquete en los anaqueles correspondientes a su sección dentro del área blindada de almacenamiento.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inconsistencia de Datos en PREP</strong><br>Si el acta PREP viene ilegible, alterada o tachada, el sistema de captura digital la etiqueta con estatus de inconsistencia y se prohíbe su suma automática al sistema público.</li>
+                    <li><strong>Clausura de la Bodega</strong><br>Una vez ingresado el último paquete, la puerta de la bodega se asegura con candados y sellos firmados por consejeros y partidos. Nadie puede ingresar hasta el miércoles del cómputo oficial.</li>
+                    <li><strong>Vigilancia Permanente</strong><br>La bodega debe contar con resguardo de fuerzas de seguridad pública federales (Guardia Nacional o Ejército) y circuito cerrado de televisión durante todo su resguardo.</li>
+                </ul>
+            </td>
+            <td>Desde la <strong>noche del domingo</strong> de la jornada electoral hasta concluir la recepción del último paquete.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 301-305</td>
+        </tr>
+
+        <tr data-etapa="Resultados" data-organo="CD">
+            <td><strong>Resultados</strong></td>
+            <td><strong>Sesión Especial de Cómputo</strong><br><span class="texto-secundario">El Voto por Voto</span></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Apertura de la sesión</strong><br>Instalación de la mesa del CD a las 08:00 h del miércoles con quórum legal de consejeros y representantes.</li>
+                    <li><strong>Cotejo preliminar</strong><br>Apertura de los sellos de la bodega y extracción ordenada de paquetes para comparar el acta original interna con la copia del Presidente del CD.</li>
+                    <li><strong>Creación de grupos de trabajo</strong><br>Si el volumen de paquetes a recontar es elevado, se habilitan mesas auxiliares simultáneas para desahogar el conteo.</li>
+                    <li><strong>Emisión de resultados</strong><br>Sumatoria generalizada de los cómputos, validación legal del proceso distrital y expedición de la constancia de mayoría.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Recuento Total Obligatorio</strong><br>Cuando la diferencia entre el candidato puntero y el segundo lugar es igual o menor al 1% de la votación distrital emitida, y el segundo lugar demanda el recuento absoluto al inicio de la sesión.</li>
+                    <li><strong>Recuento Parcial de Paquetes</strong><br>Se abre un paquete de forma individual si las actas no coinciden, tienen tachaduras, muestran muestras de alteración física evidente, o si todos los votos asentados son para un solo partido político.</li>
+                    <li><strong>Paquetes no Localizados</strong><br>Si un paquete electoral desaparece de la bodega o no se localiza su registro de entrada, se procede a computar utilizando la copia de acta certificada en poder de los representantes generales de partidos.</li>
+                </ul>
+            </td>
+            <td>Inicia a las <strong>08:00 h del miércoles siguiente</strong> a la Jornada Electoral y tiene carácter de ininterrumpido.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Arts. 310-312</td>
+        </tr>
+
+    </tbody>
+</table>
+</main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

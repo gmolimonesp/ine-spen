@@ -5,27 +5,18 @@
     <title>Analítica Electoral</title>
     <link rel="stylesheet" href="index_files/estilos.css">
 </head>
-    <body>
+    <body data-ley="LGSMIME">
 
         <!-- MENÚ SUPERIOR CORPORATIVO ALTAMENTE RESALTADO -->
         <div class="top-navbar">
             <div class="nav-brand">⚖️ Analítica Electoral</div>
             <div class="nav-menu">
                 
-                <!-- Selector de Leyes (Opciones dinámicas para cambiar de ley) -->
-                <div class="dropdown">
-                    <button class="dropbtn">📚 Ley Activa: 
-                        LGSMIME ▾
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="01_lgipe.html">👉 <strong>LGIPE</strong> - Ley General de Instituciones y Procedimientos Electorales</a>
-                        <a href="02_lgmde.html">👉 <strong>LGMDE</strong> - Ley General en Materia de Delitos Electorales</a>
-                        <a href="03_lgpp.html">👉 <strong>LGPP</strong> - Ley General de Partidos Políticos</a>
-                        <a href="04_lgsmime.html">👉 <strong>LGSMIME</strong> - Ley General del Sistema de Medios de Impugnación en Materia Electoral</a>
-                        <a href="05_lfcp.html">👉 <strong>LFCP</strong> - Ley Federal de Consulta Popular</a>
-                        <a href="06_lfrm.html">👉 <strong>LFRM</strong> - Ley Federal de Revocación de Mandato</a>
-                    </div>
-                </div>
+            <!-- Selector de Leyes (Opciones dinámicas para cambiar de ley) -->
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
 
                 <!-- Botón de Login con Resalte Premium de Contraste -->
                                 <div class="user-badge-nav">

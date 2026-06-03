@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<leyesElectoras>
+    <ley>
+        <id>HOME</id>
+        <sigla>HOME</sigla>
+        <nombre>HOME</nombre>
+        <archivo>index.html</archivo>
+    </ley>
+    <ley>
+        <id>LGIPE</id>
+        <sigla>LGIPE</sigla>
+        <nombre>Ley General de Instituciones y Procedimientos Electorales</nombre>
+        <archivo>01_lgipe.html</archivo>
+    </ley>
+    <ley>
+        <id>LGMDE</id>
+        <sigla>LGMDE</sigla>
+        <nombre>Ley General en Materia de Delitos Electorales</nombre>
+        <archivo>02_lgmde.html</archivo>
+    </ley>
+    <ley>
+        <id>LGPP</id>
+        <sigla>LGPP</sigla>
+        <nombre>Ley General de Partidos Políticos</nombre>
+        <archivo>03_lgpp.html</archivo>
+    </ley>
+    <ley>
+        <id>LGSMIME</id>
+        <sigla>LGSMIME</sigla>
+        <nombre>Ley General del Sistema de Medios de Impugnación en Materia Electoral</nombre>
+        <archivo>04_lgsmime.html</archivo>
+    </ley>
+    <ley>
+        <id>LFCP</id>
+        <sigla>LFCP</sigla>
+        <nombre>Ley Federal de Consulta Popular</nombre>
+        <archivo>05_lfcp.html</archivo>
+    </ley>
+    <ley>
+        <id>LFRM</id>
+        <sigla>LFRM</sigla>
+        <nombre>Ley Federal de Revocación de Mandato</nombre>
+        <archivo>06_lfrm.html</archivo>
+    </ley>
+</leyesElectoras>

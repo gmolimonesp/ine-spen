@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reglas del Cómputo Distrital y Recuentos - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Reglas del Cómputo Distrital y Recuentos</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Tipo de Recuento / Fase<br>
+                <select id="filtro-recuento" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="Cotejo">Cotejo de Actas</option>
+                    <option value="Parcial">Recuento Parcial</option>
+                    <option value="Total">Recuento Total (1%)</option>
+                </select>
+            </th>
+            <th class="col-fase">Ámbito Operativo</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CD">Consejo Distrital</option>
+                    <option value="GT">Grupos de Trabajo</option>
+                </select>
+            </th>
+            
+            <th style="width: 22%; min-width: 300px;">Logística del Procedimiento</th>
+            <th style="width: 22%; min-width: 300px;">Causales de Excepción / Reglas Críticas</th>
+            <th style="width: 15%; min-width: 180px;">Periodo / Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= BLOQUE 1: COTEJO GENERAL Y RECUENTO PARCIAL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📊 SECCIÓN I: COTEJO DE ACTAS Y CAUSALES DE APERTURA INDIVIDUAL (RECUENTO PARCIAL)
+            </td>
+        </tr>
+
+        <tr data-recuento="Cotejo" data-organo="CD">
+            <td><strong>Cotejo</strong></td>
+            <td><strong>Apertura de Sesión y Orden de Cómputo</strong></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inicio formal</strong><br>El Consejo Distrital se instala en sesión permanente con quórum legal de consejeros y representantes de partido.</li>
+                    <li><strong>Extracción de actas</strong><br>Se retiran los sobres de las actas de escrutinio que venían por fuera de los paquetes electorales para iniciar la lectura pública.</li>
+                    <li><strong>Orden secuencial</strong><br>Los cómputos se realizan sucesivamente por tipo de elección en el siguiente orden obligatorio: 1° Presidencia, 2° Diputaciones, 3° Senadurías.</li>
+                    <li><strong>Cotejo preliminar</strong><br>Se compara el resultado del acta del Presidente del Consejo con las copias en las actas de los partidos políticos acreditados.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Coincidencia Absoluta</strong><br>Si los resultados de todas las actas coinciden perfectamente y no hay objeciones, el paquete no se abre y el resultado se asienta directamente en el sistema.</li>
+                    <li><strong>Alteración del Orden</strong><br>Bajo ninguna circunstancia se puede iniciar el cómputo de Diputaciones o Senadurías si no ha concluido legalmente y al 100% el cómputo de la elección presidencial.</li>
+                </ul>
+            </td>
+            <td>Inicia a las <strong>08:00 h del miércoles siguiente</strong> al día de la Jornada Electoral.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 310</td>
+        </tr>
+
+        <tr data-recuento="Parcial" data-organo="CD">
+            <td><strong>Parcial</strong></td>
+            <td><strong>Causales de Recuento por Casilla</strong><br><span class="texto-secundario">Apertura Individual</span></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Detección de inconsistencias</strong><br>El Secretario del Consejo separa los paquetes cuyos datos de actas muestren errores evidentes aritméticos o formales.</li>
+                    <li><strong>Apertura física</strong><br>El Presidente autoriza romper los sellos del paquete en pleno del Consejo para extraer los votos válidos y nulos.</li>
+                    <li><strong>Conteo presencial</strong><br>Se realiza el conteo de voto por voto frente a las representaciones partidistas, anotando el nuevo resultado oficial.</li>
+                    <li><strong>Sustitución de actas</strong><br>El resultado del recuento sustituye formalmente al acta original de la casilla para la sumatoria distrital.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Causales de Apertura</strong><br>El paquete DEBE abrirse si: las actas no coinciden, tienen tachaduras, no existe acta original ni copia, o todos los votos son para un solo partido.</li>
+                    <li><strong>Votos Nulos Excedentes</strong><br>Es causa obligatoria de recuento individual si el número de votos nulos asentado en el acta es mayor a la diferencia entre los candidatos del 1° y 2° lugar.</li>
+                </ul>
+            </td>
+            <td>Durante el desarrollo del <strong>cómputo distrital específico</strong> de la elección evaluada.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 311, Párp. 1</td>
+        </tr>
+
+        <tr data-recuento="Parcial" data-organo="GT">
+            <td><strong>Parcial</strong></td>
+            <td><strong>Operación de Mesas Auxiliares</strong><br><span class="texto-secundario">Grupos de Trabajo</span></td>
+            <td><span class="badge-sigla">GT</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Activación por volumen</strong><br>Si los paquetes con causales de recuento exceden el 20% de las casillas instaladas, el Consejo aprueba crear Grupos de Trabajo.</li>
+                    <li><strong>Distribución equitativa</strong><br>Los paquetes a recontar se reparten en forma proporcional entre las mesas auxiliares habilitadas en el inmueble.</li>
+                    <li><strong>Presencia partidista</strong><br>Cada partido tiene derecho a acreditar a un representante con voz y voto en cada grupo para vigilar el conteo.</li>
+                    <li><strong>Concentración de resultados</strong><br>Al terminar, se levanta un acta circunstanciada en la mesa que se entrega al pleno del Consejo para la sumatoria final.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prohibición de Pleno</strong><br>Los grupos de trabajo solo cuentan votos; no tienen atribuciones legales para resolver sobre la validez o nulidad de votos en disputa.</li>
+                    <li><strong>Votos Objetados</strong><br>Si un representante objeta la calificación de un voto (válido vs. nulo) y no hay consenso, ese voto se aparta y se envía al pleno del Consejo para su definición definitiva.</li>
+                </ul>
+            </td>
+            <td>Simultáneo a la sesión de cómputo; de carácter <strong>ininterrumpido</strong> hasta terminar.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 311, Párp. 2-3</td>
+        </tr>
+
+        <!-- ================= BLOQUE 2: RECUENTO TOTAL O VOTO POR VOTO ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚖️ SECCIÓN II: RECUENTO TOTAL DE CASILLAS (SISTEMA DE MAYORÍA ABSOLUTA O REGLA DEL 1%)
+            </td>
+        </tr>
+
+        <tr data-recuento="Total" data-organo="CD">
+            <td><strong>Total</strong></td>
+            <td><strong>Regla Crítica del 1% Margen</strong><br><span class="texto-secundario">Voto por Voto Distrital</span></td>
+            <td><span class="badge-sigla">CD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Validación del supuesto</strong><br>Al inicio de la sesión o al corte del cotejo preliminar se constata que la diferencia entre el 1° y 2° lugar es igual o menor a un punto porcentual.</li>
+                    <li><strong>Petición formal</strong><br>El representante del partido que ocupa el segundo lugar solicita formalmente el recuento total antes de iniciar el cómputo.</li>
+                    <li><strong>Exclusión de casillas</strong><br>Se ordena la apertura de todos los paquetes del distrito, exceptuando únicamente aquellos que ya fueron recontados en las mesas parciales.</li>
+                    <li><strong>Logística masiva</strong><br>Se suspende el cotejo en pleno y se redirecciona al 100% del personal hacia los grupos de trabajo para agilizar el recuento.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Excepción de Concesión</strong><br>Si el partido en 2° lugar solicita el recuento total pero, tras revisar el cotejo inicial de actas, la diferencia real es superior al 1%, el Consejo desecha de inmediato la solicitud.</li>
+                    <li><strong>Garantía de Certeza</strong><br>Ningún consejero o partido puede oponerse al recuento total si se cumple numéricamente el supuesto legal; negarlo invalida el cómputo distrital.</li>
+                </ul>
+            </td>
+            <td>Debe solicitarse **al inicio** o constancia del margen del 1%; ejecución inmediata.</td>
+            <td class="fundamento"><strong>LGIPE:</strong><br>Art. 312</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>
