@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Regímenes Sancionadores - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+    <header class="header-dashboard">
+        <h1>Regímenes Sancionadores</h1>
+    </header>
+
+    <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Vía Procesal<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todas --</option>
+                    <option value="POS">Ordinario (POS)</option>
+                    <option value="PES">Especial (PES)</option>
+                </select>
+            </th>
+            <th class="col-fase">Etapa del Proceso</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="UTCE">UTCE (INE)</option>
+                    <option value="CG">Consejo General</option>
+                    <option value="TEPJF">Sala Especializada</option>
+                </select>
+            </th>
+            
+            <th style="width: 25%; min-width: 320px;">Logística y Actuaciones del Procedimiento</th>
+            <th style="width: 25%; min-width: 320px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 12%; min-width: 130px;">Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= SECCIÓN 1: PROCEDIMIENTO ORDINARIO SANCIONADOR (POS) ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚖️ VIA 1: PROCEDIMIENTO ORDINARIO SANCIONADOR (POS) — Faltas Generales / Ámbito Permanente
+            </td>
+        </tr>
+
+        <tr data-viva="POS" data-organo="UTCE">
+            <td><strong>Ordinario (POS)</strong></td>
+            <td><strong>1. Inicio e Investigación</strong></td>
+            <td><span class="badge-sigla">UTCE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Vías de activación</strong><br>Presentación de queja por la parte afectada o de oficio por acuerdo de la Unidad Técnica de lo Contencioso Electoral (UTCE).</li>
+                    <li><strong>Diligencias preliminares</strong><br>Acciones de investigación que realiza la UTCE para recabar elementos probatorios mínimos e indicios antes de admitir.</li>
+                    <li><strong>Acuerdo técnico</strong><br>Dictamen de la UTCE que determina formalmente la admisión de la queja o propone su desechamiento.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cómputo del Reloj</strong><br>En Periodo Ordinario los plazos corren en días hábiles. Durante Proceso Electoral mutan estrictamente a días naturales debido a la sesión permanente del INE.</li>
+                    <li><strong>Frivolidad</strong><br>Causal de desechamiento inmediato si la denuncia carece de indicios mínimos o se basa únicamente en notas periodísticas sin sustento.</li>
+                    <li><strong>Reserva del expediente</strong><br>Las actuaciones durante la etapa de investigación previa son confidenciales para garantizar la presunción de inocencia.</li>
+                </ul>
+            </td>
+            <td><strong>5 días</strong> para admitir o desechar (tras la recepción o al concluir la investigación preliminar).</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 464-468</td>
+        </tr>
+
+        <tr data-viva="POS" data-organo="UTCE">
+            <td><strong>Ordinario (POS)</strong></td>
+            <td><strong>2. Emplazamiento y Audiencia</strong></td>
+            <td><span class="badge-sigla">UTCE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Notificación formal</strong><br>Emplazamiento al denunciado, corriéndole traslado con copia completa de la denuncia y los elementos de prueba integrados.</li>
+                    <li><strong>Contestación escrita</strong><br>El presunto infractor debe comparecer por escrito para exponer sus excepciones, defensas y ofrecer sus pruebas de descargo.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Garantía de Audiencia</strong><br>El emplazamiento de la UTCE debe cumplir rigurosamente con las formalidades del derecho procesal; cualquier omisión en la notificación rompe la legalidad y revoca el caso en tribunales.</li>
+                    <li><strong>Carga de la prueba</strong><br>Corresponde exclusivamente al quejoso aportar los elementos de cargo, salvo en investigaciones de oficio.</li>
+                </ul>
+            </td>
+            <td><strong>5 días</strong> otorgados al denunciado para presentar su contestación por escrito.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 469</td>
+        </tr>
+
+        <tr data-viva="POS" data-organo="CG">
+            <td><strong>Ordinario (POS)</strong></td>
+            <td><strong>3. Resolution Final</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cierre de instrucción</strong><br>La UTCE declara cerrada la etapa de desahogo de pruebas y elabora el proyecto de resolución (Dictamen).</li>
+                    <li><strong>Sesión de Consejo</strong><br>El Consejo General del INE conoce el proyecto, lo somete a debate público y vota la acreditación de la falta y la imposición de sanciones.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Facultad Sancionadora Única</strong><br>El Consejo General del INE es el único ente facultado para sancionar en la vía del POS. El INE concentra la función investigadora y resolutiva.</li>
+                    <li><strong>Prescripción</strong><br>La facultad de la autoridad para sancionar prescribe en un plazo estricto de 3 años.</li>
+                </ul>
+            </td>
+            <td>Sujeto a tiempos de sustanciación ordinaria; opera bajo el plazo general de <strong>prescripción de 3 años</strong>.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 470-471</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 2: PROCEDIMIENTO ESPECIAL SANCIONADOR (PES) ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚡ VIA 2: PROCEDIMIENTO ESPECIAL SANCIONADOR (PES) — Urgencia / Proceso Electoral y Equidad
+            </td>
+        </tr>
+
+        <tr data-viva="PES" data-organo="UTCE">
+            <td><strong>Especial (PES)</strong></td>
+            <td><strong>1. Instrucción y Cautelares</strong></td>
+            <td><span class="badge-sigla">UTCE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Materias específicas</strong><br>Conductas que vulneren las reglas de propaganda en Radio/TV, actos anticipados de precampaña/campaña, violaciones al Art. 134 Constitucional o Violencia Política contra las Mujeres en Razón de Género.</li>
+                    <li><strong>Medidas cautelares</strong><br>Acciones preventivas inmediatas tramitadas ante la Comisión de Quejas del INE para ordenar el retiro de propaganda o suspensión de conductas que amenacen la equidad.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Habilitación de Reloj Fatal</strong><br>Durante Proceso Electoral todos los días y horas son hábiles, corriendo el reloj de forma ininterrumpida. En periodo no electoral solo se activa si la propaganda impacta de forma adelantada un proceso futuro.</li>
+                    <li><strong>Apariencia de Buen Derecho</strong><br>Criterio legal para decretar medidas cautelares preventivas sin que implique juzgar de forma anticipada el fondo del expediente.</li>
+                </ul>
+            </td>
+            <td><strong>24 horas</strong> para proponer medidas cautelares; <strong>48 horas</strong> para resolver admisión.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 472-473</td>
+        </tr>
+
+        <tr data-viva="PES" data-organo="UTCE">
+            <td><strong>Especial (PES)</strong></td>
+            <td><strong>2. Audiencia de Pruebas</strong></td>
+            <td><span class="badge-sigla">UTCE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Citación inmediata</strong><br>Una vez admitida la queja, la UTCE emplaza a las partes y señala fecha inmediata para desahogar las actuaciones.</li>
+                    <li><strong>Desahogo Concentrado</strong><br>Celebración de una audiencia única e ininterrumpida de pruebas y alegatos de forma presencial o virtual.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Restricción Probatoria Sumaria</strong><br>Debido a la urgencia procesal solo se admiten pruebas documentales y técnicas. Las testimoniales o periciales se desechan automáticamente a menos que puedan desahogarse de forma líquida en el acto.</li>
+                </ul>
+            </td>
+            <td>Debe celebrarse dentro de las <strong>48 horas</strong> posteriores a la notificación del emplazamiento oficial.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 474</td>
+        </tr>
+
+        <tr data-viva="PES" data-organo="TEPJF">
+            <td><strong>Especial (PES)</strong></td>
+            <td><strong>3. Sentencia de Fondo</strong></td>
+            <td><span class="badge-sigla">TEPJF</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cierre y envío express</strong><br>Concluida la audiencia, la UTCE da por cerrada la instrucción, integra el informe circunstanciado y remite físicamente todo el expediente al tribunal.</li>
+                    <li><strong>Resolución judicial</strong><br>La Sala Regional Especializada del TEPJF recibe, turna a ponencia, califica el expediente y dicta sentencia definitiva.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Modelo Dual Desconcentrado</strong><br>El INE instruye e investiga pero carece de facultad resolutiva o sancionadora en el PES. La Sala Regional Especializada del TEPJF es el único ente con el poder de dictar sentencia e imponer la multa.</li>
+                </ul>
+            </td>
+            <td>La UTCE envía en <strong>24 horas</strong>. La Sala Especializada cuenta con <strong>72 horas</strong> fatales para dictar sentencia.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 475-477</td>
+        </tr>
+
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

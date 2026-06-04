@@ -56,7 +56,11 @@
         <nombre>LGIPE -- Reglas y Modalidades del Voto en el Extranjero</nombre>
         <archivo>tabla-voto-extranjero.html</archivo>
     </tabla>
-
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Regímenes Sancionadores</nombre>
+        <archivo>tabla-regimen-sancionador.html</archivo>
+    </tabla>
     <tabla>
         <ley>LGPP</ley>
         <nombre>-- Selecciona una tabla de la LGPP --</nombre>
