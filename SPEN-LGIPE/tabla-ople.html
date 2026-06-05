@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Organismos Públicos Locales - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGPP">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Organismos Públicos Locales</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Eje Operativo<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="ORGANICA">Estructura Orgánica</option>
+                    <option value="COMPETENCIA">Competencia Funcional</option>
+                    <option value="VIGILANCE">Vigilancia y Régimen Local</option>
+                </select>
+            </th>
+            <th class="col-fase">Materia de Control</th>
+            
+            <th style="width: 25%; min-width: 320px;">Logística y Actuaciones del Procedimiento</th>
+            <th style="width: 23%; min-width: 300px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 23%; min-width: 300px;">Periodo Ordinario (No Electoral)</th>
+            <th style="width: 10%; min-width: 110px;">Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= SECCIÓN 1: ESTRUCTURA ORGÁNICA ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🏢 EJE 1: ESTRUCTURA ORGÁNICA — Integración y Control Sustanciado por el Consejo General del INE
+            </td>
+        </tr>
+
+        <tr data-viva="ORGANICA">
+            <td><strong>Estructura Orgánica</strong></td>
+            <td><strong>Consejo General del OPLE</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Integración del órgano superior</strong><br>El Consejo General de cada OPLE se compone de una Consejera o Consejero Presidente y seis Consejeras o Consejeros Electorales adicionales.</li>
+                    <li><strong>Mecanismo de designación</strong><br>El Consejo General del INE realiza un proceso nacional público que incluye examen de conocimientos, ensayo presencial y entrevista para nombrar a los integrantes.</li>
+                    <li><strong>Representaciones concurrentes</strong><br>Se integran formalmente con voz pero sin voto representantes de los partidos políticos con registro nacional o local y una Secretaría Ejecutiva encargada de la fe pública.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Principio de escalonamiento</strong><br>Las consejerías locales se renuevan de manera parcial para garantizar la continuidad institucional y la transmisión de experiencia operativa.</li>
+                    <li><strong>Prohibición de reelección</strong><br>Los consejeros electorales locales designados no pueden ser reelectos para un periodo posterior en el mismo órgano bajo ninguna circunstancia.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Permanencia del cargo</strong><br>Las consejerías mantienen su dieta, atribuciones y participación en las comisiones permanentes del instituto de forma ininterrumpida todo el año.</li>
+                </ul>
+            </td>
+            <td><strong>7 años</strong> de ejercicio continuo en el cargo sin posibilidad de prórroga.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 98-100</td>
+        </tr>
+
+        <tr data-viva="ORGANICA">
+            <td><strong>Estructura Orgánica</strong></td>
+            <td><strong>Remoción de Consejerías</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Sustanciación del procedimiento</strong><br>El INE tramita las denuncias presentadas contra consejeros locales mediante una investigación a cargo de la Unidad Técnica de lo Contencioso Electoral.</li>
+                    <li><strong>Garantía de defensa</strong><br>Se emplaza formalmente a la consejería denunciada para que comparezca a una audiencia a rendir pruebas y alegatos de descargo de forma escrita u oral.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Causales graves de destitución</strong><br>Procederá la remoción únicamente por realizar conductas graves como votar asuntos con conflicto de interés, perder la nacionalidad o tener negligencia administrativa notoria.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Vigilancia continua</strong><br>La facultad de remoción por parte del INE se mantiene plenamente vigente durante el periodo no electoral ante cualquier falta administrativa grave de las consejerías.</li>
+                </ul>
+            </td>
+            <td>Sujeto a los plazos del procedimiento sancionador administrativo del INE.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 102-103</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 2: COMPETENCIA FUNCIONAL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📋 EJE 2: COMPETENCIA FUNCIONAL — Atribuciones Ejecutadas por el Consejo General del OPLE
+            </td>
+        </tr>
+
+        <tr data-viva="COMPETENCIA">
+            <td><strong>Competencia Funcional</strong></td>
+            <td><strong>Atribuciones de Organización</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Preparación de la jornada local</strong><br>El OPLE se encarga directamente de imprimir las boletas electorales locales, diseñar las actas de casilla y producir los materiales de votación estatal.</li>
+                    <li><strong>Mecanismos de resultados rápidos</strong><br>Implementa y opera el Programa de Resultados Electorales Preliminares (PREP) local para las elecciones de gubernaturas, diputaciones y ayuntamientos.</li>
+                    <li><strong>Escrutinios definitivos locales</strong><br>Realiza los cómputos distritales y municipales en sus propios consejos del estado para emitir las declaraciones de validez y entregar las constancias de mayoría respectivas.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Subordinación a lineamientos</strong><br>La producción de materiales y la operación del PREP local deben alinearse de forma obligatoria a los anexos técnicos del Reglamento de Elecciones del INE.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Educación cívica permanente</strong><br>Fuera del proceso electoral, el OPLE reorienta toda su estructura hacia la ejecución de programas obligatorios de cultura democrática y participación ciudadana en el estado.</li>
+                </ul>
+            </td>
+            <td>Plazos fijados en el calendario electoral de cada entidad federativa coordinado con el INE.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 104</td>
+        </tr>
+
+        <tr data-viva="COMPETENCIA">
+            <td><strong>Competencia Funcional</strong></td>
+            <td><strong>Prerrogativas y Partidos Locales</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Registro de partidos políticos</strong><br>Tramita y resuelve las solicitudes de las organizaciones ciudadanas locales que buscan constituirse como partidos políticos estatales.</li>
+                    <li><strong>Distribución de tiempos</strong><br>Colabora con el INE para el correcto desahogo de las pautas de transmisión de los partidos políticos en estaciones de radio y televisión locales.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Pérdida de registro local</strong><br>El OPLE debe declarar la disolución del partido político estatal si este no alcanza el porcentaje mínimo del tres por ciento de la votación válida emitida en la elección local anterior.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Control de financiamiento mensual</strong><br>En periodo ordinario el OPLE calcula, aprueba y entrega mes con mes las prerrogativas de financiamiento público para el sostenimiento de actividades ordinarias de los partidos locales.</li>
+                </ul>
+            </td>
+            <td>La solicitud de registro como partido estatal se procesa durante el mes de enero del año posterior a la elección de gubernatura.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 104, incisos q-s</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 3: VIGILANCIA, FISCALIZACIÓN Y RÉGIMEN LOCAL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚖️ EJE 3: VIGILANCIA Y RÉGIMEN LOCAL — Fiscalización Colectiva, Sanciones y Candidaturas Independientes (OPLE)
+            </td>
+        </tr>
+
+        <tr data-viva="VIGILANCE">
+            <td><strong>Vigilancia y Régimen</strong></td>
+            <td><strong>Candidaturas Independientes</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Convocatoria y registro local</strong><br>El OPLE emite las reglas y los topes de gastos para los ciudadanos que aspiran a una candidatura independiente para cargos estatales.</li>
+                    <li><strong>Validación de apoyo ciudadano</strong><br>Coordina la verificación de las firmas recabadas en territorio local utilizando las herramientas tecnológicas autorizadas.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Equidad en el acceso</strong><br>El OPLE debe garantizar de forma obligatoria que los candidatos independientes locales tengan acceso al financiamiento público y a los tiempos de radio y televisión en una bolsa unificada.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Regulación de asociaciones</strong><br>Monitorea que las asociaciones civiles constituidas por los excandidatos independientes cumplan con sus obligaciones de cierre fiscal y administrativo tras los comicios.</li>
+                </ul>
+            </td>
+            <td>Establecido en la convocatoria de cada entidad federativa acorde a sus leyes locales.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 104, incisos r-u</td>
+        </tr>
+
+        <tr data-viva="VIGILANCE">
+            <td><strong>Vigilancia y Régimen</strong></td>
+            <td><strong>Coordinación en Fiscalización</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Coadyuvancia técnica</strong><br>El OPLE funge como auxiliar de la Unidad Técnica de Fiscalización del INE para verificar los gastos de precampaña y campaña locales en campo.</li>
+                    <li><strong>Reporte de hallazgos</strong><br>Entrega de manera formal la información recopilada sobre espectaculares, eventos públicos y propaganda física detectada en los municipios.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Límite de atribuciones</strong><br>La facultad de resolver e imponer sanciones en materia de fiscalización es exclusiva del INE federal; el OPLE solo actúa como un órgano ejecutor y de apoyo.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Auditoría patrimonial ordinaria</strong><br>Auxilia en el monitoreo permanente del inventario de bienes y las cuentas bancarias de los partidos con registro local durante el periodo no electoral.</li>
+                </ul>
+            </td>
+            <td>Los informes de campo deben enviarse al INE bajo los plazos estrictos determinados en el Reglamento de Fiscalización.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Art. 104, inciso o</td>
+        </tr>
+
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

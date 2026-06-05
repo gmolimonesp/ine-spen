@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Voto en Prisión Preventiva y Voto Anticipado - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Voto en Prisión Preventiva y Voto Anticipado</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Eje Operativo<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="PRISION">Prisión Preventiva</option>
+                    <option value="ANTICIPADO">Voto Anticipado</option>
+                </select>
+            </th>
+            <th class="col-fase">Materia de Control</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="DERFE">DERFE (INE)</option>
+                    <option value="JD">Juntas Distritales</option>
+                    <option value="MEC">Mesa de Escrutinio</option>
+                </select>
+            </th>
+            
+            <th style="width: 25%; min-width: 320px;">Logística y Actuaciones del Procedimiento</th>
+            <th style="width: 25%; min-width: 320px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 12%; min-width: 130px;">Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= SECCIÓN 1: PERSONAS EN PRISIÓN PREVENTIVA ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🔒 EJE 1: PERSONAS EN PRISIÓN PREVENTIVA — Sufragio para Ciudadanos sin Sentencia Condenatoria
+            </td>
+        </tr>
+
+        <tr data-viva="PRISION" data-organo="DERFE">
+            <td><strong>Prisión Preventiva</strong></td>
+            <td><strong>Padrón y Lista Especial</strong></td>
+            <td><span class="badge-sigla">DERFE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Conformación de la base de datos</strong><br>La Dirección Ejecutiva del Registro Federal de Electores (DERFE) concilia los listados nominales vigentes con las bases de datos de los centros penitenciarios federales y locales.</li>
+                    <li><strong>Mecanismo de solicitud</strong><br>El INE distribuye formatos de solicitud de inscripción individual dentro de los penales para que las personas interesadas manifiesten su intención de votar.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Presunción de inocencia</strong><br>Esta modalidad aplica exclusivamente para personas recluidas que no han recibido una sentencia condenatoria definitiva y por ende conservan sus derechos políticos.</li>
+                    <li><strong>Validación registral</strong><br>Es un candado obligatorio que el ciudadano cuente con registro previo en el padrón electoral y que sus datos biométricos no estén suspendidos por orden judicial diversa.</li>
+                </ul>
+            </td>
+            <td>Sujeto a los plazos de corte de la Lista Nominal especial determinados por el Consejo General.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 284-286</td>
+        </tr>
+
+        <tr data-viva="PRISION" data-organo="JD">
+            <td><strong>Prisión Preventiva</strong></td>
+            <td><strong>Logística de la Votación</strong></td>
+            <td><span class="badge-sigla">JD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Instalación de mesas de votación</strong><br>Las Juntas Distritales ejecutan la instalación de módulos de votación temporales al interior de los centros penitenciarios validados.</li>
+                    <li><strong>Mecanismo de sufragio</strong><br>El elector recibe la boleta, marca su opción en secreto, introduce la boleta en un sobre de seguridad membretado y lo entrega al funcionario del INE.</li>
+                    <li><strong>Cadena de custodia</strong><br>El personal de la Junta Distrital concentra los sobres sellados y los traslada bajo resguardo con apoyo de fuerzas de seguridad pública a las bodegas centrales del INE.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Suspensión por riesgo</strong><br>La jornada de votación en un penal se puede suspender de forma inmediata si las autoridades penitenciarias informan sobre riesgos latentes a la seguridad o alteraciones al orden interno.</li>
+                    <li><strong>Prohibición de propaganda</strong><br>Queda estrictamente prohibido que los partidos políticos realicen actos de campaña o distribuyan propaganda física al interior de los centros de reclusión.</li>
+                </ul>
+            </td>
+            <td>La votación se recolecta de manera anticipada durante un periodo específico dentro de los <strong>15 días previos</strong> a la jornada electoral general.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 287-289</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 2: VOTO ANTICIPADO ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ♿ EJE 2: VOTO ANTICIPADO — Mecanismos de Inclusión para Personas con Limitaciones Físicas
+            </td>
+        </tr>
+
+        <tr data-viva="ANTICIPADO" data-organo="DERFE">
+            <td><strong>Voto Anticipado</strong></td>
+            <td><strong>Registro Domiciliario</strong></td>
+            <td><span class="badge-sigla">DERFE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Identificación de beneficiarios</strong><br>La DERFE integra el listado especial con aquellos ciudadanos que solicitaron previamente el trámite de credencialización en su domicilio por incapacidad física.</li>
+                    <li><strong>Notificación y confirmación</strong><br>Personal del INE acude a las viviendas para confirmar la permanencia de la limitación física y recabar la solicitud formal para la modalidad anticipada.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Acreditación médica previa</strong><br>Es requisito de procedencia ineludible que la condición de postración o incapacidad esté sustentada con la documentación médica que dio origen al trámite domiciliario original.</li>
+                </ul>
+            </td>
+            <td>La lista especial debe quedar aprobada y cerrada antes de la producción de las boletas electorales de la elección.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 290-292</td>
+        </tr>
+
+        <tr data-viva="ANTICIPADO" data-organo="JD">
+            <td><strong>Voto Anticipado</strong></td>
+            <td><strong>Operación en Campo</strong></td>
+            <td><span class="badge-sigla">JD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Ruta de votación móvil</strong><br>Funcionarios de las Juntas Distritales organizan un itinerario de visitas domiciliarias acompañados por las representaciones partidistas acreditadas.</li>
+                    <li><strong>Mecanismo de entrega y resguardo</strong><br>Se entrega la documentación electoral en el hogar del ciudadano, este sufraga en condiciones de secrecía, y el sobre sellado se deposita en una urna portátil institucional.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Garantía de secrecía</strong><br>A pesar de la presencia del personal del INE y los representantes de partido en la vivienda, se debe asegurar que ningún tercero observe el sentido del voto del ciudadano.</li>
+                </ul>
+            </td>
+            <td>Los recorridos domiciliarios se ejecutan de forma anticipada durante las <strong>dos semanas previas</strong> al día de la elección constitucional.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 293-295</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 3: ESCRUTINIO Y CÓMPUTO COMÚN ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📊 SECCIÓN COMÚN: ESCRUTINIO Y CÓMPUTO — Conteo de Modalidades Especiales
+            </td>
+        </tr>
+
+        <tr data-viva="ANTICIPADO" data-organo="MEC">
+            <td><strong>Prisión y Anticipado</strong></td>
+            <td><strong>Mesas Especiales de Conteo</strong></td>
+            <td><span class="badge-sigla">MEC</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Instalación formal de las mesas</strong><br>El INE instala Mesas de Escrutinio y Cómputo Especiales el día de la jornada electoral general en las sedes distritales predeterminadas.</li>
+                    <li><strong>Desahogo del conteo</strong><br>A la hora del cierre oficial de las casillas ordinarias, los funcionarios abren los sobres de seguridad resguardados, extraen las boletas de prisión preventiva y voto anticipado, y realizan la clasificación de votos válidos y nulos.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prohibición de conteo previo</strong><br>Bajo ninguna circunstancia se pueden abrir los sobres de seguridad antes de las 18:00 horas del día de la jornada electoral general, blindando el principio de certeza.</li>
+                    <li><strong>Integración al cómputo</strong><br>Los resultados de estas actas de escrutinio especial se suman de forma directa a los cómputos distritales de las elecciones respectivas.</li>
+                </ul>
+            </td>
+            <td><strong>A partir de las 18:00 horas</strong> del día de la jornada electoral general se inicia la apertura y cómputo de los sobres.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 296-298</td>
+        </tr>
+
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Justicia Electoral y Disposiciones Finales - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+    <header class="header-dashboard">
+        <h1>Justicia Electoral y Disposiciones Finales</h1>
+    </header>
+
+    <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Eje Operativo<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="RECURSOS">Recursos Administrativos</option>
+                    <option value="FACULTADES">Facultades Especiales</option>
+                    <option value="TRANSICION">Transición y Cierre</option>
+                </select>
+            </th>
+            <th class="col-fase">Materia de Control</th>
+            <th class="col-organo">
+                Órgano Resp.<br>
+                <select id="filtro-organo" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CG">CG</option>
+                    <option value="JGE">JGE</option>
+                    <option value="OD">OD</option>
+                </select>
+            </th>
+            
+            <th style="width: 25%; min-width: 320px;">Logística y Actuaciones del Procedimiento</th>
+            <th style="width: 25%; min-width: 320px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 12%; min-width: 130px;">Plazo Legal</th>
+            
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <!-- ================= SECCIÓN 1: RECURSOS ADMINISTRATIVOS ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                📥 EJE 1: RECURSOS ADMINISTRATIVOS — Medios de Impugnación Internos del INE
+            </td>
+        </tr>
+
+        <tr data-viva="RECURSOS" data-organo="OD">
+            <td><strong>Recursos Administrativos</strong></td>
+            <td><strong>Recurso de Revisión</strong></td>
+            <td><span class="badge-sigla">OD</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Interposición del medio</strong><br>Los partidos políticos o ciudadanos presentan el recurso por escrito ante el órgano desconcentrado que emitió el acto (Juntas o Consejos Locales/Distritales).</li>
+                    <li><strong>Sustanciación interna</strong><br>El órgano que recibe el recurso integra el expediente, elabora un informe circunstanciado y lo remite al superior jerárquico para su resolución.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Límite de Procedencia</strong><br>Solo procede durante el tiempo que transcurre entre dos procesos electorales federales, o bien, durante la etapa de preparación del proceso electoral contra actos de órganos distritales o locales.</li>
+                    <li><strong>Efecto no suspensivo</strong><br>La interposición del recurso de revisión en ningún caso produce efectos suspensivos sobre el acto o la resolución impugnada.</li>
+                </ul>
+            </td>
+            <td><strong>4 días</strong> para interponerlo contados a partir del día siguiente de la notificación oficial.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 479-482</td>
+        </tr>
+
+        <tr data-viva="RECURSOS" data-organo="CG">
+            <td><strong>Recursos Administrativos</strong></td>
+            <td><strong>Resolución de Revisión</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Atracción jerárquica</strong><br>El Consejo General del INE es el competente para resolver los recursos de revisión interpuestos contra los actos de la Junta General Ejecutiva.</li>
+                    <li><strong>Sentencia administrativa</strong><br>El proyecto de resolución se somete a votación en sesión pública, pudiendo confirmar, modificar o revocar el acto impugnado.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Definitividad parcial</strong><br>Las resoluciones dictadas en el recurso de revisión son vinculantes para el INE, pero son impugnables ante el Tribunal Electoral (TEPJF) mediante el Recurso de Apelación.</li>
+                </ul>
+            </td>
+            <td>Sin plazo fatal fijo; debe resolverse de forma expedita para no afectar el calendario electoral.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 483-485</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 2: FACULTADES ESPECIALES DEL INE ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚙️ EJE 2: FACULTADES ESPECIALES — Atracción, Delegación y Asunción ante OPLES
+            </td>
+        </tr>
+
+        <tr data-viva="FACULTADES" data-organo="CG">
+            <td><strong>Facultades Especiales</strong></td>
+            <td><strong>Asunción y Atracción</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Petición o de oficio</strong><br>El Consejo General puede atraer un asunto local o asumir directamente la organización de una elección local completa (asunción total) a petición de los OPLES o de los propios Consejeros.</li>
+                    <li><strong>Mapeo de datos</strong><br>La secretaría ejecutiva fundamenta la solicitud mediante un análisis técnico que verifique riesgos en la imparcialidad o condiciones de seguridad en el estado.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Mayoría Calificada</strong><br>La asunción o la atracción requieren obligatoriamente una votación por mayoría calificada de al menos <strong>8 votos</strong> de los Consejeros Electorales.</li>
+                    <li><strong>Candado Temporal</strong><br>No se puede solicitar la atracción o asunción una vez iniciado el proceso electoral local correspondiente, salvo casos de fuerza mayor debidamente acreditados.</li>
+                </ul>
+            </td>
+            <td>La resolución definitiva debe emitirse antes del inicio del proceso electoral local afectado.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 486-489</td>
+        </tr>
+
+        <tr data-viva="FACULTADES" data-organo="CG">
+            <td><strong>Facultades Especiales</strong></td>
+            <td><strong>Delegación de Funciones</strong></td>
+            <td><span class="badge-sigla">CG</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Transferencia operativa</strong><br>El INE delega funciones de la organización de elecciones federales o locales hacia los OPLES para optimizar recursos en campo.</li>
+                    <li><strong>Supervisión de datos</strong><br>Los órganos desconcentrados del INE mantienen la facultad de fiscalizar y auditar de forma permanente que el OPLE cumpla con los lineamientos técnicos delegados.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Causal de Revocación</strong><br>El Consejo General puede revocar la delegación en cualquier momento si los reportes de análisis muestran que el OPLE pone en riesgo los principios de certeza o legalidad de la elección.</li>
+                </ul>
+            </td>
+            <td>Sujeto a los convenios de coordinación suscritos para cada proceso electoral específico.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 490-492</td>
+        </tr>
+
+        <!-- ================= SECCIÓN 3: TRANSICIÓN Y CIERRE ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🔄 EJE 3: TRANSICIÓN Y CIERRE — Reglas de Liquidación y Disposiciones Finales
+            </td>
+        </tr>
+
+        <tr data-viva="TRANSICION" data-organo="JGE">
+            <td><strong>Transición y Cierre</strong></td>
+            <td><strong>Liquidación de Partidos</strong></td>
+            <td><span class="badge-sigla">JGE</span></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Declaratoria de pérdida</strong><br>La Junta General Ejecutiva emite la declaratoria de pérdida de registro del partido político que no alcanzó el porcentaje mínimo de votación.</li>
+                    <li><strong>Designación del interventor</strong><br>Se nombra un interventor que toma el control absoluto de los recursos, cuentas bancarias y patrimonio remanente del partido político en proceso de disolución.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prelación de pagos</strong><br>Los recursos del partido en liquidación se destinan de forma prioritaria a cubrir las obligaciones laborales con su personal y, en segundo lugar, las multas fiscales y electorales federales.</li>
+                </ul>
+            </td>
+            <td>El proceso de liquidación inicia inmediatamente después de que el TEPJF confirma los cómputos distritales definitivos.</td>
+            <td class="fundamento"><strong>LGIPE</strong><br>Arts. 493-495</td>
+        </tr>
+
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>
