@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipos Penales y Delitos Electorales - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGMDE">
+    <div id="contenedor-principal" data-ley="LGMDE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Tipos Penales y Delitos Electorales</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Sujeto Activo<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="CIUDADANOS">Ciudadanos y Particulares</option>
+                    <option value="FUNCIONARIOS_ELECTORALES">Funcionarios Electorales y Partidistas</option>
+                    <option value="SERVIDORES_PUBLICOS">Servidores Públicos y Autoridades</option>
+                </select>
+            </th>
+            <th class="col-fase">Bien Jurídico Tutelado</th>
+            <th style="width: 25%; min-width: 320px;">Conductas Ilícitas y Descripción del Delito</th>
+            <th style="width: 23%; min-width: 300px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 23%; min-width: 300px;">Periodo Ordinario (No Electoral)</th>
+            <th style="width: 10%; min-width: 110px;">Plazo Legal / Sanción Penas</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= SUJETO: CIUDADANOS ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                👤 CIUDADANOS Y PARTICULARES — Delitos Cometidos por Cualquier Persona sin Cargo Público
+            </td>
+        </tr>
+        <tr data-viva="CIUDADANOS">
+            <td><strong>Ciudadanos y Particulares</strong></td>
+            <td><strong>Libertad y Secrecía del Voto</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MENOR] Intento de suplantación</strong><br>Votar utilizando una credencial ajena o haciéndose pasar por otra persona de la Lista Nominal.</li>
+                    <li><strong>[GRAVEDAD MENOR] Votar más de una vez</strong><br>Acudir a una o más casillas para emitir el sufragio de forma múltiple en la misma jornada electoral.</li>
+                    <li><strong>[GRAVEDAD MEDIA] Recolección de credenciales</strong><br>Recoger de manera ilegal o sin causa justificada una o más credenciales para votar de los ciudadanos.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Candado de la tinta indeleble</strong><br>El uso del líquido germicida y el marcado de la credencial son los mecanismos físicos de control en casilla que mitigan la suplantación.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inoperabilidad ordinaria</strong><br>El intento de voto múltiple y la suplantación de identidad fenecen estrictamente al cierre de las casillas en la jornada electoral.</li>
+                </ul>
+            </td>
+            <td><strong>De 50 a 100 días multa</strong><br>Y prisión de 6 meses a 3 años.</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 7<br>Fracc. II, III y IV</td>
+        </tr>
+        <tr data-viva="CIUDADANOS">
+            <td><strong>Ciudadanos y Particulares</strong></td>
+            <td><strong>Integridad de los Instrumentos Electorales</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MEDIA] Turismo electoral masivo</strong><br>Organizar o promover que un grupo de ciudadanos proporcione datos o domicilios falsos ante los módulos del INE para cambiar de sección de forma ilícita.</li>
+                    <li><strong>[GRAVEDAD MEDIA] Robo material de paquetes</strong><br>Sustraer, destruir, abrir o violar los candados de seguridad de las urnas, boletas o paquetes electorales en cualquier momento.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Ruptura de la certeza</strong><br>El robo de paquetes anula la certeza de la votación recibida, obligando a dar vista inmediata a la FISEL y procesar la cadena de custodia residual.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Auditoría permanente en MAC</strong><br>Los trámites falsos ante el Registro Federal de Electores constituyen un foco rojo bajo investigación constante durante el periodo ordinario.</li>
+                </ul>
+            </td>
+            <td><strong>De 100 a 200 días multa</strong><br>Y prisión de 2 a 6 años.<br><br><strong>De 60 a 200 días multa</strong><br>Y prisión de 3 a 7 años (Turismo electoral).</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 7<br>Fracc. XI y XIII</td>
+        </tr>
+
+        <!-- ================= SUJETO: FUNCIONARIOS ELECTORALES ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🗳️ FUNCIONARIOS ELECTORALES Y PARTIDISTAS — Delitos de Autoridades de Casilla, del INE o Directivos de Partidos
+            </td>
+        </tr>
+        <tr data-viva="FUNCIONARIOS_ELECTORALES">
+            <td><strong>Funcionarios Electorales y Partidistas</strong></td>
+            <td><strong>Autenticidad del Escrutinio y Cómputo</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MENOR] Negación de acceso</strong><br>Expulsar o impedir el acceso sin causa legal a los representantes de partidos políticos o a los observadores electorales acreditados.</li>
+                    <li><strong>[GRAVEDAD MEDIA] Retención de Documentación</strong><br>Ocultar o no entregar de manera dolosa los paquetes electorales a los Consejos Distritales del INE correspondientes.</li>
+                    <li><strong>[GRAVEDAD MAXIMA] Alteración dolosa de actas</strong><br>Asentar datos falsos en las actas de escrutinio y cómputo a sabiendas de que no coinciden con los votos reales depositados en la urna.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Agravante por investidura</strong><br>La pena criminal se incrementa porque el transgresor es el depositario legal de la fe pública ciudadana el día de la elección.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inaplicabilidad ordinaria</strong><br>La alteración de actas y la expulsión de representantes son exclusivas del despliegue logístico de la jornada electoral y los recuentos.</li>
+                </ul>
+            </td>
+            <td><strong>De 200 a 400 días multa</strong><br>Y prisión de 2 a 9 años.</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 8<br>Fracc. IV y V</td>
+        </tr>
+        <tr data-viva="FUNCIONARIOS_ELECTORALES">
+            <td><strong>Funcionarios Electorales y Partidistas</strong></td>
+            <td><strong>Equidad en el Financiamiento y Derechos Políticos</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MAXIMA] Inyección de fondos prohibidos</strong><br>Dirigentes de partidos o candidatos que acepten a sabiendas aportaciones de dinero de procedencia extranjera, empresas privadas o entes gubernamentales.</li>
+                    <li><strong>[GRAVEDAD MAXIMA] Sabotaje informático de resultados</strong><br>Alterar, bloquear o destruir dolosamente los sistemas informáticos oficiales del INE (como el PREP) destinados a la captura y difusión de resultados preliminares.</li>
+                    <li><strong>[GRAVEDAD MAXIMA] Violencia política de género</strong><br>Realizar acciones u omisiones dirigidas a restringir, suspender o anular el ejercicio de los derechos político-electorales de una mujer basadas en su género.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Pérdida del registro</strong><br>El financiamiento ilegal de entes prohibidos puede detonar la pérdida del registro del partido además de la sanción penal directa sobre su dirigencia.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Rastreo financiero continuo</strong><br>La fiscalización analítica de cuentas bancarias de los partidos políticos por parte de la UTF se mantiene activa todos los días del año no electoral.</li>
+                </ul>
+            </td>
+            <td><strong>De 1000 a 5000 días multa</strong><br>Y prisión de 5 a 15 años (Financiamiento).<br><br><strong>Inhabilitación inmediata</strong> del cargo.</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 9, 10 y 20 Bis</td>
+        </tr>
+
+        <!-- ================= SUJETO: SERVIDORES PUBLICOS ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🏢 SERVIDORES PÚBLICOS Y AUTORIDADES — Abuso de Poder de Empleados de Gobiernos y Órganos Autónomos
+            </td>
+        </tr>
+        <tr data-viva="SERVIDORES_PUBLICOS">
+            <td><strong>Servidores Públicos y Autoridades</strong></td>
+            <td><strong>Imparcialidad de los Recursos Públicos</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MEDIA] Uso de tiempo laboral</strong><br>Obligar a los subordinados de una oficina pública a asistir a eventos de campaña, mitines o votar por un partido dentro de sus horarios reglamentarios de servicio.</li>
+                    <li><strong>[GRAVEDAD MEDIA] Retención forzosa de salarios</strong><br>Aplicar descuentos al salario de los empleados públicos de forma ilegal para fondear o canalizar recursos económicos a un partido político (diezmos partidistas).</li>
+                    <li><strong>[GRAVEDAD MAXIMA] Coacción institucional</strong><br>Amenazar a los ciudadanos con suspenderles programas sociales, pensiones o apoyos del Estado si no votan por una opción política determinada.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prisión Preventiva Oficiosa</strong><br>El condicionamiento de programas de desarrollo social es un delito grave a nivel constitucional que amerita cárcel forzosa sin derecho a fianza durante el juicio.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Blindaje Presupuestal Continuo</strong><br>El monitoreo analítico del ejercicio presupuestal de los gobiernos se mantiene activo de manera ininterrumpida todo el año no electoral.</li>
+                </ul>
+            </td>
+            <td><strong>De 200 a 400 días multa</strong><br>Y prisión de 2 a 9 años.<br><br><strong>Prisión preventiva oficiosa</strong> para coacción.</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 11<br>Fracc. II, III y IV</td>
+        </tr>
+        <tr data-viva="SERVIDORES_PUBLICOS">
+            <td><strong>Servidores Públicos y Autoridades</strong></td>
+            <td><strong>Laicidad y neutralidad del proceso</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>[GRAVEDAD MEDIA] Inducción al voto desde el púlpito</strong><br>Ministros de culto religioso que en el ejercicio de sus funciones induzcan expresamente al voto en favor o en contra de un candidato o partido político.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Principio de Laicidad</strong><br>Constituye un límite constitucional estricto para asegurar que las creencias religiosas no interfieran en la libre voluntad política del electorado.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Monitoreo de discursos</strong><br>El seguimiento analítico y las denuncias sobre expresiones de ministros de culto pueden presentarse en periodos de intercampaña u ordinarios.</li>
+                </ul>
+            </td>
+            <td><strong>Hasta 500 días multa</strong><br>O amonestación pública institucional.</td>
+            <td class="fundamento"><strong>LGMDE</strong><br>Art. 16</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

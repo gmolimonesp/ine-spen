@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Organización, Jornada y Resultados - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LFRM">
+    <div id="contenedor-principal" data-ley="LFRM">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Organización, Jornada y Resultados</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th style="width: 22%; min-width: 240px;">Etapa y Logística</th>
+            <th style="width: 22%; min-width: 240px;">Reglas de Casilla y Conteo</th>
+            <th style="width: 22%; min-width: 240px;">Roles del INE y TEPJF</th>
+            <th style="width: 22%; min-width: 240px;">Participación y Candados</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- ================= BLOQUE 1: FASE PREPARATORIA Y INTEGRACIÓN OPERATIVA ================= -->
+        <tr class="cabecera-descanso">
+            <td colspan="5">
+                ⚙️ LFRM — CAPÍTULO IV: SECCIÓN A (FASE PREPARATORIA Y RED DE DOCUMENTACIÓN)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Papeleta Oficial</strong><br>El INE diseña la papeleta con una pregunta clara sobre la pérdida de confianza y dos opciones de respuesta bien definidas.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Ubicación de Casillas</strong><br>Se determina la instalación de casillas considerando una distribución geográfica homogénea para garantizar el acceso universal al voto.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Insaculación de Funcionarios</strong><br>El INE selecciona y capacita a los ciudadanos que integrarán las Mesas Directivas utilizando los mismos padrones del proceso previo.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Promoción Institucional</strong><br>El INE es la única autoridad encargada de promover la participación de manera objetiva, imparcial y con fines informativos.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>LFRM</strong> Arts. 19, 21 y 25</td>
+        </tr>
+
+        <!-- ================= BLOQUE 2: JORNADA DE VOTACIÓN Y DESPLIEGUE EN CAMPO ================= -->
+        <tr class="cabecera-descanso">
+            <td colspan="5">
+                🗳️ LFRM — CAPÍTULO IV: SECCIÓN B (JORNADA CIUDADANA Y ESCRUTINIO EN SEDE)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Horario del Ejercicio</strong><br>Las casillas operan en un horario fijo de las 8:00 a las 18:00 horas bajo estrictos protocolos de seguridad institucional.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Escrutinio Distrital</strong><br>Los funcionarios de casilla realizan el conteo inmediato y llenado de actas al cerrar las urnas para dar certeza jurídica.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Monitoreo de Incidentes</strong><br>Los Consejos Distritales del INE se declaran en sesión permanente para vigilar el desarrollo y resolver eventualidades en campo.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Representaciones en Casilla</strong><br>Los partidos políticos tienen derecho a registrar representantes para vigilar la votación, sin facultades de interferencia operativa.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>LFRM</strong> Arts. 32, 35 y 38</td>
+        </tr>
+
+        <!-- ================= BLOQUE 3: CÓMPUTOS, UMBRALES Y DECLARATORIA FINAL ================= -->
+        <tr class="cabecera-descanso">
+            <td colspan="5">
+                📊 LFRM — CAPÍTULO IV: SECCIÓN C (CÓMPUTOS FINALES, IMPUGNACIONES Y EFECTOS)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Cómputo Centralizado</strong><br>El Consejo General del INE concentra los resultados de los 300 distritos para emitir el cómputo total a nivel nacional.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Umbral Vinculatorio</strong><br>La revocación solo será válida y obligatoria si participa al menos el 40% de las personas inscritas en la Lista Nominal.</li>
+                    <li><strong>Mayoría Absoluta</strong><br>Para proceder al cese del cargo se requiere que la revocación sea aprobada por mayoría absoluta de los votos emitidos.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Resolución del TEPJF</strong><br>La Sala Superior del Tribunal Electoral resuelve las impugnaciones de los partidos y emite la declaratoria final del proceso.</li>
+                </ul>
+            </td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Efecto Constitucional</strong><br>Si se cumple el umbral y la mayoría vota por revocar, el titular del Ejecutivo se entenderá separado del cargo de forma inmediata.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>CPEUM</strong> Art. 35, IX<br><strong>LFRM</strong> Arts. 46, 52 y 58</td>
+        </tr>
+    </tbody>
+    <!-- ================= FOOTER DE LA TABLA COMPATIBLE CON EL DOM ================= -->
+    <tfoot>
+        <tr>
+            <td colspan="5">
+                <strong>Nota</strong> De acuerdo con el marco constitucional, corresponde en exclusiva a la Sala Superior del TEPJF realizar el cómputo final, formular la declaración de validez y emitir la declaratoria oficial de revocación en caso de alcanzarse los umbrales de ley.
+            </td>
+        </tr>
+    </tfoot>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

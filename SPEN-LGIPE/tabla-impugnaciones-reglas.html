@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reglas Comunes y Juicio de Inconformidad - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGSMIME">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Reglas Comunes y Juicio de Inconformidad</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Vía / Tipo de Recurso<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="REGLAS_COMUNES">Reglas Comunes de Procedencia</option>
+                    <option value="JUICIOS_ESPECIALES">Juicios y Recursos Especiales</option>
+                </select>
+            </th>
+            <th class="col-sujeto">
+                Sujeto Legitimado<br>
+                <select id="filtro-sujeto" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="PARTIDOS_COALICIONES_CI">Partidos, Coaliciones y CI</option>
+                    <option value="CIUDADANOS">Ciudadanos por propio derecho</option>
+                    <option value="PARTIDOS_CI">Solo Partidos y CI</option>
+                </select>
+            </th>
+            <th class="col-fase">Institución Procesal / Acto Combatido</th>
+            <th style="width: 25%; min-width: 320px;">Sustanciación y Trámite de la Autoridad</th>
+            <th style="width: 25%; min-width: 300px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 10%; min-width: 110px;">Plazo Legal</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= ÁMBITO: REGLAS COMUNES DE PROCEDENCIA ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                ⚖️ JUSTICIA ELECTORAL — Reglas Generales del Sistema de Medios de Impugnación Jurisdiccionales
+            </td>
+        </tr>
+        <tr data-viva="REGLAS_COMUNES" data-sujeto="PARTIDOS_COALICIONES_CI CIUDADANOS">
+            <td><strong>Reglas Comunes de Procedencia</strong></td>
+            <td><strong>Partidos, Coaliciones, Candidaturas Independientes y Ciudadanos</strong></td>
+            <td><strong>Interposición del Medio Procesal</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Presentación ante la autoridad responsable</strong><br>El escrito de demanda debe entregarse obligatoriamente ante el órgano del INE u OPLE que emitió el acto o resolución que se busca combatir.</li>
+                    <li><strong>Trámite de publicidad obligatoria</strong><br>La autoridad responsable debe dar aviso inmediato al Tribunal Electoral y colocar la demanda en sus estrados públicos por un plazo de 72 horas para conocimiento de terceros interesados.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Causal de desechamiento automático</strong><br>La presentación del medio de impugnación de forma extemporánea o la falta de firma autógrafa del promovente genera el desechamiento de plano de la demanda.</li>
+                    <li><strong>Efecto no suspensivo</strong><br>La interposición de un medio de impugnación bajo ninguna circunstancia suspende los efectos jurídicos del acto o resolución reclamada.</li>
+                    <li><strong>Nota de Periodo Ordinario</strong><br>Durante los tiempos no electorales, el cómputo de los plazos procesales se suspende los fines de semana, contando únicamente los días hábiles (excluyendo sábados, domingos y días festivos oficiales).</li>
+                </ul>
+            </td>
+            <td><strong>4 días</strong> contados a partir del día siguiente a aquel en que se tenga conocimiento del acto reclamado.</td>
+            <td class="fundamento"><strong>LGSMIME</strong><br>Arts. 7-9</td>
+        </tr>
+
+        <!-- ================= ÁMBITO: JUICIOS Y RECURSOS ESPECIALES ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🏛️ RECURSOS ESPECIALES — Control de Constitucionalidad y Legalidad de Resultados Electorales Oficiales
+            </td>
+        </tr>
+        <tr data-viva="JUICIOS_ESPECIALES" data-sujeto="PARTIDOS_CI">
+            <td><strong>Juicios y Recursos Especiales</strong></td>
+            <td><strong>Partidos Políticos y Candidaturas Independientes</strong></td>
+            <td><strong>Juicio de Inconformidad (JIN)</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Impugnación de resultados oficiales</strong><br>Procede de manera exclusiva durante la etapa de resultados y declaraciones de validez para controvertir los cómputos distritales de las elecciones federales.</li>
+                    <li><strong>Demanda por error aritmético</strong><br>Se promueve para solicitar la rectificación de los datos asentados en las actas de escrutinio por errores de suma o dolo en el conteo de votos de las casillas.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Acreditación de causales de nulidad</strong><br>Para anular la votación recibida en una casilla se debe probar plenamente supuestos graves como la instalación en lugar distinto, la recepción del voto por personas no autorizadas o violencia física.</li>
+                    <li><strong>Nota de Periodo Ordinario</strong><br>Este juicio carece de vigencia u operatividad en periodos no electorales, limitándose estrictamente a las fechas posteriores a la jornada electoral.</li>
+                </ul>
+            </td>
+            <td><strong>4 días</strong> contados a partir del día siguiente al que concluyan los cómputos distritales de la elección respectiva.</td>
+            <td class="fundamento"><strong>LGSMIME</strong><br>Arts. 49-55</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

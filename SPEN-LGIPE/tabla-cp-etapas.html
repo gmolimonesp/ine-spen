@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Etapas, Actores y Post-Ejercicio - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LFCP">
+    <div id="contenedor-principal" data-ley="LFCP">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Etapas, Actores y Post-Ejercicio</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Etapa del Ejercicio<br>
+                <select id="filtro-fase" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="PREPARATORIA">Fase Preparatoria</option>
+                    <option value="JORNADA">Jornada de Consulta</option>
+                    <option value="POST_EJERCICIO">Post-Ejercicio y Resultados</option>
+                </select>
+            </th>
+            <th style="width: 20%; min-width: 250px;">Características Críticas / Candados</th>
+            <th style="width: 25%; min-width: 320px;">Roles Institucionales (INE / OPLE)</th>
+            <th style="width: 25%; min-width: 320px;">Participación de PP y Observadores</th>
+            <th style="width: 15%; min-width: 200px;">Cierre y Declaratoria</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- ================= BLOQUE 1: FASE PREPARATORIA Y LOGÍSTICA INICIAL ================= -->
+        <tr class="cabecera-descanso" data-fase="">
+            <td colspan="6">
+                ⚙️ LFCP — CAPÍTULO IV: SECCIÓN A (FASE PREPARATORIA, MATERIALES Y LOGÍSTICA OPERATIVA)
+            </td>
+        </tr>
+        <!-- ETAPA: PREPARATORIA -->
+        <tr data-fase="PREPARATORIA">
+            <td><strong>Fase Preparatoria</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Diseño Homologado</strong><br>Aprobación obligatoria de la papeleta oficial con opciones binarias claras ("Sí" o "No") y medidas de seguridad para evitar su falsificación.</li>
+                    <li><strong>Integración de Mesas</strong><br>Instalación de las Mesas Directivas de Casilla utilizando el mismo listado de ciudadanos insaculados y capacitados del proceso ordinario.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>INE como Autoridad Única</strong><br>Centralización absoluta de la ubicación de casillas, capacitación electoral, impresión de papeletas, distribución de paquetes y resguardo de documentación.</li>
+                    <li><strong>OPLE como Órgano Auxiliar</strong><br>No organiza el ejercicio de forma autónoma. Su intervención se limita a convenios de coordinación logística si coincide con elecciones locales ordinarias.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Restricción de Pauta a Partidos</strong><br>Prohibición absoluta para contratar tiempo en medios. El INE es la única entidad facultada para promover la participación de forma neutral.</li>
+                    <li><strong>Observadores Electorales</strong><br>Acreditación formal ante los Consejos del INE para vigilar la preparación de materiales y la cadena de custodia de la paquetería.</li>
+                </ul>
+            </td>
+            <td>N/A<br>Fase de planificación e integración interna de los sistemas de cara a la jornada.</td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 35-41</td>
+        </tr>
+
+        <!-- ================= BLOQUE 2: JORNADA DE CONSULTA Y CONTROL EN CAMPO ================= -->
+        <tr class="cabecera-descanso" data-fase="">
+            <td colspan="6">
+                🗳️ LFCP — CAPÍTULO IV: SECCIÓN B (JORNADA DE CONSULTA, ACTORES EN CASILLA Y ESCRUTINIO)
+            </td>
+        </tr>
+        <!-- ETAPA: JORNADA DE CONSULTA -->
+        <tr data-fase="JORNADA">
+            <td><strong>Jornada de Consulta</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Votación Libre</strong><br>Apertura formal de casillas a las 8:00 horas y cierre a las 18:00 horas bajo las reglas del Listado Nominal validado.</li>
+                    <li><strong>Escrutinio Binario</strong><br>Conteo directo, público e inmediato de las papeletas depositadas en las urnas por parte de los funcionarios de casilla designados.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>INE en Operación</strong><br>Despliegue de Capacitadores Asistentes Electorales (CAE) para recolectar paquetes, operar sistemas de incidentes y garantizar el orden público en los 300 distritos.</li>
+                    <li><strong>OPLE en Coordinación</strong><br>Mantiene canales de comunicación institucional abiertos si se comparte la infraestructura física de casillas únicas.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Representantes de Partidos</strong><br>Los partidos políticos nacionales y coaliciones conservan el derecho de registrar un representante en cada casilla para vigilar el conteo.</li>
+                    <li><strong>Prohibición de Proselitismo</strong><br>Ningún actor político o tercero puede realizar mítines, propaganda o encuestas de salida en las inmediaciones de los centros de votación.</li>
+                </ul>
+            </td>
+            <td>Cómputos Distritales<br>Los cómputos automatizados de las actas se inician formalmente al cierre de las casillas en las sedes distritales.</td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 42-49</td>
+        </tr>
+
+        <!-- ================= BLOQUE 3: CÓMPUTOS, RESULTADOS Y EFECTOS LEGALES ================= -->
+        <tr class="cabecera-descanso" data-fase="">
+            <td colspan="6">
+                📊 LFCP — CAPÍTULO IV: SECCIÓN C (POST-EJERCICIO, CÓMPUTOS FINALES Y EFECTO VINCULATORIO)
+            </td>
+        </tr>
+        <!-- ETAPA: POST-EJERCICIO Y RESULTADOS -->
+        <tr data-fase="POST_EJERCICIO">
+            <td><strong>Post-Ejercicio y Resultados</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cómputos Distritales</strong><br>Los 300 Consejos Distritales del INE realizan la suma y el cotejo de las actas de escrutinio a partir de la noche de la jornada.</li>
+                    <li><strong>Umbral Matemático Vinculatorio</strong><br>Para que el resultado obligue legalmente a los Poderes Ejecutivo y Legislativo se requiere una participación mínima del 40% de la Lista Nominal.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Consejo General del INE</strong><br>Agrupa los resultados de los 300 distritos, realiza el cómputo total a nivel nacional y declara los resultados cuantitativos oficiales.</li>
+                    <li><strong>Tribunal Electoral TEPJF</strong><br>Resuelve con definitividad los juicios de inconformidad interpuestos por los partidos políticos en contra de los cómputos.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Derecho de Impugnación</strong><br>Los partidos validan su carácter de vigilantes del proceso pudiendo controvertir actas por errores aritméticos graves o dolo.</li>
+                </ul>
+            </td>
+            <td><strong>Declaratoria de Efectos</strong><br>El INE remite el expediente final a la SCJN, autoridad que emite la declaratoria de constitucionalidad y vinculación para los efectos legales correspondientes.</td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 50-60</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

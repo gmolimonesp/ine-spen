@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Origen, Organización y Finanzas - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LFCP">
+    <div id="contenedor-principal" data-ley="LFCP">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Origen, Organización y Finanzas</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Vía de Activación<br>
+                <select id="filtro-viva" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="VIA_INSTITUCIONAL">Vía Institucional (Poderes)</option>
+                    <option value="VIA_CIUDADANA">Vía Ciudadana</option>
+                </select>
+            </th>
+            <th class="col-sujeto">Sujeto Facultado y Validación</th>
+            <th style="width: 25%; min-width: 320px;">Tiempos de Organización y Convocatoria</th>
+            <th style="width: 30%; min-width: 350px;">Régimen Financiero y Fiscalización</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <!-- ================= BLOQUE 1: ORIGEN Y VALIDACIÓN CONSTITUCIONAL ================= -->
+        <tr class="cabecera-descanso" data-viva="">
+            <td colspan="5">
+                📋 LFCP — CAPÍTULO II: SECCIÓN A (SUJETOS LEGITIMADOS Y FILTROS DE CONSTITUCIONALIDAD)
+            </td>
+        </tr>
+        <!-- VÍA INSTITUCIONAL - ORIGEN -->
+        <tr data-viva="VIA_INSTITUCIONAL">
+            <td><strong>Vía Institucional (Poderes)</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Presidente de la República</strong><br>Petición directa firmada formalmente por el Ejecutivo Federal.</li>
+                    <li><strong>Congreso de la Unión</strong><br>Equivalente al 33% de los integrantes de cualquiera de las Cámaras (Diputados o Senadores).</li>
+                    <li><strong>Filtro del Control de la SCJN</strong><br>Obligatoriamente la Suprema Corte debe revisar y declarar la constitucionalidad de la materia y la concordancia de la pregunta antes de que el Congreso emita la convocatoria.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Turno de la Petición</strong><br>El Presidente de la Mesa Directiva de la Cámara de origen la remite de inmediato a la SCJN para su análisis constitucional.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Gasto Operativo Inicial</strong><br>Absorbido por las estructuras presupuestarias ordinarias de los Poderes del Estado promoventes; no genera prerrogativas extraordinarias.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>CPEUM</strong> Art. 35, VIII<br><strong>LFCP</strong> Arts. 12 y 13</td>
+        </tr>
+        <!-- VÍA CIUDADANA - ORIGEN -->
+        <tr data-viva="VIA_CIUDADANA">
+            <td><strong>Vía Ciudadana</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Respaldos Ciudadanos Mínimos</strong><br>Solicitada por al menos el 2% de las personas inscritas en la Lista Nominal de Electores.</li>
+                    <li><strong>Validación Matemática del INE</strong><br>La Dirección Ejecutiva del Registro Federal de Electores (DERFE) verifica los nombres, firmas y claves de elector mediante compulsa directa con la base de datos del Padrón Electoral.</li>
+                    <li><strong>Filtro Posterior de la SCJN</strong><br>Si el INE valida formalmente el umbral del 2%, el Congreso remite el expediente a la SCJN para resolver la constitucionalidad en un plazo de 20 días naturales.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Plazo de Recolección</strong><br>Las firmas pueden recabarse desde el inicio del año previo al que deba realizarse la consulta, feneciendo el plazo el día en que concluya el periodo ordinario de sesiones anterior.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prohibición de Financiamiento</strong><br>Queda estrictamente prohibido el uso de recursos públicos para la obtención de firmas ciudadanas de respaldo.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>CPEUM</strong> Art. 35, VIII<br><strong>LFCP</strong> Arts. 14, 21 y 23</td>
+        </tr>
+
+        <!-- ================= BLOQUE 2: TIEMPOS, DECRETOS Y REGLAS DE DIFUSIÓN ================= -->
+        <tr class="cabecera-descanso" data-viva="">
+            <td colspan="5">
+                📅 LFCP — CAPÍTULO II: SECCIÓN B (LOGÍSTICA TEMPORAL, CONVOCATORIA Y EMISIÓN DE DECRETOS)
+            </td>
+        </tr>
+        <!-- VÍA INSTITUCIONAL - TIEMPOS -->
+        <tr data-viva="VIA_INSTITUCIONAL">
+            <td><strong>Vía Institucional (Poderes)</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Aprobación por Votación</strong><br>La petición de Consulta Popular debe ser votada y aprobada por la mayoría de los miembros presentes de cada Cámara legislativa.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Emisión de la Convocatoria</strong><br>El Congreso de la Unión expide la Convocatoria formal mediante un Decreto publicado en el Diario Oficial de la Federación (DOF).</li>
+                    <li><strong>Blindaje Cronológico Fijo</strong><br>La jornada de la Consulta Popular se realizará invariablemente el primer domingo de agosto del año que corresponda legalmente.</li>
+                    <li><strong>Suspensión Obligatoria de Propaganda</strong><br>Desde la publicación de la convocatoria y hasta la conclusión de la jornada de votación, se suspende la difusión de toda propaganda gubernamental en medios de comunicación.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Monitoreo de Medios</strong><br>El INE ejerce facultades directas de monitoreo para asegurar el cese total de la difusión oficial federal, estatal y municipal (salvo campañas de salud, protección civil y educación).</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 26, 27 y 28</td>
+        </tr>
+        <!-- VÍA CIUDADANA - TIEMPOS -->
+        <tr data-viva="VIA_CIUDADANA">
+            <td><strong>Vía Ciudadana</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Declaratoria de Validez</strong><br>El Consejo General del INE emite un dictamen formal de verificación de firmas que es enviado directamente a las Cámaras del Congreso.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Sujeción al Decreto General</strong><br>Una vez que la SCJN determina la constitucionalidad, el Congreso de la Unión procede a la notificación del decreto de convocatoria al INE para su ejecución.</li>
+                    <li><strong>Homologación de Fechas</strong><br>Se alinea de manera exacta al mismo calendario: organización centralizada para el primer domingo de agosto, garantizando certidumbre operativa.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Fiscalización Ordinaria</strong><br>El INE supervisa que la propaganda emitida por los comités promotores ciudadanos respete los periodos fijados por el decreto de convocatoria.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 29 y 30</td>
+        </tr>
+
+        <!-- ================= BLOQUE 3: CONTROL FINANCIERO Y CANDADOS DE FISCALIZACIÓN ================= -->
+        <tr class="cabecera-descanso" data-viva="">
+            <td colspan="5">
+                💰 LFCP — CAPÍTULO II: SECCIÓN C (RÉGIMEN FINANCIERO, PROHIBICIONES Y CANDADOS DE LA UTF)
+            </td>
+        </tr>
+        <!-- VÍA INSTITUCIONAL - FINANZAS -->
+        <tr data-viva="VIA_INSTITUCIONAL">
+            <td><strong>Vía Institucional (Poderes)</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Sujetos de Control</strong><br>Partidos Políticos Nacionales (PPN) y coaliciones que pretendan incidir en la opinión ciudadana sobre el sentido de la consulta.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Uso Exclusivo de Tiempos</strong><br>El posicionamiento de los partidos solo se puede realizar dentro del tiempo aire asignado por el INE en Radio y Televisión.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Financiamiento del Ejercicio</strong><br>El INE ejerce el presupuesto específico aprobado por la Cámara de Diputados para este fin. No se asignan fondos públicos adicionales a los partidos.</li>
+                    <li><strong>Prohibición Absoluta de Contratación</strong><br>Ninguna persona física o moral, sea partido político, tercero o particular, puede contratar propaganda en Radio y TV orientada a influir en la opinión de la consulta.</li>
+                    <li><strong>Fiscalización por la UTF</strong><br>La Unidad Técnico de Fiscalización del INE computa y vigila que no se desvíen recursos de los financiamientos ordinarios de los partidos para pautas no autorizadas.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>CPEUM</strong> Art. 35, VIII<br><strong>LFCP</strong> Arts. 31, 32 y 33</td>
+        </tr>
+        <!-- VÍA CIUDADANA - FINANZAS -->
+        <tr data-viva="VIA_CIUDADANA">
+            <td><strong>Vía Ciudadana</strong></td>
+            <td>
+                <ul class="lista-celda">
+                    <li><strong>Sujetos de Control Ciudadano</strong><br>Comités promotores, organizaciones civiles y personas ciudadanas organizadas que recolectan firmas o difunden la propuesta.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Límites a la Promoción</strong><br>La difusión ciudadana externa está sujeta a los lineamientos emitidos por el Consejo General del INE para evitar campañas encubiertas.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Topes de Gasto en Recolección</strong><br>El Consejo General del INE determina un tope máximo de gastos para la recolección de firmas equivalentes al financiamiento privado permitido.</li>
+                    <li><strong>Obligación de Rendición de Cuentas</strong><br>Los ciudadanos organizadores deben presentar un informe detallado de ingresos y gastos ante la UTF. Las aportaciones de procedencia ilícita o anónimas conllevan sanciones administrativas y penales directas.</li>
+                </ul>
+            </td>
+            <td class="fundamento"><strong>LFCP</strong> Arts. 22 y 34</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

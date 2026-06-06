@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prerrogativas, Fiscalizacion y Regimen Interno - Analítica Electoral</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGPP">
+    <div id="contenedor-principal" data-ley="LGPP">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Prerrogativas, Fiscalización y Régimen Interno</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th class="col-etapa">
+                Ámbito de Regulación<br>
+                <select id="filtro-viva" class="filtro-select" onchange="filtrarTabla()">
+                    <option value="">-- Todos --</option>
+                    <option value="PRERROGATIVAS">Prerrogativas y Radio/TV</option>
+                    <option value="FISCALIZACION">Fiscalización y Control</option>
+                    <option value="INDEPENDIENTES_COALICIONES">Independientes y Coaliciones</option>
+                </select>
+            </th>
+            <th class="col-fase">Concepto Regulado</th>
+            <th style="width: 25%; min-width: 320px;">Fórmulas, Obligaciones y Mecanismos de Distribución</th>
+            <th style="width: 23%; min-width: 300px;">Reglas Críticas / Candados Jurídicos</th>
+            <th style="width: 23%; min-width: 300px;">Periodo Ordinario (No Electoral)</th>
+            <th style="width: 10%; min-width: 110px;">Plazo Legal</th>
+            <th class="col-fundamento">Fundamento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= ÁMBITO: PRERROGATIVAS Y RADIO/TV ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                💰 PRERROGATIVAS Y FINANCIAMIENTO — Distribución de Recursos y Salvaguarda de la Equidad Económica
+            </td>
+        </tr>
+        <tr data-viva="PRERROGATIVAS">
+            <td><strong>Prerrogativas y Radio/TV</strong></td>
+            <td><strong>Financiamiento Público Local</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Cálculo de la bolsa anual</strong><br>El OPLE multiplica el padrón electoral local por el 65% del valor de la UMA para determinar el monto total a distribuir entre los partidos con registro.</li>
+                    <li><strong>Fórmula de distribución</strong><br>Se reparte el 30% de forma igualitaria entre todos las fuerzas políticas y el 70% restante según el porcentaje de votación obtenido en la elección de diputados inmediata anterior.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prevalencia del recurso público</strong><br>Constituye un límite constitucional estricto donde el financiamiento público debe prevalecer sobre el privado para blindar la equidad institucional de la contienda.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Sostenimiento ordinario</strong><br>Las prerrogativas para actividades ordinarias permanentes se calendarizan y entregan de forma mensual e ininterrumpida durante todo el año no electoral.</li>
+                </ul>
+            </td>
+            <td>Ministraciones mensuales aprobadas al inicio de cada año fiscal.</td>
+            <td class="fundamento"><strong>LGPP</strong><br>Art. 26</td>
+        </tr>
+
+        <!-- ================= ÁMBITO: FISCALIZACIÓN Y CONTROL ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                🛡️ FISCALIZACIÓN Y RENDICIÓN DE CUENTAS — Control del Gasto y Sistemas de Auditoría en Línea
+            </td>
+        </tr>
+        <tr data-viva="FISCALIZACION">
+            <td><strong>Fiscalización y Control</strong></td>
+            <td><strong>Rendición de Cuentas e Informes</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Carga en el sistema en línea</strong><br>Los partidos políticos tienen la obligación de registrar cada ingreso y gasto directamente en el Sistema Online de Contabilidad de la Unidad Técnica de Fiscalización del INE.</li>
+                    <li><strong>Auditorías de campo</strong><br>El personal técnico del INE realiza visitas de verificación física a las sedes de los partidos y monitorea espectaculares en vialidades para cruzar la información reportada.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Causal de nulidad de elección</strong><br>El rebase del tope de gastos de campaña en más de un 5% en elecciones concurrentes es una falta grave que puede derivar en la invalidez jurídica de los comicios.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Informes anuales ordinarios</strong><br>Durante los periodos no electorales los partidos deben presentar reportes anuales detallando sus gastos operativos, sueldos y actividades de capacitación política.</li>
+                </ul>
+            </td>
+            <td>Los informes anuales se presentan a más tardar dentro de los primeros 60 días del año siguiente.</td>
+            <td class="fundamento"><strong>LGPP</strong><br>Arts. 59-61</td>
+        </tr>
+
+        <!-- ================= ÁMBITO: INDEPENDIENTES Y COALICIONES ================= -->
+        <tr>
+            <td colspan="7" class="cabecera-descanso">
+                👤 REGÍMENES ESPECIALES — Reglas Financieras para Candidaturas Independientes y Alianzas Temporales
+            </td>
+        </tr>
+        <tr data-viva="INDEPENDIENTES_COALICIONES">
+            <td><strong>Independientes y Coaliciones</strong></td>
+            <td><strong>Candidaturas Independientes (CI)</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Distribución como Partido Único</strong><br>El conjunto de todas las candidaturas independientes registradas para un mismo cargo se asimila operativamente como si fuera un solo partido de nuevo registro.</li>
+                    <li><strong>Reparto Igualitario</strong><br>La bolsa total asignada para ese cargo (equivalente al 2% del financiamiento público) se divide en partes iguales entre todos los candidatos independientes con registro vigente.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Tope de Financiamiento Privado</strong><br>El dinero privado que aporten los simpatizantes y el propio candidato independiente está topado legalmente. La suma de su dinero público y privado jamás puede rebasar el tope de gastos de campaña establecido para la misma elección ordinaria.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Inexistencia de Prerrogativa Ordinaria</strong><br>Las candidaturas independientes carecen de personalidad jurídica permanente, por lo que no reciben ningún tipo de financiamiento público ni acceso a tiempos de Radio y TV fuera de los periodos de campaña electoral.</li>
+                </ul>
+            </td>
+            <td>Asignación de recursos al momento de la aprobación formal del registro de la candidatura.</td>
+            <td class="fundamento"><strong>LGPP</strong><br>Art. 26<br><strong>LGIPE</strong><br>Art. 399</td>
+        </tr>
+        <tr data-viva="INDEPENDIENTES_COALICIONES">
+            <td><strong>Independientes y Coaliciones</strong></td>
+            <td><strong>Partidos Nacionales vs Locales</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Financiamiento Local de Partidos Federales</strong><br>Un partido con registro nacional tiene derecho a recibir financiamiento en el estado siempre que haya obtenido el 3% de la votación válida emitida en la elección local inmediata anterior.</li>
+                    <li><strong>Distribución de Partidos Locales</strong><br>Los partidos locales calculan su bolsa estatal con la misma fórmula (65% de la UMA por padrón local) pero su supervivencia depende estrictamente de mantener ese 3% en su entidad.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Pérdida de Prerrogativa Estatal</strong><br>Si un partido nacional no alcanza el 3% de los votos en el estado, pierde el financiamiento público local de forma inmediata, aunque conserve sus prerrogativas federales ante el INE.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Garantía de Ministración</strong><br>Tanto los partidos locales como los nacionales con derecho a financiamiento estatal reciben sus ministraciones de forma mensual a través del presupuesto asignado al OPLE.</li>
+                </ul>
+            </td>
+            <td>Corte de caja mensual gestionado por la Dirección General de Administración de cada OPLE.</td>
+            <td class="fundamento"><strong>LGPP</strong><br>Art. 28<br><strong>Constitución</strong><br>Art. 116</td>
+        </tr>
+        <tr data-viva="INDEPENDIENTES_COALICIONES">
+            <td><strong>Independientes y Coaliciones</strong></td>
+            <td><strong>Régimen de Coaliciones</strong></td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Bolsas Individuales Preasentadas</strong><br>Las coaliciones no reciben financiamiento público de forma directa. Cada partido que integra la alianza recibe su presupuesto anual de forma individual según sus propios votos anteriores.</li>
+                    <li><strong>Aportación por Convenio</strong><br>Los partidos transfieren el porcentaje de sus prerrogativas pactado en el Convenio de Coalición a una cuenta bancaria única creada exclusivamente para la administración de la campaña conjunta.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Distribución de Tiempos de Radio y TV</strong><br>Para la pauta de transmisión en medios de comunicación, el 30% igualitario se asigna a la coalición como si fuera un solo partido, mientras que el 70% proporcional se suma con base en lo que aporta individualmente cada integrante.</li>
+                    <li><strong>Prorrateo Obligatorio de Gastos</strong><br>Mecanismo legal para distribuir los costos de propaganda común de forma proporcional o equitativa según la campaña, impidiendo que una fuerza política absorba indebidamente los gastos de otra para burlar el tope de gastos de campaña.</li>
+                </ul>
+            </td>
+            <td class="col-ancha">
+                <ul class="lista-celda">
+                    <li><strong>Prohibición de Coalición Ordinaria</strong><br>Las coaliciones tienen una naturaleza estrictamente electoral y temporal. No existe la figura de coalición durante los periodos ordinarios no electorales, por lo que los partidos actúan por separado.</li>
+                </ul>
+            </td>
+            <td>Vigencia estricta desde la aprobación del Convenio hasta la conclusión de la etapa de dictaminación de la fiscalización.</td>
+            <td class="fundamento"><strong>LGPP</strong><br>Arts. 87-91</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

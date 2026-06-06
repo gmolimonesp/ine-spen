@@ -104,6 +104,26 @@
         <archivo>tabla-organizaciones.html</archivo>
         <titulo>Titulo Primero</titulo>
     </tabla>
+    <tabla>
+        <ley>LGPP</ley>
+        <nombre>LGPP -- Prerrogativas, Fiscalizacion y Regimen Interno</nombre>
+        <archivo>tabla-prerrogativas.html</archivo>
+        <titulo>Titulo Tercero</titulo>
+    </tabla>
+
+    <!-- ================= SECCIÓN: LGMDE (ORDENADA POR ARTICULOS Y CONDUCTAS) ================= -->
+    <tabla>
+        <ley>LGMDE</ley>
+        <nombre>-- Selecciona una tabla de la LGMDE --</nombre>
+        <archivo>#</archivo>
+        <titulo>Menu General</titulo>
+    </tabla>
+    <tabla>
+        <ley>LGMDE</ley>
+        <nombre>LGMDE -- Tipos Penales y Delitos Electorales</nombre>
+        <archivo>tabla-delitos.html</archivo>
+        <titulo>Articulos Generales</titulo>
+    </tabla>
 
     <tabla>
         <ley>LGSMIME</ley>
@@ -116,5 +136,51 @@
         <nombre>LGSMIME -- Sistema de Medios de Impugnación en Materia Electoral</nombre>
         <archivo>tabla-impugnaciones.html</archivo>
         <titulo>Titulo Primero</titulo>
+    </tabla>
+    <tabla>
+        <ley>LGSMIME</ley>
+        <nombre>LGSMIME -- Reglas Comunes y Juicio de Inconformidad</nombre>
+        <archivo>tabla-impugnaciones-reglas.html</archivo>
+        <titulo>Titulo Segundo</titulo>
+    </tabla>
+
+    <!-- ================= SECCIÓN: LFCP (CONSULTA POPULAR) ================= -->
+    <tabla>
+        <ley>LFCP</ley>
+        <nombre>-- Selecciona una tabla de la LFCP --</nombre>
+        <archivo>#</archivo>
+        <titulo>Menu General</titulo>
+    </tabla>
+    <tabla>
+        <ley>LFCP</ley>
+        <nombre>LFCP -- Origen, Organización y Finanzas</nombre>
+        <archivo>tabla-cp-origen.html</archivo>
+        <titulo>Capitulo II</titulo>
+    </tabla>
+    <tabla>
+        <ley>LFCP</ley>
+        <nombre>LFCP -- Etapas, Actores y Post-Ejercicio</nombre>
+        <archivo>tabla-cp-etapas.html</archivo>
+        <titulo>Capitulo IV</titulo>
+    </tabla>
+
+    <!-- ================= SECCIÓN: LFRM (REVOCACIÓN DE MANDATO) ================= -->
+    <tabla>
+        <ley>LFRM</ley>
+        <nombre>-- Selecciona una tabla de la LFRM --</nombre>
+        <archivo>#</archivo>
+        <titulo>Menu General</titulo>
+    </tabla>
+    <tabla>
+        <ley>LFRM</ley>
+        <nombre>LFRM -- Inicio, Umbrales y Financiamiento</nombre>
+        <archivo>tabla-rm-origen.html</archivo>
+        <titulo>Capitulo II</titulo>
+    </tabla>
+    <tabla>
+        <ley>LFRM</ley>
+        <nombre>LFRM -- Organización, Jornada y Resultados</nombre>
+        <archivo>tabla-rm-etapas.html</archivo>
+        <titulo>Capitulo IV</titulo>
     </tabla>
 </menu>
