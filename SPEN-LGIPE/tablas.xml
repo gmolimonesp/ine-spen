@@ -91,6 +91,11 @@
         <archivo>tabla-justicia-disposiciones.html</archivo>
         <libro>Libro Noveno</libro>
     </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Tipos de Casilla y Reglas de Instalación por Elección</nombre>
+        <archivo>tabla-casillas-tipos.html</archivo>
+    </tabla>
 
     <tabla>
         <ley>LGPP</ley>
