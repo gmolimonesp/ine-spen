@@ -29,30 +29,36 @@
         <table id="tabla-dinamica" class="tabla-maestra">
     <thead class="sticky-header">
         <tr>
-            <th style="width: 25%; min-width: 220px;">TIPO DE CASILLA Y REGLAS</th>
-            <th style="width: 35%; min-width: 300px;">DETERMINACIÓN POR ELECCIÓN (FED / LOC / COINCIDENTE)</th>
+            <th style="width: 25%; min-width: 220px;">
+                <label for="filtro-tipo-de-casillas" style="display:block; margin-bottom:5px;">TIPO DE CASILLA Y REGLAS</label>
+                <select id="filtro-tipo-de-casillas" class="filtro-select" style="width:100%; color:#1a365d; font-weight:bold;">
+                    <option value="">-- TODOS --</option>
+                    <option value="B">B - BÁSICA</option>
+                    <option value="C">C - CONTIGUA</option>
+                    <option value="S">S - ESPECIAL</option>
+                    <option value="X">X - EXTRAORDINARIA</option>
+                </select>
+            </th>
+            <th style="width: 40%; min-width: 320px;">DETERMINACIÓN POR ELECCIÓN / ESCENARIOS DE TRÁNSITO</th>
             <th style="width: 20%; min-width: 180px;">RANGO DE BOLETAS</th>
-            <th class="col-fundamento" style="width: 20%;">FUNDAMENTO</th>
+            <th class="col-fundamento" style="width: 15%;">FUNDAMENTO</th>
         </tr>
     </thead>
     <tbody>
 
-        <tr class="cabecera-descanso">
-            <td colspan="4">
-                🏢 PROCESOS ELECTORALES ORDINARIOS: CASILLAS TERRITORIALES
-            </td>
+        <tr class="cabecera-descanso" data-tipo-de-casillas="B">
+            <td colspan="4">🏢 PROCESOS ELECTORALES ORDINARIOS: CASILLAS TERRITORIALES (NÚCLEO SECCIONAL)</td>
         </tr>
-        <tr>
+        <tr data-tipo-de-casillas="B">
             <td>
                 <ul class="lista-celda">
-                    <li><strong>CASILLA BÁSICA</strong><br>Se instala una sola casilla por cada sección electoral de manera obligatoria.</li>
+                    <li><strong>CASILLA BÁSICA</strong><br>Se instala una sola casilla por cada sección electoral de manera obligatoria para el padrón base.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
                     <li><strong>Elección Federal o Local</strong><br>Constituye el núcleo base de votación en cualquier proceso ordinario.</li>
                     <li><strong>Elección Coincidente</strong><br>Eje de la Casilla Única; alberga la documentación de ambos niveles bajo una misma Mesa Directiva.</li>
-                    <li><strong>Elección Extraordinaria</strong><br>Se instala de forma prioritaria respetando el plano seccional del Consejo Distrital.</li>
                 </ul>
             </td>
             <td>
@@ -63,77 +69,89 @@
             </td>
             <td class="fundamento"><strong>LGIPE</strong><br>Arts. 253 y 256</td>
         </tr>
-        <tr>
+
+        <tr class="cabecera-descanso" data-tipo-de-casillas="C">
+            <td colspan="4">👥 PROCESOS ELECTORALES ORDINARIOS: CASILLAS CONTIGUAS (COMPLEMENTARIAS)</td>
+        </tr>
+        <tr data-tipo-de-casillas="C">
             <td>
                 <ul class="lista-celda">
-                    <li><strong>CASILLA CONTIGUA</strong><br>Se instalan cuando el padrón de una sección electoral supera el límite legal de la casilla básica.</li>
+                    <li><strong>CASILLA CONTIGUA</strong><br>Se instalan por fraccionamiento alfabético cuando el padrón de la sección supera el límite legal de 750 electores.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
-                    <li><strong>Criterio de Multiplicidad</strong><br>Se abre una contigua por cada 750 electores excedentes fraccionados en orden alfabético.</li>
+                    <li><strong>Criterio de Multiplicidad</strong><br>Se abre una contigua por cada 750 electores excedentes de forma consecutiva.</li>
                     <li><strong>Ámbito Coincidente</strong><br>Se duplica la infraestructura de urnas y mamparas manteniendo la modalidad de Casilla Única.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
-                    <li><strong>Distribución Equitativa</strong><br>El listado se divide proporcionalmente entre el total de casillas de la sección.</li>
+                    <li><strong>Distribución Equitativa</strong><br>El listado nominal se divide proporcionalmente entre el total de casillas de la sección.</li>
                     <li><strong>Rango Fraccionado</strong><br>El número máximo de boletas será de 750, ajustándose a la baja según la partición alfabética.</li>
                 </ul>
             </td>
             <td class="fundamento"><strong>LGIPE</strong><br>Art. 253 Num. 1<br><strong>RE INE</strong><br>Art. 210</td>
         </tr>
 
-        <tr class="cabecera-descanso">
-            <td colspan="4">
-                ⚠️ PROCESOS ELECTORALES ORDINARIOS: FLUJO Y GEOGRAFÍA EXCEPCIONAL
-            </td>
+        <tr class="cabecera-descanso" data-tipo-de-casillas="S">
+            <td colspan="4">✈️ PROCESOS ELECTORALES ORDINARIOS: CASILLAS ESPECIALES (CIUDADANÍA EN TRÁNSITO)</td>
         </tr>
-        <tr>
+        <tr data-tipo-de-casillas="S">
             <td>
                 <ul class="lista-celda">
-                    <li><strong>CASILLA ESPECIAL</strong><br>Establecida para la recepción del voto de electores que se encuentran transitoriamente fuera de su sección.</li>
+                    <li><strong>CASILLA ESPECIAL</strong><br>Establecida exclusivamente para la recepción del voto de electores que se encuentran transitoriamente fuera de su sección.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
                     <li><strong>Límite por Distrito</strong><br>Se aprueba la instalación de hasta un máximo de 10 casillas especiales por cada distrito electoral federal.</li>
-                    <li><strong>Elección Coincidente</strong><br>Cuentan con un sistema informático que parametriza los cargos locales válidos según el origen del elector.</li>
+                    <li><strong>Regla de Oro del Voto</strong><br>Solo se puede votar por los cargos correspondientes al territorio común de la credencial de elector.</li>
+                </ul>
+                <div style="margin-top: 10px;"><strong>ESCENARIOS</strong></div>                    
+                <ul class="lista-celda">
+                    <li><b>Fuera de sección y fuera de distrito</b><br>Federal: Vota por Presidencia y Senadurías (RP). No por Diputaciones Federales. Local: Vota por Gobernador (si sigue en el estado). No por Ayuntamiento ni Diputaciones Locales.</li>
+                    <li><b>Fuera de sección pero dentro del distrito</b><br>Federal: Vota por todos los cargos (Presidencia, Senadurías y Diputaciones Federales). Local: Vota por Gobernador y Diputaciones Locales (si coincide el plano distrital). No por Ayuntamiento (si cambió de municipio).</li>
+                    <li><b>En otro municipio de la entidad</b><br>Federal: Vota por Presidencia y Senadurías. Local: Vota únicamente por Gobernador. No se le entregan boletas para el Ayuntamiento anfitrión.</li>
+                    <li><b>Fuera de la entidad federativa</b><br>Federal: Vota únicamente por Presidencia de la República (y Senadurías por Lista Nacional). Local: No puede votar por ningún cargo local.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
                     <li><strong>Rango Restringido</strong><br>Dotadas con un límite estricto de 1,000 boletas por casilla especial para salvaguardar la equidad.</li>
+                    <li><strong>Control de Sistema</strong><br>Las boletas se descuentan del bloque único de 1,000 asignado de acuerdo al llenado informático de las actas de electores en tránsito.</li>
                 </ul>
             </td>
             <td class="fundamento"><strong>LGIPE</strong><br>Art. 258<br><strong>RE INE</strong><br>Art. 242</td>
         </tr>
-        <tr>
+
+        <tr class="cabecera-descanso" data-tipo-de-casillas="X">
+            <td colspan="4">🗺️ PROCESOS ELECTORALES ORDINARIOS: CASILLAS EXTRAORDINARIAS (ACCESIBILIDAD GEOGRÁFICA)</td>
+        </tr>
+        <tr data-tipo-de-casillas="X">
             <td>
                 <ul class="lista-celda">
-                    <li><strong>CASILLA EXTRAORDINARIA</strong><br>Se instala en secciones donde las condiciones geográficas o socioculturales hacen difícil el acceso a la básica.</li>
+                    <li><strong>CASILLA EXTRAORDINARIA</strong><br>Se instala para ciudadanos que SÍ están en su sección, pero el traslado a la básica es difícil por condiciones geográficas o socioculturales.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
-                    <li><strong>Configuración Territorial</strong><br>Determinada por el Consejo Distrital para asegurar el sufragio en comunidades aisladas.</li>
-                    <li><strong>Ámbito Coincidente</strong><br>Funciona como Casilla Única Extraordinaria concentrando las urnas de todas las elecciones vigentes.</li>
+                    <li><strong>Configuración Territorial</strong><br>Determinada por el Consejo Distrital para acercar las urnas a comunidades aisladas, valles o cerros dentro de la misma sección.</li>
+                    <li><strong>Votación Integra</strong><br>Al no salir de su territorio, el ciudadano vota por todos los cargos federales y locales vigentes sin restricción informática.</li>
                 </ul>
             </td>
             <td>
                 <ul class="lista-celda">
-                    <li><strong>Rango Ajustado</strong><br>El volumen de boletas equivale exactamente al número de ciudadanos residentes en esa sublocalidad aislada.</li>
+                    <li><strong>Rango Ajustado</strong><br>El volumen de boletas equivale exactamente al número de ciudadanos residentes en esa sublocalidad o fraccionamiento aislado.</li>
                 </ul>
             </td>
             <td class="fundamento"><strong>LGIPE</strong><br>Art. 253 Num. 2<br><strong>RE INE</strong><br>Art. 210</td>
         </tr>
 
-        <tr class="cabecera-descanso">
-            <td colspan="4">
-                🗳️ EJERCICIOS DE DEMOCRACIA DIRECTA: MESAS RECEPTORAS (CP - RM)
-            </td>
+        <tr class="cabecera-descanso" data-tipo-de-casillas="B C S X">
+            <td colspan="4">🗳️ EJERCICIOS DE DEMOCRACIA DIRECTA: MESAS RECEPTORAS (CP - RM)</td>
         </tr>
-        <tr>
+        <tr data-tipo-de-casillas="B C S X">
             <td>
                 <ul class="lista-celda">
                     <li><strong>MESA RECEPTORA</strong><br>Órgano que sustituye a las casillas tradicionales en los ejercicios de Consulta Popular y Revocación de Mandato.</li>
@@ -151,7 +169,7 @@
                     <li><strong>Dotación</strong><br>Una papeleta por cada ciudadano inscrito en el conjunto de secciones fusionadas.</li>
                 </ul>
             </td>
-            <td class="fundamento"><strong>LFCP</strong><br>Art. 32<br><strong>LFRM</strong><br>Art. 41</td>
+            <td class="fundamento"><strong>LFCP</strong> Art. 32<br><strong>LFRM</strong> Art. 41</td>
         </tr>
     </tbody>
     <tfoot>
