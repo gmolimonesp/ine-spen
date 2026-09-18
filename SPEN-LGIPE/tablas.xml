@@ -192,8 +192,32 @@
     <!-- ================= SECCIÓN: OPLE ================= -->
     <tabla>
         <ley>OPLE</ley>
-        <nombre>-- Selecciona una tabla de la LFRM --</nombre>
+        <nombre>-- Selecciona una tabla OPLE --</nombre>
         <archivo>#</archivo>
         <titulo>Menu General</titulo>
+    </tabla>
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>OPLE -- Geografía, Cartografía y Logística de Casillas</nombre>
+        <archivo>tabla-ople-geografia-cartografia-logistica-casillas.html</archivo>
+        <titulo>OPLE</titulo>
+    </tabla>
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>OPLE -- Documentación, Materiales y Cadena de Custodia</nombre>
+        <archivo>tabla-ople-documentacion-materiales-custodia.html</archivo>
+        <titulo>OPLE</titulo>
+    </tabla>
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>OPLE -- Jornada Electoral, Recolección y Resultados Preliminares</nombre>
+        <archivo>tabla-ople-jornada-recoleccion-resultados.html</archivo>
+        <titulo>OPLE</titulo>
+    </tabla>
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>OPLE -- Cómputos, Declaración de Validez y Participación Ciudadana</nombre>
+        <archivo>tabla-ople-computos-validez-participacion.html</archivo>
+        <titulo>OPLE</titulo>
     </tabla>
 </menu>
