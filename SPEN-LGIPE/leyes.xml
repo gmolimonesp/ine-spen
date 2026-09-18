@@ -42,4 +42,10 @@
         <nombre>Ley Federal de Revocación de Mandato</nombre>
         <archivo>06_lfrm.html</archivo>
     </ley>
+    <ley>
+        <id>OPLE</id>
+        <sigla>OPLE</sigla>
+        <nombre>OPLE</nombre>
+        <archivo>07_ople.html</archivo>
+    </ley>
 </leyesElectoras>

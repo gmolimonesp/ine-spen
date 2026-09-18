@@ -188,4 +188,12 @@
         <archivo>tabla-rm-etapas.html</archivo>
         <titulo>Capitulo IV</titulo>
     </tabla>
+
+    <!-- ================= SECCIÓN: OPLE ================= -->
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>-- Selecciona una tabla de la LFRM --</nombre>
+        <archivo>#</archivo>
+        <titulo>Menu General</titulo>
+    </tabla>
 </menu>
