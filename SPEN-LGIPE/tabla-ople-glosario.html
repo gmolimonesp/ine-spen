@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>OPLE - Glosario</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="OPLE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>OPLE - Glosario</h1>
+        </header>
+
+<table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th style="width: 15%;">Concepto / Sigla
+                <br>
+                <select id="filtro-viva" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="G">G</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="O">O</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                </select>
+            </th>
+            <th style="width: 45%;">Definición</th>
+            <th style="width: 40%;">Explicación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= A ================= -->
+        <tr class="modulo-header" data-viva="A">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">A</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Anuencia de Propietarios</strong></td>
+            <td>Contrato o formato de consentimiento firmado por los dueños o directivos de escuelas o inmuebles particulares, mediante el cual autorizan formalmente al OPLE la instalación de casillas en sus espacios.</td>
+            <td>Es el permiso por escrito que firman los directores o dueños para prestar un lugar y que se puedan poner las casillas el día de la elección.</td>
+        </tr>
+
+        <!-- ================= B ================= -->
+        <tr class="modulo-header" data-viva="B">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">B</td>
+        </tr>
+        <tr data-viva="B">
+            <td><strong>Bodega Distrital Local</strong></td>
+            <td>Espacio físico acondicionado con estrictas medidas de seguridad, control de humedad, prevención de incendios y resguardo policial permanente, destinado al almacenamiento de las boletas y paquetes locales.</td>
+            <td>Es el cuarto seguro y vigilado por la policía en la oficina distrital donde se guardan bajo llave los paquetes y boletas de la elección local.</td>
+        </tr>
+
+        <!-- ================= C ================= -->
+        <tr class="modulo-header" data-viva="C">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">C</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Cancel Electoral</strong></td>
+            <td>Estructura modular plegable y portátil que se coloca en las casillas para proveer un espacio semi-cerrado, garantizando que el ciudadano cruce sus boletas locales con absoluta secrecía.</td>
+            <td>Es la cabina plástica con cortinas donde te metes a tachar tus boletas para que nadie vea por quién estás votando.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>CRYT</strong></td>
+            <td>Centros de Recepción y Traslado. Mecanismos logísticos aprobados (fijos o itinerantes) para recolectar y agrupar los paquetes electorales de zonas rurales o distantes, agilizando su envío seguro al Consejo.</td>
+            <td>Son puntos de reunión intermedios para juntar los paquetes de casillas lejanas y transportarlos juntos de forma rápida y segura hacia el INE o el OPLE.</td>
+        </tr>
+
+        <!-- ================= D ================= -->
+        <tr class="modulo-header" data-viva="D">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">D</td>
+        </tr>
+        <tr data-viva="D">
+            <td><strong>DAT</strong></td>
+            <td>Dispositivos de Apoyo al Traslado. Mecanismo de asistencia que consiste en asignar rutas de transporte seguro para auxiliar a los presidentes de casilla en la entrega de sus paquetes electorales al cierre de la votación.</td>
+            <td>Es la red de vehículos autorizados que ayuda a los presidentes de casilla a llevar el paquete electoral al Consejo de forma directa y rápida.</td>
+        </tr>
+
+        <!-- ================= E ================= -->
+        <tr class="modulo-header" data-viva="E">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">E</td>
+        </tr>
+        <tr data-viva="E">
+            <td><strong>Encasillamiento</strong></td>
+            <td>Operativo logístico que consiste en la publicación oficial y fijación física de los listados con la ubicación de las casillas y los nombres de los funcionarios elegidos, colocados en las sedes distritales y áreas públicas.</td>
+            <td>Es colgar las listas oficiales en las calles para que todos los ciudadanos sepan exactamente dónde ir a votar y quiénes contarán los votos.</td>
+        </tr>
+
+        <!-- ================= G ================= -->
+        <tr class="modulo-header" data-viva="G">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">G</td>
+        </tr>
+        <tr data-viva="G">
+            <td><strong>Geografía Electoral Local</strong></td>
+            <td>Subdisciplina encargada de la delimitación cartográfica del territorio del estado, dividiéndolo de forma equitativa en distritos uninominales locales y secciones para organizar las elecciones regionales.</td>
+            <td>Es el mapa oficial que divide el estado en distritos y colonias para repartir las casillas de manera justa según la cantidad de habitantes.</td>
+        </tr>
+
+        <!-- ================= L ================= -->
+        <tr class="modulo-header" data-viva="L">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">L</td>
+        </tr>
+        <tr data-viva="L">
+            <td><strong>Líquido Indeleble (IPN)</strong></td>
+            <td>Fórmula química permanente desarrollada científicamente que se aplica en el dedo pulgar de los electores tras emitir su sufragio, dejando una marca cutánea resistente a solventes para evitar el voto múltiple.</td>
+            <td>Es la tinta que te ponen en el dedo después de votar; no se quita con nada durante todo el día para asegurar que nadie intente votar dos veces.</td>
+        </tr>
+
+        <!-- ================= M ================= -->
+        <tr class="modulo-header" data-viva="M">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">M</td>
+        </tr>
+        <tr data-viva="M">
+            <td><strong>Mesa Directiva Concurrente</strong></td>
+            <td>Órgano ciudadano de carácter temporal integrado por 9 funcionarios (1 Presidente, 2 Secretarios, 3 Escrutadores y 3 Suplentes) facultado para recibir el voto y contar las boletas tanto federales como locales en una misma casilla.</td>
+            <td>Es la casilla única atendida por tus vecinos donde en la misma mesa te dan y te cuentan los votos para Presidente y también para Alcalde o Diputado Local.</td>
+        </tr>
+
+        <!-- ================= O ================= -->
+        <tr class="modulo-header" data-viva="O">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">O</td>
+        </tr>
+        <tr data-viva="O">
+            <td><strong>OPLE</strong></td>
+            <td>Organismos Públicos Locales Electorales. Autoridades administrativas dotadas de autonomía encargadas de organizar de forma exclusiva los procesos electorales para Gubernaturas, Diputaciones Locales y Ayuntamientos.</td>
+            <td>Es el instituto electoral de tu estado (como el IECM o el IEEM) encargado de las elecciones de tu comunidad, trabajando de la mano con el INE.</td>
+        </tr>
+
+        <!-- ================= R ================= -->
+        <tr class="modulo-header" data-viva="R">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">R</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Reseccionamiento Técnico</strong></td>
+            <td>Procedimiento cartográfico mediante el cual el OPLE y el INE dividen una sección electoral que ha superado el límite de 3,000 electores, creando nuevas secciones menores para facilitar la logística del voto.</td>
+            <td>Es cuando una sección electoral crece demasiado y la ley la divide en partes más pequeñas para que las casillas no se saturen de gente.</td>
+        </tr>
+
+        <!-- ================= S ================= -->
+        <tr class="modulo-header" data-viva="S">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">S</td>
+        </tr>
+        <tr data-viva="S">
+            <td><strong>SIJE</strong></td>
+            <td>Sistema de Información de la Jornada Electoral. Plataforma informática alimentada por los CAE encargada de reportar en tiempo real la hora de apertura, asistencia de funcionarios e incidencias en las casillas.</td>
+            <td>Es la aplicación digital que usa la autoridad electoral desde temprano para revisar qué casillas ya abrieron y monitorear si hay algún problema.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

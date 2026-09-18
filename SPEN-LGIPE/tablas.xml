@@ -256,4 +256,10 @@
         <archivo>tabla-ople-computos-validez-participacion.html</archivo>
         <titulo>OPLE</titulo>
     </tabla>
+    <tabla>
+        <ley>OPLE</ley>
+        <nombre>OPLE -- Glosario</nombre>
+        <archivo>tabla-ople-glosario.html</archivo>
+        <titulo>Glosario</titulo>
+    </tabla>
 </menu>
