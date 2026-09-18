@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glosario LFCP</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LFCP">
+    <div id="contenedor-principal" data-ley="LFCP">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Glosario LFCP</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th style="width: 15%;">Concepto / Sigla
+                <br>
+                <select id="filtro-viva" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="I">I</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="P">P</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="V">V</option>
+                </select>
+            </th>
+            <th style="width: 45%;">Definición</th>
+            <th style="width: 40%;">Explicación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= C ================= -->
+        <tr class="modulo-header" data-viva="C">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">C</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Consulta Popular</strong></td>
+            <td>Mecanismo constitucional de democracia directa mediante el cual las y los ciudadanos ejercen su derecho político para expresar su opinión respecto de uno o varios temas de trascendencia nacional o regional, cuyos resultados pueden ser vinculantes.</td>
+            <td>Es la votación oficial en la que la ciudadanía responde "Sí" o "No" a una pregunta para decidir directamente sobre un tema muy importante para el país o su región.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Convocatoria</strong></td>
+            <td>Acto formal de carácter constitucional emitido por el Congreso de la Unión, a través del cual se publica el decreto que contiene la fecha de la jornada, el texto de la pregunta aprobada y las condiciones generales del proceso.</td>
+            <td>Es el llamado oficial que hacen los diputados y senadores para invitar a todo el país a participar en la consulta, fijando el día y la pregunta exacta.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Cómputo Distrital</strong></td>
+            <td>Procedimiento oficial realizado por cada uno de los 300 consejos distritales del INE el domingo siguiente a la jornada, consistente en la suma de los resultados anotados en las actas de casilla y el desahogo de recuentos legales.</td>
+            <td>Es el conteo oficial definitivo que hace cada oficina del INE en los distritos para dar un resultado formal y legal de la consulta.</td>
+        </tr>
+
+        <!-- ================= D ================= -->
+        <tr class="modulo-header" data-viva="D">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">D</td>
+        </tr>
+        <tr data-viva="D">
+            <td><strong>Declaratoria de Validez</strong></td>
+            <td>Resolución emitida por el Consejo General del INE, o en su caso por el Tribunal Electoral, que formaliza que el proceso cumplió con los requisitos legales y determina si los resultados son obligatorios según el porcentaje de participación.</td>
+            <td>Es el veredicto oficial que confirma que la votación se hizo bien y que sus resultados ya son una ley u orden obligatoria para el gobierno.</td>
+        </tr>
+
+        <!-- ================= E ================= -->
+        <tr class="modulo-header" data-viva="E">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">E</td>
+        </tr>
+        <tr data-viva="E">
+            <td><strong>Escrutinio y Cómputo</strong></td>
+            <td>Fase posterior al cierre de la votación en la casilla, en la cual los funcionarios abren las urnas, cuentan de forma pública las papeletas, validan las respuestas emitidas y asientan los resultados numéricos en el acta oficial.</td>
+            <td>Es el conteo de los votos en la casilla; al cerrar las urnas, los ciudadanos encargados de la mesa abren las cajas y cuentan papeleta por papeleta enfrente de todos.</td>
+        </tr>
+
+        <!-- ================= I ================= -->
+        <tr class="modulo-header" data-viva="I">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">I</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>INE</strong></td>
+            <td>Instituto Nacional Electoral. Autoridad administrativa independiente encargada constitucionalmente de la organización total, difusión, capacitación, instalación de casillas, conteo de votos y cómputos de la Consulta Popular.</td>
+            <td>Es el instituto encargado de toda la logística de la votación: imprime las papeletas, capacita a los funcionarios, instala las urnas y da los resultados oficiales.</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Informe de Verificación</strong></td>
+            <td>Dictamen técnico y legal emitido por la Dirección Ejecutiva del Registro Federal de Electores del INE, mediante el cual se certifica si una petición ciudadana reunió el porcentaje mínimo de firmas válidas exigido por la Constitución.</td>
+            <td>Es el reporte donde el INE avisa si las firmas que entregaron los ciudadanos son reales y suficientes para poder autorizar la votación.</td>
+        </tr>
+
+        <!-- ================= L ================= -->
+        <tr class="modulo-header" data-viva="L">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">L</td>
+        </tr>
+        <tr>
+            <td><strong>LFCP</strong></td>
+            <td>Ley Federal de Consulta Popular. Ordenamiento jurídico reglamentario de la fracción VIII del artículo 35 de la Constitución, que regula los requisitos, procedimientos y atribuciones para estos mecanismos de democracia directa.</td>
+            <td>Es el libro de reglas oficial que dice quién puede pedir una consulta, qué temas se pueden votar y cómo se debe organizar todo el proceso.</td>
+        </tr>
+        <tr data-viva="L">
+            <td><strong>Lista Nominal</strong></td>
+            <td>Relación elaborada por el INE que contiene el nombre de los ciudadanos que cuentan con credencial para votar vigente; es el padrón de referencia para validar las firmas de apoyo y calcular el porcentaje de participación final.</td>
+            <td>Es la lista con fotografía de todos los que pueden votar; sirve para revisar si se juntaron las firmas necesarias y si votó la cantidad de gente obligatoria.</td>
+        </tr>
+
+        <!-- ================= M ================= -->
+        <tr class="modulo-header" data-viva="M">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">M</td>
+        </tr>
+        <tr data-viva="M">
+            <td><strong>Mesa Directiva de Casilla</strong></td>
+            <td>Órgano electoral integrado por ciudadanos sorteados y capacitados, encargados de recibir la votación de la consulta, realizar el escrutinio y cómputo de las papeletas y resguardar los paquetes electorales.</td>
+            <td>Es la casilla atendida por tus propios vecinos el día de la votación, donde te reciben, te dan tu papeleta oficial y cuentan los votos al cerrar la jornada.</td>
+        </tr>
+        <!-- ================= P ================= -->
+        <tr class="modulo-header" data-viva="P">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">P</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Papeleta</strong></td>
+            <td>Documento oficial impreso por el INE en papel de seguridad que contiene la pregunta aprobada, las opciones de respuesta ("Sí" o "No") y los cuadros para que el ciudadano emita su voto de forma libre y secreta.</td>
+            <td>Es la boleta oficial de votación que te entregan en la casilla para que cruces la opción de tu preferencia.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Petición Ciudadana</strong></td>
+            <td>Modalidad para solicitar una consulta popular impulsada directamente por la ciudadanía, la cual debe contar con el respaldo formal de al menos el equivalente al dos por ciento de las personas inscritas en la lista nominal.</td>
+            <td>Es cuando la gente se organiza por iniciativa propia para proponer una votación nacional juntando firmas de apoyo en todo el país.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Prohibiciones de Materia</strong></td>
+            <td>Restricciones constitucionales expresas sobre temas que no pueden ser objeto de consulta popular, tales como los derechos humanos, los presupuestos, la seguridad nacional y la permanencia de las fuerzas armadas.</td>
+            <td>Son los temas prohibidos por ley que nunca se pueden poner a votación (como los impuestos o los derechos de las personas).</td>
+        </tr>
+
+        <!-- ================= R ================= -->
+        <tr class="modulo-header" data-viva="R">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">R</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Revisión de Constitucionalidad</strong></td>
+            <td>Calificación jurídica obligatoria realizada por la Suprema Corte de Justicia de la Nación para determinar si la materia de la consulta respeta la Constitución y avalar que la pregunta no sea capciosa o tendenciosa.</td>
+            <td>Es el filtro legal obligatorio donde los ministros de la Corte revisan que el tema no sea ilegal y que la pregunta se entienda claramente.</td>
+        </tr>
+
+        <!-- ================= S ================= -->
+        <tr class="modulo-header" data-viva="S">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">S</td>
+        </tr>
+        <tr data-viva="S">
+            <td><strong>SCJN</strong></td>
+            <td>Suprema Corte de Justicia de la Nación. Máximo tribunal del país constitucionalmente facultado para resolver de forma definitiva sobre la legalidad y constitucionalidad de todas las peticiones de consulta popular.</td>
+            <td>Son los jueces encargados de dar luz verde o frenar un tema propuesto, validando que la pregunta sea neutral y esté bien redactada.</td>
+        </tr>
+
+        <!-- ================= T ================= -->
+        <tr class="modulo-header" data-viva="T">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">T</td>
+        </tr>
+        <tr data-viva="T">
+            <td><strong>TEPJF</strong></td>
+            <td>Tribunal Electoral del Poder Judicial de la Federación. Órgano jurisdiccional especializado que resuelve en última instancia las impugnaciones sobre los cómputos distritales, la asignación de resultados y la validez de la consulta.</td>
+            <td>Es la corte de jueces que atiende y resuelve las quejas o demandas formales si un partido político o ciudadano no está de acuerdo con los conteos del INE.</td>
+        </tr>
+        <tr data-viva="T">
+            <td><strong>Trascendencia Nacional</strong></td>
+            <td>Criterio cualitativo que califica a un tema propuesto para consulta cuando sus efectos impactan de manera directa a la mayor parte del territorio nacional y afectan el bienestar o los derechos de la mayoría de la población.</td>
+            <td>Es el requisito obligatorio de que el asunto a votar sea de gran interés e importancia para todo el país y no solo para un estado o municipio.</td>
+        </tr>
+
+        <!-- ================= V ================= -->
+        <tr class="modulo-header" data-viva="V">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">V</td>
+        </tr>
+        <tr data-viva="V">
+            <td><strong>Vinculatoriedad</strong></td>
+            <td>Efecto jurídico obligatorio que obliga al Congreso y a las autoridades a aplicar el resultado de la consulta, el cual solo se alcanza si la participación total es de al menos el cuarenta por ciento de la lista nominal.</td>
+            <td>Es la regla que obliga al gobierno a cumplir el resultado de la votación, la cual solo se activa si acude a votar el 40% o más de la población.</td>
+        </tr>
+    </tbody>
+</table>
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

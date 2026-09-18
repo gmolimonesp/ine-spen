@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glosario LGIPE</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGIPE">
+    <div id="contenedor-principal" data-ley="LGIPE">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Glosario LGIPE</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th style="width: 15%;">Concepto / Sigla
+                <br>
+                <select id="filtro-viva" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                </select>
+            </th>
+            <th style="width: 45%;">Definición</th>
+            <th style="width: 40%;">Explicación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= A ================= -->
+        <tr class="modulo-header" data-viva="A">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">A</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Acreditación de Representantes</strong></td>
+            <td>Procedimiento legal mediante el cual los partidos políticos nacionales y locales registran formalmente a sus representantes propietarios y suplentes ante los consejos locales, distritales y mesas directivas de casilla para ejercer funciones de vigilancia.</td>
+            <td>Es la entrega de los nombramientos oficiales para que los partidos políticos puedan enviar a su personal a vigilar las votaciones y los conteos de votos en las casillas.</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Acta de la Jornada Electoral</strong></td>
+            <td>Documento público oficial en formato autocopiante que firman los funcionarios de casilla y representantes de partidos para constatar legalmente las fases de instalación, apertura, desarrollo y cierre de la votación el día de los comicios.</td>
+            <td>Es el diario oficial de la casilla; una hoja donde se anota paso a paso a qué hora se abrió la casilla, qué incidentes ocurrieron y a qué hora cerró la votación.</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Anuencia de Propietarios</strong></td>
+            <td>Formato de autorización legal y consentimiento firmado por los dueños o directivos de inmuebles privados o escuelas públicas que permite al INE instalar casillas electorales en sus instalaciones el día de la jornada.</td>
+            <td>Es el permiso por escrito que firman los dueños de casas o los directores de escuelas para prestar sus espacios y que el INE pueda poner ahí las casillas.</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Asistencia Electoral</strong></td>
+            <td>Conjunto de actividades logísticas y operativas en campo realizadas por el personal eventual del Instituto encaminadas a la notificación, capacitación de funcionarios de casilla, preparación y distribución de los paquetes electorales.</td>
+            <td>Es todo el trabajo de apoyo en la calle para asegurar que las casillas tengan boletas, materiales y ciudadanos listos para recibir los votos.</td>
+        </tr>
+
+        <!-- ================= B ================= -->
+        <tr class="modulo-header" data-viva="B">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">B</td>
+        </tr>
+        <tr data-viva="B">
+            <td><strong>Bodega Electoral Distrital</strong></td>
+            <td>Espacio físico altamente resguardado ubicado en la sede de cada Consejo Distrital, acondicionado técnicamente para almacenar, sellar y blindar la documentación, las boletas y los paquetes electorales antes y después de los comicios.</td>
+            <td>Es el cuarto blindado, cerrado bajo llave y custodiado por la policía donde las oficinas del INE guardan los paquetes con los votos de los ciudadanos.</td>
+        </tr>
+        <tr data-viva="B">
+            <td><strong>Boleta Electoral</strong></td>
+            <td>Documento oficial impreso en papel de seguridad con medidas de control inviolables que contiene los nombres, emblemas y candidaturas autorizadas, entregado individualmente a los electores para manifestar su voto.</td>
+            <td>Es la papeleta oficial en la que cruzas la opción o candidato de tu preferencia para depositarla de forma secreta en la urna.</td>
+        </tr>
+
+        <!-- ================= C ================= -->
+        <tr class="modulo-header" data-viva="C">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">C</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Cadena de Custodia Logística</strong></td>
+            <td>Protocolo de seguridad ininterrumpido que controla el traslado físico de boletas y paquetes electorales, asegurando su identidad y blindaje desde que salen de los Talleres Gráficos hasta su resguardo en las bodegas.</td>
+            <td>Es el operativo de vigilancia constante para garantizar que nadie abra, altere o robe los paquetes con votos desde que se arman hasta que llegan al INE.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Casilla Básica</strong></td>
+            <td>Centro de votación de referencia que se instala en cada sección electoral para recibir los sufragios de un universo máximo de hasta 750 ciudadanos inscritos en la lista nominal.</td>
+            <td>Es la casilla principal de tu colonia; si en tu sección electoral hay menos de 750 votantes, solo se pondrá esta casilla.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Casilla Contigua</strong></td>
+            <td>Casilla complementaria que se instala obligatoriamente en una misma ubicación cuando el listado nominal de la sección electoral supera los 750 electores registrados, distribuyendo alfabéticamente a los ciudadanos.</td>
+            <td>Es la casilla extra que se pone al lado de la principal cuando somos demasiados votantes en la misma colonia, dividiéndonos por la letra del apellido.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Casilla Especial</strong></td>
+            <td>Centro de recepción del voto aprobado de forma estratégica para que los ciudadanos que se encuentran transitoriamente fuera de su sección electoral o de su entidad puedan ejercer su derecho al sufragio el día de la jornada.</td>
+            <td>Es la casilla destinada a los viajeros o personas que están lejos de su casa el día de la elección para que no se queden sin votar.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Casilla Extraordinaria</strong></td>
+            <td>Mesa de votación cuya instalación se justifica por condiciones geográficas, socioeconómicas o de comunicación difíciles en una sección, facilitando el acceso físico de los electores de esa zona sin trasladarse grandes distancias.</td>
+            <td>Es una casilla especial por geografía que se pone en lugares aislados, cerros o comunidades lejanas para que la gente no tenga que viajar horas para votar.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Cómputo Distrital</strong></td>
+            <td>Sesión legal ininterrumpida que realizan los 300 consejos distritales el miércoles posterior a la elección para realizar la suma oficial de los votos y declarar los resultados definitivos del distrito.</td>
+            <td>Es el conteo oficial definitivo donde el INE revisa y suma los resultados de todas las casillas de la zona para dar al ganador oficial de ese distrito.</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Consejo General del INE</strong></td>
+            <td>Órgano superior de dirección del Instituto Nacional Electoral, integrado por un Consejero Presidente, diez Consejeros Electorales, Consejeros del Poder Legislativo y representantes de los partidos políticos.</td>
+            <td>Es la mesa directiva máxima de todo el INE; los 11 consejeros principales que toman las grandes decisiones, aprueban los reglamentos y cuidan la democracia del país.</td>
+        </tr>
+
+        <!-- ================= D ================= -->
+        <tr class="modulo-header" data-viva="D">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">D</td>
+        </tr>
+        <tr data-viva="D">
+            <td><strong>Distritación Electoral</strong></td>
+            <td>Procedimiento técnico geográfico mediante el cual se divide el territorio nacional en 300 demarcaciones uninominales federales basándose en el equilibrio demográfico del último censo general de población.</td>
+            <td>Es la división del mapa de México en 300 zonas iguales en población para asegurar que cada diputado represente a la misma cantidad de ciudadanos.</td>
+        </tr>
+        <!-- ================= E ================= -->
+        <tr class="modulo-header" data-viva="E">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">E</td>
+        </tr>
+        <tr data-viva="E">
+            <td><strong>Escrutinio y Cómputo de Casilla</strong></td>
+            <td>Fase técnica ejecutada por los funcionarios de casilla al cierre de las urnas para extraer las boletas, clasificar los votos válidos y nulos, contar físicamente los sufragios y asentar los números oficiales en las actas.</td>
+            <td>Es el conteo vecinal de votos; cuando dan las 6:00 PM, los ciudadanos encargados limpian la mesa, abren las cajas y cuentan boleta por boleta enfrente de todos.</td>
+        </tr>
+        <tr data-viva="E">
+            <td><strong>Estrategia de Capacitación</strong></td>
+            <td>Documento rector aprobado por el Consejo General que fija los lineamientos, contenidos, herramientas didácticas y calendarios para la sensibilización y adiestramiento de la ciudadanía que integrará las casillas.</td>
+            <td>Es el plan maestro de educación del INE que define los manuales y métodos para enseñar a los ciudadanos sorteados cómo operar las casillas y contar los votos.</td>
+        </tr>
+
+        <!-- ================= F ================= -->
+        <tr class="modulo-header" data-viva="F">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">F</td>
+        </tr>
+        <tr data-viva="F">
+            <td><strong>Fibras Ópticas de Seguridad</strong></td>
+            <td>Elementos filamentosos visibles e invisibles incorporados directamente en la masa del papel oficial durante su fabricación industrial, utilizados como medida de control físico para autentificar las boletas.</td>
+            <td>Son los hilitos de colores y candados de seguridad que tiene el papel de las boletas (como los billetes) que brillan con luz ultravioleta para evitar falsificaciones.</td>
+        </tr>
+        <tr data-viva="F">
+            <td><strong>Funcionarios de Casilla</strong></td>
+            <td>Ciudadanos seleccionados por sorteo y capacitados por la autoridad electoral administrativa para recibir la votación de sus vecinos y ejercer la máxima autoridad civil en el espacio del centro de votación.</td>
+            <td>Son tus vecinos encargados de la mesa el día de la elección (Presidente, Secretarios y Escrutadores); ellos cuidan los votos y firman los papeles oficiales.</td>
+        </tr>
+
+        <!-- ================= G ================= -->
+        <tr class="modulo-header" data-viva="G">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">G</td>
+        </tr>
+        <tr data-viva="G">
+            <td><strong>Geografía Electoral</strong></td>
+            <td>Subdisciplina encargada de la delimitación espacial y cartográfica del territorio para organizar las elecciones, dividiendo al país en circunscripciones plurinominales, distritos federales, distritos locales y secciones electorales.</td>
+            <td>Es el trazo de los mapas oficiales del INE que divide los municipios y colonias en secciones organizadas para que la logística de votación sea viable.</td>
+        </tr>
+        <tr data-viva="G">
+            <td><strong>Grupos de Trabajo (Cómputos)</strong></td>
+            <td>Células logísticas operativas auxiliares integradas por consejeros y representantes de partidos creadas por ley cuando un Consejo Distrital debe recontar más de veinte paquetes electorales, desahogando los puntos de recuento.</td>
+            <td>Son equipos de apoyo con mesas adicionales que arma el INE el miércoles de cómputos para recontar paquetes de forma veloz y paralela cuando son demasiados.</td>
+        </tr>
+
+        <!-- ================= I ================= -->
+        <tr class="modulo-header" data-viva="I">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">I</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Incidentes en Casilla</strong></td>
+            <td>Acontecimientos imprevistos de carácter técnico, meteorológico, de seguridad o de orden público que alteran el curso normal de la votación en un centro electoral, requiriendo su registro formal en la hoja correspondiente.</td>
+            <td>Cualquier problema extraordinario el día de la votación (como violencia, retraso en la apertura, propaganda ilegal o falta de luz) que debe reportarse por escrito.</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Insaculación</strong></td>
+            <td>Procedimiento por computadora mediante el cual se seleccionan de forma aleatoria, transparente y por sorteo las muestras del padrón electoral (13%) y las letras del apellido para integrar las casillas.</td>
+            <td>Es la lotería o sorteo digital que hace el INE para elegir sin favoritismos a las personas de la colonia que participarán en el operativo electoral.</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Inviolabilidad de Paquetes</strong></td>
+            <td>Principio legal y físico garantizado mediante cintas adheribles de seguridad, firmas de partidos sobre las uniones de la caja y custodia policial, que asegura que un paquete no ha sido abierto tras salir de la casilla.</td>
+            <td>Es el blindaje de la caja de votos; la ley prohíbe abrirla tras el cierre de la casilla y viaja sellada para asegurar que nadie meta o saque boletas.</td>
+        </tr>
+
+        <!-- ================= J ================= -->
+        <tr class="modulo-header" data-viva="J">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">J</td>
+        </tr>
+        <tr data-viva="J">
+            <td><strong>Jornada Electoral</strong></td>
+            <td>Periodo que comprende formalmente desde las 7:30 horas del primer domingo de junio del año correspondiente hasta la clausura formal de las casillas y la remisión de todos los paquetes a los consejos distritales.</td>
+            <td>Es el día oficial de la elección; las horas clave en las que las casillas abren, la gente acude a votar y se cuentan los sufragios al cerrar.</td>
+        </tr>
+
+        <!-- ================= L ================= -->
+        <tr class="modulo-header" data-viva="L">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">L</td>
+        </tr>
+        <tr data-viva="L">
+            <td><strong>Líquido Aplicador Inndeleble</strong></td>
+            <td>Fórmula química permanente certificada elaborada para aplicarse en el dedo pulgar derecho de los electores tras emitir su voto, garantizando una reacción dermatológica visible que impide el sufragio múltiple.</td>
+            <td>Es la tinta oficial del INE que te ponen en el dedo tras votar; no se quita con jabón, cloro o solventes durante horas para asegurar que nadie vote dos veces.</td>
+        </tr>
+        <tr data-viva="L">
+            <td><strong>Lista Nominal de Electores</strong></td>
+            <td>Relación impresa con fotografía que contiene los datos de los ciudadanos registrados en el padrón electoral que cuentan con credencial vigente, utilizada por los funcionarios el día de la votación para validar el sufragio.</td>
+            <td>Es el cuadernillo oficial con las fotos de todos los vecinos que pueden votar en esa casilla específica; si tu nombre no está ahí, no puedes votar.</td>
+        </tr>
+
+        <!-- ================= M ================= -->
+        <tr class="modulo-header" data-viva="M">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">M</td>
+        </tr>
+        <tr data-viva="M">
+            <td><strong>Mampara Electoral (Cancel)</strong></td>
+            <td>Estructura plástica o de cartón plegable diseñada técnicamente para colocarse sobre las mesas de votación, garantizando que el ciudadano cruce su boleta con absoluta secrecía e independencia visual.</td>
+            <td>Es la cabina o módulo con cortinas plásticas donde te metes a tachar tus boletas para que nadie pueda ver por quién estás votando.</td>
+        </tr>
+        <tr data-viva="M">
+            <td><strong>Mesa Directiva de Casilla</strong></td>
+            <td>Órgano electoral ciudadano de carácter temporal instalado el día de los comicios en cada sección electoral, facultado por ley para recibir el voto, contar las boletas y resguardar la documentación oficial de la casilla.</td>
+            <td>Es el equipo oficial de vecinos (Presidente, Secretarios y Escrutadores) que instala las urnas en tu colonia y opera la votación durante todo el día.</td>
+        </tr>
+
+        <!-- ================= O ================= -->
+        <tr class="modulo-header" data-viva="O">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">O</td>
+        </tr>
+        <tr data-viva="O">
+            <td><strong>OPLE</strong></td>
+            <td>Organismos Públicos Locales Electorales. Autoridades administrativas electorales independientes en los estados encargadas de organizar las elecciones de Gobernadores, Diputados Locales y Ayuntamientos coordinadas con el INE.</td>
+            <td>Son los institutos electorales de cada estado (como el IECM en la CDMX) encargados de las elecciones locales de alcaldes y diputados de la región.</td>
+        </tr>
+        <!-- ================= P ================= -->
+        <tr class="modulo-header" data-viva="P">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">P</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Padrón Electoral</strong></td>
+            <td>Base de datos informática general administrada por el INE que contiene el registro histórico y la información de todos los ciudadanos mexicanos que han solicitado su inscripción formal para obtener su credencial de elector.</td>
+            <td>Es el inventario de todas las personas que han tramitado su credencial; sirve como base general de datos para la generación posterior de las listas nominales de votación.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Paquete Electoral</strong></td>
+            <td>Caja de cartón reforzada y sellada herméticamente que contiene las boletas utilizadas, los votos válidos, los sufragios nulos, las boletas sobrantes e inutilizadas, y los expedientes originales de las actas de la casilla.</td>
+            <td>Es la caja donde se empaqueta y amarra toda la documentación al cerrar la casilla para que viaje completamente protegida y firmada hacia el INE.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>PREP</strong></td>
+            <td>Programa de Resultados Electorales Preliminares. Sistema informático oficial que difunde de forma inmediata y en tiempo real a través de internet las imágenes digitales y los datos capturados de las actas de escrutinio la misma noche de la elección.</td>
+            <td>Es el sistema informativo de consulta rápida que muestra cómo va el conteo de actas la noche de la votación; no da ganadores oficiales pero da certeza a la ciudadanía.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Prelación de Funcionarios</strong></td>
+            <td>Orden jerárquico legalmente preestablecido en la normatividad para realizar las sustituciones de los integrantes ausentes de la casilla el día de la jornada, recorriendo los cargos de suplentes a propietarios a partir de las 8:15 AM.</td>
+            <td>Es la regla de turnos para suplir a los ciudadanos que no llegaron a abrir la casilla, usando primero a los suplentes oficiales y en su defecto a la gente formada en la fila.</td>
+        </tr>
+
+        <!-- ================= Q ================= -->
+        <tr class="modulo-header" data-viva="Q">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">Q</td>
+        </tr>
+        <tr data-viva="Q">
+            <td><strong>Quórum de Asistencia</strong></td>
+            <td>Requisito legal mínimo de presencia física de los integrantes con voto (consejeros electorales) exigido para declarar la validez e inicio de las sesiones formales de los consejos generales, locales y distritales.</td>
+            <td>Es la cantidad mínima de consejeros obligatorios que deben estar sentados en la mesa para que una junta o sesión oficial del INE pueda empezar y tomar acuerdos legales.</td>
+        </tr>
+
+        <!-- ================= R ================= -->
+        <tr class="modulo-header" data-viva="R">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">R</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Recuento Parcial</strong></td>
+            <td>Procedimiento técnico que consiste en la apertura de paquetes de casillas específicas en sede de consejo por causales de inconsistencia aritmética en las actas, alteraciones físicas del paquete o votos nulos mayores a la diferencia.</td>
+            <td>Es abrir paquetes específicos para volver a contar los votos uno por uno porque el acta viene rota, ilegible o tiene errores graves de suma.</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Recuento Total</strong></td>
+            <td>Procedimiento extraordinario de carácter distrital u estatal consistente en volver a contar físicamente el cien por ciento de los votos depositados en todas las urnas de la elección cuando la diferencia final es igual o menor al uno por ciento.</td>
+            <td>Es el famoso recuento voto por voto de todas las casillas que se activa obligatoriamente cuando el primer y segundo lugar quedan empatados o pegadísimos.</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Remisión de Paquetes</strong></td>
+            <td>Operativo logístico obligatorio e inmediato mediante el cual los presidentes de casilla o los CAE trasladan el paquete electoral cerrado desde el centro de votación hasta la sede del Consejo Distrital bajo estricta cadena de custodia.</td>
+            <td>Es llevar la caja con los votos hacia las oficinas del INE en el momento en que se termina de limpiar y cerrar la casilla, sin desvíos ni demoras.</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Representante de Casilla</strong></td>
+            <td>Ciudadano acreditado por un partido político o candidatura independiente facultado para vigilar de forma presencial las actividades de la jornada y firmar las actas, con derecho a interponer escritos de protesta.</td>
+            <td>Es el vigilante enviado por los candidatos para vigilar que nadie haga trampa en la casilla, cuidar sus votos y llevarse una copia legible del acta final.</td>
+        </tr>
+
+        <!-- ================= S ================= -->
+        <tr class="modulo-header" data-viva="S">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">S</td>
+        </tr>
+        <tr data-viva="S">
+            <td><strong>Sección Electoral</strong></td>
+            <td>Fracción territorial mínima de la geografía electoral en la que se agrupan los electores inscritos en el padrón; por ley contiene un universo de entre cien y tres mil ciudadanos con derecho al voto.</td>
+            <td>Es el cuadrito geográfico o división básica de tu colonia; el número de sección viene en tu credencial y define exactamente en dónde te toca votar.</td>
+        </tr>
+        <tr data-viva="S">
+            <td><strong>SIJE</strong></td>
+            <td>Sistema de Información de la Jornada Electoral. Herramienta informática institucional alimentada por los CAE encargada de monitorear y reportar en tiempo real la instalación, asistencia de funcionarios e incidentes críticos de las casillas.</td>
+            <td>Es la aplicación y plataforma digital del INE que avisa desde temprano a qué hora se abren las casillas en el país y reporta si hay peleas o problemas.</td>
+        </tr>
+        <tr data-viva="S">
+            <td><strong>SPEN</strong></td>
+            <td>Servicio Profesional Electoral Nacional. Sistema de carrera de servidores públicos electorales encargado de garantizar la selección, ingreso, capacitación, evaluación y permanencia bajo principios de profesionalismo e imparcialidad.</td>
+            <td>Es el cuerpo técnico especializado de carrera (los funcionarios de base del INE y OPLEs) que se ganan su puesto por examen público y operan las elecciones del país.</td>
+        </tr>
+
+        <!-- ================= T ================= -->
+        <tr class="modulo-header" data-viva="T">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">T</td>
+        </tr>
+        <tr data-viva="T">
+            <td><strong>Talleres Gráficos de México</strong></td>
+            <td>Institución industrial encargada de la impresión de las boletas oficiales, actas y formatos electorales bajo esquemas de seguridad industrial y resguardo permanente de las fuerzas armadas nacionales.</td>
+            <td>Es la gran imprenta oficial del gobierno federal donde se fabrican con candados de seguridad las millones de boletas que se usarán en el país.</td>
+        </tr>
+
+        <!-- ================= U ================= -->
+        <tr class="modulo-header" data-viva="U">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">U</td>
+        </tr>
+        <tr data-viva="U">
+            <td><strong>Urna Electoral</strong></td>
+            <td>Caja fabricada industrialmente en material plástico transparente y desarmable destinada a colocarse en las casillas para que los ciudadanos depositen sus boletas dobladas, garantizando el secreto y visibilidad del interior.</td>
+            <td>Es el contenedor de plástico transparente donde echas tus boletas dobladas; es transparente para que todos vean que inicia vacía y no tiene trampas.</td>
+        </tr>
+
+        <!-- ================= V ================= -->
+        <tr class="modulo-header" data-viva="V">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">V</td>
+        </tr>
+        <tr data-viva="V">
+            <td><strong>Voto Nulo</strong></td>
+            <td>Sufragio emitido en la boleta que no permite determinar con claridad la voluntad del elector, ya sea por marcar múltiples emblemas no coaligados, tachar toda la boleta de forma indiscriminada o dejar el espacio completamente en blanco.</td>
+            <td>Es una boleta tachada erróneamente, rota, en blanco o rayada por completo, la cual no cuenta para ningún candidato y se separa en el conteo vecinal.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>

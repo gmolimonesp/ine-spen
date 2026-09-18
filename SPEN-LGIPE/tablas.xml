@@ -96,6 +96,11 @@
         <nombre>LGIPE -- Tipos de Casilla y Reglas de Instalación por Elección</nombre>
         <archivo>tabla-casillas-tipos.html</archivo>
     </tabla>
+    <tabla>
+        <ley>LGIPE</ley>
+        <nombre>LGIPE -- Glosario</nombre>
+        <archivo>tabla-glosario.html</archivo>
+    </tabla>
 
     <tabla>
         <ley>LGPP</ley>
@@ -115,6 +120,12 @@
         <archivo>tabla-prerrogativas.html</archivo>
         <titulo>Titulo Tercero</titulo>
     </tabla>
+    <tabla>
+        <ley>LGPP</ley>
+        <nombre>LGPP -- Glosario</nombre>
+        <archivo>tabla-lgpp-glosario.html</archivo>
+        <titulo>Glosario</titulo>
+    </tabla>
 
     <!-- ================= SECCIÓN: LGMDE (ORDENADA POR ARTICULOS Y CONDUCTAS) ================= -->
     <tabla>
@@ -129,7 +140,14 @@
         <archivo>tabla-delitos.html</archivo>
         <titulo>Articulos Generales</titulo>
     </tabla>
+    <tabla>
+        <ley>LGMDE</ley>
+        <nombre>LGMDE -- Glosario</nombre>
+        <archivo>tabla-lgmde-glosario.html</archivo>
+        <titulo>Glosario</titulo>
+    </tabla>
 
+    <!-- ================= SECCIÓN: LGSMIME (ORDENADA POR ARTICULOS Y CONDUCTAS) ================= -->
     <tabla>
         <ley>LGSMIME</ley>
         <nombre>-- Selecciona una tabla de la LGSMIME --</nombre>
@@ -147,6 +165,12 @@
         <nombre>LGSMIME -- Reglas Comunes y Juicio de Inconformidad</nombre>
         <archivo>tabla-impugnaciones-reglas.html</archivo>
         <titulo>Titulo Segundo</titulo>
+    </tabla>
+    <tabla>
+        <ley>LGSMIME</ley>
+        <nombre>LGSMIME -- Glosario</nombre>
+        <archivo>tabla-lgsmime-glosario.html</archivo>
+        <titulo>Glosario</titulo>
     </tabla>
 
     <!-- ================= SECCIÓN: LFCP (CONSULTA POPULAR) ================= -->
@@ -168,6 +192,12 @@
         <archivo>tabla-cp-etapas.html</archivo>
         <titulo>Capitulo IV</titulo>
     </tabla>
+    <tabla>
+        <ley>LFCP</ley>
+        <nombre>LFCP -- Glosario</nombre>
+        <archivo>tabla-cp-glosario.html</archivo>
+        <titulo>Glosario</titulo>
+    </tabla>
 
     <!-- ================= SECCIÓN: LFRM (REVOCACIÓN DE MANDATO) ================= -->
     <tabla>
@@ -187,6 +217,12 @@
         <nombre>LFRM -- Organización, Jornada y Resultados</nombre>
         <archivo>tabla-rm-etapas.html</archivo>
         <titulo>Capitulo IV</titulo>
+    </tabla>
+    <tabla>
+        <ley>LFRM</ley>
+        <nombre>LFRM -- Glosario</nombre>
+        <archivo>tabla-rm-glosario.html</archivo>
+        <titulo>Glosario</titulo>
     </tabla>
 
     <!-- ================= SECCIÓN: OPLE ================= -->

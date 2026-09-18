@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Glosario LGSMIME</title>
+    <link rel="stylesheet" href="index_files/estilos.css">
+</head>
+<body data-ley="LGSMIME">
+    <div id="contenedor-principal" data-ley="LGSMIME">
+    <div class="top-navbar">
+        <div class="nav-brand">⚖️ Analítica Electoral</div>
+        <div class="nav-menu">
+            <div class="dropdown">
+                <button id="boton-ley-activa" class="dropbtn">📚 Ley Activa: HOME ▾</button>
+                <div id="menu-leyes-dinamico" class="dropdown-content"></div>
+            </div>
+            <div class="user-badge-nav">
+                <span class="user-name-tag">👤 memito</span>
+                <a href="#" class="logout-link">Salir</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <header class="header-dashboard">
+            <h1>Glosario LGSMIME</h1>
+        </header>
+
+        <table id="tabla-dinamica" class="tabla-maestra">
+    <thead class="sticky-header">
+        <tr>
+            <th style="width: 15%;">Concepto / Sigla
+                <br>
+                <select id="filtro-viva" class="filtro-select">
+                    <option value="">-- Todas --</option>
+                    <option value="A">A</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="N">N</option>
+                    <option value="P">P</option>
+                    <option value="R">R</option>
+                    <option value="T">T</option>
+                </select>
+            </th>
+            <th style="width: 45%;">Definición</th>
+            <th style="width: 40%;">Explicación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ================= A ================= -->
+        <tr class="modulo-header" data-viva="A">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">A</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Acuerdo de Desechamiento</strong></td>
+            <td>Resolución dictada por el magistrado instructor cuando el medio de impugnación incurre en causales notorias de improcedencia previstas en la ley, lo que impide que el tribunal analice el fondo del asunto.</td>
+            <td>Es cuando los jueces electorales rechazan una queja o demanda desde el principio porque se entregó fuera de tiempo o no cumple con los requisitos mínimos de ley.</td>
+        </tr>
+        <tr data-viva="A">
+            <td><strong>Ampliación de Demanda</strong></td>
+            <td>Derecho procesal que permite al actor presentar nuevos hechos, agravios o pruebas supervenientes, siempre y cuando estén estrechamente vinculados con la controversia original y se haga dentro de los plazos legales.</td>
+            <td>Es la oportunidad legal de agregar más información, quejas o pruebas a tu demanda original si descubres algo nuevo que ayude a tu caso.</td>
+        </tr>
+
+        <!-- ================= C ================= -->
+        <tr class="modulo-header" data-viva="C">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">C</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Causal de Nulidad de Casilla</strong></td>
+            <td>Supuesto legal específico que, al demostrarse plenamente ante el tribunal (como violencia, dolo o instalación en lugar prohibido), obliga a los jueces a invalidar por completo la votación recibida en esa casilla.</td>
+            <td>Es el motivo grave por el cual los jueces anulan todos los votos de una casilla (por ejemplo, si se comprobó que hubo conteos falsos o violencia generalizada).</td>
+        </tr>
+        <tr data-viva="C">
+            <td><strong>Causales de Improcedencia</strong></td>
+            <td>Conjunto de supuestos normativos explícitos en la ley que bloquean el juicio (como falta de interés jurídico, extemporaneidad o impugnar actos consentidos), provocando que la demanda sea desechada de forma automática.</td>
+            <td>Son los errores graves en la demanda que hacen que la queja quede cancelada de inmediato sin que los jueces se pongan a investigar los hechos.</td>
+        </tr>
+
+        <!-- ================= D ================= -->
+        <tr class="modulo-header" data-viva="D">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">D</td>
+        </tr>
+        <tr data-viva="D">
+            <td><strong>Definitividad</strong></td>
+            <td>Principio procesal fundamental que exige que, antes de acudir a los tribunales federales, el impugnante agote de forma obligatoria todas las instancias y recursos previos previstos en las leyes locales o estatutos partidistas.</td>
+            <td>Es la regla que te obliga a agotar primero los recursos internos de tu partido o estado antes de poder ir a quejarte con los magistrados federales del TEPJF.</td>
+        </tr>
+
+        <!-- ================= I ================= -->
+        <tr class="modulo-header" data-viva="I">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">I</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Impugnante (Actor)</strong></td>
+            <td>Persona física, partido político, coalición o agrupación que promueve un medio de impugnación electoral alegando una violación a sus derechos político-electorales o una ilegalidad en los actos de la autoridad.</td>
+            <td>Es la persona, candidato o partido político que presenta formalmente la demanda ante el Tribunal Electoral porque considera que le hicieron trampa.</td>
+        </tr>
+        <tr data-viva="I">
+            <td><strong>Interés Jurídico</strong></td>
+            <td>Requisito procesal que tiene el demandante para demostrar que el acto de la autoridad electoral le causa un perjuicio directo, real y personal en sus derechos, lo que justifica plenamente su derecho a demandar.</td>
+            <td>Es la obligación de demostrarle a los jueces que el problema te afecta directamente a ti, a tu candidatura o a tu partido, y no es solo una queja general.</td>
+        </tr>
+        <!-- ================= J ================= -->
+        <tr class="modulo-header" data-viva="J">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">J</td>
+        </tr>
+        <tr data-viva="J">
+            <td><strong>Juicio de Inconformidad</strong></td>
+            <td>Medio de impugnación específico promovido exclusivamente durante la etapa de resultados y declaraciones de validez para controvertir las determinaciones de los consejos distritales en las elecciones federales.</td>
+            <td>Es la demanda especial que meten los partidos la semana después de la votación para exigirle a los jueces que anulen casillas o revisen los cómputos oficiales.</td>
+        </tr>
+        <tr data-viva="J">
+            <td><strong>JDC</strong></td>
+            <td>Juicio para la Protección de los Derechos Político-Electorales del Ciudadano. Medio de impugnación constitucional que pueden tramitar de forma directa e individual los ciudadanos cuando alegan violaciones a su derecho de votar, ser votados o afiliarse.</td>
+            <td>Es el juicio ciudadano que puedes armar tú mismo si el INE o un partido político violan tus derechos individuales (como no dejarte votar o quitarte una candidatura ilegalmente).</td>
+        </tr>
+
+        <!-- ================= N ================= -->
+        <tr class="modulo-header" data-viva="N">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">N</td>
+        </tr>
+        <tr data-viva="N">
+            <td><strong>Nulidad de Elección</strong></td>
+            <td>Sanción jurídica máxima dictada por las salas del TEPJF que invalida por completo un proceso electoral cuando las violaciones acreditadas son graves, generalizadas y determinantes para el resultado final de la votación.</td>
+            <td>Es el castigo supremo en el que los jueces cancelan toda la elección y ordenan repetirla desde cero porque las trampas arruinaron la validez del resultado.</td>
+        </tr>
+
+        <!-- ================= P ================= -->
+        <tr class="modulo-header" data-viva="P">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">P</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Plazo Perentorio</strong></td>
+            <td>Término legal fatal y perentorio (generalmente de 4 días) establecido en la legislación procesal para la presentación de las demandas; transcurrido el tiempo, el derecho a impugnar precluye de forma automática.</td>
+            <td>Es el límite estricto de tiempo (casi siempre de 4 días seguidos) que tienes para meter tu demanda; si se te pasa una sola hora, tu queja queda cancelada.</td>
+        </tr>
+        <tr data-viva="P">
+            <td><strong>Pruebas Supervenientes</strong></td>
+            <td>Medios de convicción surgidos con posterioridad al vencimiento del plazo legal de la demanda, o que existiendo antes eran desconocidos de forma justificada por el actor, admitidos excepcionalmente por el tribunal.</td>
+            <td>Son los videos, audios o documentos valiosos que descubres o que ocurren después de haber entregado tu demanda y que los jueces aceptan de forma extraordinaria.</td>
+        </tr>
+
+        <!-- ================= R ================= -->
+        <tr class="modulo-header" data-viva="R">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">R</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Recurso de Apelación</strong></td>
+            <td>Medio de impugnación utilizado durante la etapa preparatoria de la jornada para controvertir resoluciones, acuerdos o sanciones definitivas emitidas por los órganos centrales del INE (como multas de fiscalización).</td>
+            <td>Es la demanda formal que se usa meses antes de la votación para apelar contra los castigos, reglamentos o multas económicas que el INE le impone a un partido.</td>
+        </tr>
+        <tr data-viva="R">
+            <td><strong>Recurso de Reconsideración</strong></td>
+            <td>Medio de impugnación extraordinario competencia exclusiva de la Sala Superior del TEPJF para revisar las sentencias de fondo dictadas por las Salas Regionales, evaluando violaciones constitucionales directas.</td>
+            <td>Es el recurso de "última oportunidad" que se manda con los jueces de más alto rango del país para revisar si las sentencias anteriores respetaron la Constitución.</td>
+        </tr>
+
+        <!-- ================= T ================= -->
+        <tr class="modulo-header" data-viva="T">
+            <td colspan="3" style="text-align: center; font-weight: bold; background-color: #f2f2f2; color: #333; font-size: 1.2rem;">T</td>
+        </tr>
+        <tr data-viva="T">
+            <td><strong>Tercero Interesado</strong></td>
+            <td>Ciudadano, partido político o coalición con un interés legítimo en la causa derivado de un derecho compatible con el acto impugnado, que interviene en el juicio exigiendo que se mantenga vigente la resolución de la autoridad.</td>
+            <td>Es el candidato o partido que ganó la elección y que se mete al juicio para defender sus votos frente a las demandas de los que perdieron.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </main>
+
+    <div class="contenedor-navegacion">
+            <label for="navegador-tablas">Ir a la tabla: </label>
+            <select id="navegador-tablas">
+                <option value="">-- Selecciona una tabla --</option>
+            </select>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p style="font-weight: bold; font-size:15px; letter-spacing:0.5px;">Elaborado orgullosamente con IA de G - 2026</p>
+            <p class="tech-stack">PHP / CSS3 / MySQL (PDO) / JavaScript Nativo</p>
+        </div>
+    </footer>
+    <script src="tablas.js"></script>
+</body>
+</html>
